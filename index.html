@@ -12,6 +12,12 @@
     <link rel="icon" href="/favicon.ico" />
     <link rel="manifest" href="/site.webmanifest" />
     <title>Teología - Estudio para parcial</title>
+    <script>
+      try {
+        const p = JSON.parse(localStorage.getItem('teo-progress') || '{}');
+        if (p.darkMode) document.documentElement.classList.add('dark');
+      } catch(e) {}
+    </script>
   </head>
   <body>
     <div id="root"></div>
