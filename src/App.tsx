@@ -1,5 +1,6 @@
 import { useState, useEffect, useCallback } from 'react';
 import { AppProvider, useApp } from './context/AppContext';
+import { QuotaProvider } from './context/QuotaContext';
 import { Header } from './components/layout/Header';
 import { BottomNav } from './components/layout/BottomNav';
 import { SearchModal } from './components/layout/SearchModal';
@@ -8,6 +9,7 @@ import { ChuletaView } from './components/chuleta/ChuletaView';
 import { FlashcardView } from './components/flashcards/FlashcardView';
 import { PreguntasView } from './components/preguntas/PreguntasView';
 import { StatsView } from './components/stats/StatsView';
+import { ChatView } from './components/chat/ChatView';
 import type { SearchResult } from './hooks/useSearch';
 
 function AppContent() {
@@ -15,7 +17,6 @@ function AppContent() {
   const [searchOpen, setSearchOpen] = useState(false);
   const [helpOpen, setHelpOpen] = useState(false);
 
-  // Atajos globales
   useEffect(() => {
     const handler = (e: KeyboardEvent) => {
       const tag = (e.target as HTMLElement).tagName;
@@ -54,12 +55,18 @@ function AppContent() {
   return (
     <div className="min-h-screen pb-20 sm:pb-4">
       <Header onSearchOpen={() => setSearchOpen(true)} onHelpOpen={() => setHelpOpen(true)} />
-      <main className="max-w-5xl mx-auto px-4 sm:px-6 py-6 sm:py-8">
-        {view === 'chuleta' && <ChuletaView />}
-        {view === 'flashcards' && <FlashcardView />}
-        {view === 'preguntas' && <PreguntasView />}
-        {view === 'stats' && <StatsView />}
-      </main>
+      {view === 'chat' ? (
+        <main className="h-[calc(100vh-8rem)] sm:h-[calc(100vh-5rem)]">
+          <ChatView />
+        </main>
+      ) : (
+        <main className="max-w-5xl mx-auto px-4 sm:px-6 py-6 sm:py-8">
+          {view === 'chuleta' && <ChuletaView />}
+          {view === 'flashcards' && <FlashcardView />}
+          {view === 'preguntas' && <PreguntasView />}
+          {view === 'stats' && <StatsView />}
+        </main>
+      )}
       <BottomNav />
       <SearchModal open={searchOpen} onClose={() => setSearchOpen(false)} onNavigate={handleSearchNavigate} />
       <KeyboardHelp open={helpOpen} onClose={() => setHelpOpen(false)} />
@@ -70,7 +77,9 @@ function AppContent() {
 export default function App() {
   return (
     <AppProvider>
-      <AppContent />
+      <QuotaProvider>
+        <AppContent />
+      </QuotaProvider>
     </AppProvider>
   );
 }

@@ -1,4 +1,4 @@
-import { Layers, BookOpen, MessageCircleQuestion, BarChart3, Search, Sun, Moon, Calendar, Keyboard } from 'lucide-react';
+import { Layers, BookOpen, MessageCircleQuestion, BarChart3, Speech, Search, Sun, Moon, Calendar, Keyboard } from 'lucide-react';
 import { useApp } from '../../context/AppContext';
 import { daysUntilExam } from '../../utils/dates';
 import type { ViewMode } from '../../types';
@@ -7,6 +7,7 @@ import type { LucideIcon } from 'lucide-react';
 const tabs: { id: ViewMode; label: string; icon: LucideIcon }[] = [
   { id: 'flashcards', label: 'Flashcards', icon: Layers },
   { id: 'chuleta', label: 'Repaso', icon: BookOpen },
+  { id: 'chat', label: 'Dios', icon: Speech },
   { id: 'preguntas', label: 'Preguntas', icon: MessageCircleQuestion },
   { id: 'stats', label: 'Stats', icon: BarChart3 },
 ];

@@ -3,10 +3,8 @@
     "examDate": "2026-05-29",
     "subject": "Teología",
     "lastUpdated": "2026-05-08",
-    "coversUntil": "Capítulo XIV - La Iglesia",
-    "pendingTopics": [
-      "Sacramentos: Bautismo, Confirmación, Eucaristía, Penitencia, Unción, Orden, Matrimonio"
-    ]
+    "coversUntil": "Capítulo XVII - Sacramentos en Particular",
+    "pendingTopics": []
   },
   "chapters": [
     {
@@ -91,6 +89,24 @@
       "id": "cap14",
       "number": "XIV",
       "title": "La Iglesia",
+      "part": "Gracia, Iglesia, Sacramentos"
+    },
+    {
+      "id": "cap15",
+      "number": "XV",
+      "title": "Liturgia y Sacralidad",
+      "part": "Gracia, Iglesia, Sacramentos"
+    },
+    {
+      "id": "cap16",
+      "number": "XVI",
+      "title": "Sacramentos en General",
+      "part": "Gracia, Iglesia, Sacramentos"
+    },
+    {
+      "id": "cap17",
+      "number": "XVII",
+      "title": "Sacramentos en Particular",
       "part": "Gracia, Iglesia, Sacramentos"
     }
   ],
@@ -1200,6 +1216,847 @@
       "front": "Espíritu Santo y la Iglesia",
       "back": "El Espíritu Santo es el principio de la santificación de la Iglesia. La Iglesia no nace de acción humana alguna, es creación de Cristo, y su santificación es producida por el Espíritu Santo. Habita en ella como principio vital interno.",
       "priority": "alta"
+    },
+    {
+      "id": "fc-158",
+      "chapterId": "cap15",
+      "front": "Definición de Liturgia",
+      "back": "El culto público que nuestro Redentor rinde al Padre como Cabeza de la Iglesia, y es el culto que la sociedad de los fieles rinde a su Cabeza, y, por medio de ella, al Padre eterno.",
+      "priority": "alta"
+    },
+    {
+      "id": "fc-159",
+      "chapterId": "cap15",
+      "front": "Etimología de 'liturgia'",
+      "back": "Del griego leitourgía / leiturgía: significa originariamente 'obra o quehacer público', 'servicio de parte de o a favor del pueblo'. En la Tradición cristiana = la Iglesia toma parte en 'la obra de Dios'.",
+      "priority": "alta"
+    },
+    {
+      "id": "fc-160",
+      "chapterId": "cap15",
+      "front": "Tres elementos esenciales de la Liturgia",
+      "back": "(1) Signos sensibles, instituidos por Cristo o por la Iglesia. (2) Signos eficaces de lo que significan. (3) Ordenados a la santificación de los hombres y a la gloria de Dios.",
+      "priority": "alta"
+    },
+    {
+      "id": "fc-161",
+      "chapterId": "cap15",
+      "front": "¿Qué es lo sagrado y qué es lo profano?",
+      "back": "Sagrado: lo distinto, separado del común, lo que se distingue de lo profano. Profano: del latín pro = fuera + fanum = templo; lo que está 'fuera' de lo estrictamente sagrado. Profano NO significa malo. PROFANAR sí es peyorativo: tomar lo sagrado como si fuera profano.",
+      "priority": "alta"
+    },
+    {
+      "id": "fc-162",
+      "chapterId": "cap15",
+      "front": "Las 4 cuestiones de la celebración litúrgica",
+      "back": "(a) Quién celebra. (b) Cómo se celebra. (c) Cuándo se celebra. (d) Dónde se celebra.",
+      "priority": "alta"
+    },
+    {
+      "id": "fc-163",
+      "chapterId": "cap15",
+      "front": "¿Quién celebra la liturgia?",
+      "back": "El sacerdote ordenado, consagrado, 'alter Christus' (otro Cristo), 'sacer-dotis' = mediador entre el Cielo y la Tierra, 'dador de lo sagrado'. No es 'presidente de la asamblea', sino que hace las veces de Cristo.",
+      "priority": "alta"
+    },
+    {
+      "id": "fc-164",
+      "chapterId": "cap15",
+      "front": "Frase de Paulo VI sobre el sacerdocio",
+      "back": "El sacerdocio está ante todo ordenado para la celebración del Sacrificio eucarístico, en el que 'in persona Christi et nomine Ecclesiae' ofrece a Dios sacramentalmente la Pasión y la Muerte de nuestro Redentor.",
+      "priority": "media"
+    },
+    {
+      "id": "fc-165",
+      "chapterId": "cap16",
+      "front": "Etimología y sentido de 'sacramento'",
+      "back": "Sacramento significa 'misterio', 'cosa oculta y sagrada'. Mediante los sacramentos se produce la comunicación de la gracia santificante, que es la participación en la vida de Dios.",
+      "priority": "alta"
+    },
+    {
+      "id": "fc-166",
+      "chapterId": "cap16",
+      "front": "Definición de Sacramento",
+      "back": "Signos sensibles y eficaces de la gracia instituidos por Nuestro Señor Jesucristo y administrados por la Iglesia para nuestra salvación.",
+      "priority": "alta"
+    },
+    {
+      "id": "fc-167",
+      "chapterId": "cap16",
+      "front": "Tres elementos esenciales del sacramento",
+      "back": "(1) Deben ser signos SENSIBLES (perceptibles por los sentidos). (2) Deben ser EFICACES (que produzcan la gracia). (3) Deben ser de INSTITUCIÓN DIVINA (instituidos por Jesucristo).",
+      "priority": "alta"
+    },
+    {
+      "id": "fc-168",
+      "chapterId": "cap16",
+      "front": "¿Son los sacramentos absolutamente necesarios?",
+      "back": "NO con necesidad absoluta: Dios podría sin ellos sanar al hombre. Pero son muy convenientes dada la naturaleza humana, que se eleva a las cosas espirituales a través de las corporales.",
+      "priority": "alta"
+    },
+    {
+      "id": "fc-169",
+      "chapterId": "cap16",
+      "front": "¿Qué son materia y forma del sacramento?",
+      "back": "MATERIA: la cosa sensible que se emplea para administrarlo (ej. agua en Bautismo). FORMA: las palabras que se pronuncian al administrarlo (ej. 'Yo te bautizo en el nombre del Padre...'). San Agustín: 'Únese la palabra (forma) al elemento (materia) y se hace el sacramento.'",
+      "priority": "alta"
+    },
+    {
+      "id": "fc-170",
+      "chapterId": "cap16",
+      "front": "Ministros ordinarios y extraordinarios",
+      "back": "ORDINARIOS: en general, los que han recibido el sacramento del Orden, excepto el caso del Matrimonio (donde los ministros ordinarios son los propios contrayentes). EXTRAORDINARIOS: los que pueden administrarlos excepcionalmente.",
+      "priority": "alta"
+    },
+    {
+      "id": "fc-171",
+      "chapterId": "cap16",
+      "front": "Sujeto del sacramento",
+      "back": "El ser humano, mientras vive y tiene capacidad de recibirlo. Después de muerto no le aprovecha. No todos los seres humanos son capaces de recibir todos los sacramentos: las mujeres no pueden recibir el Orden; los niños antes del uso de razón, no pueden recibir Penitencia ni Unción.",
+      "priority": "alta"
+    },
+    {
+      "id": "fc-172",
+      "chapterId": "cap16",
+      "front": "Significado de 'ex opere operato'",
+      "back": "Los sacramentos actúan 'ex opere operato' = 'por la obra obrada'. La gracia sacramental NO se confiere por la acción subjetiva del que recibe o administra, sino que es producida por el signo sacramental válidamente realizado. NO es causalidad mágica ni mecánica.",
+      "priority": "alta"
+    },
+    {
+      "id": "fc-173",
+      "chapterId": "cap16",
+      "front": "Significado de 'opus operantis'",
+      "back": "'La obra del que obra'. Es la disposición subjetiva del que recibe el sacramento. NO es causa de la gracia, sino condición indispensable (sine qua non) para que ésta sea conferida (causa dispositiva, no eficiente). De ella depende la medida de la gracia producida.",
+      "priority": "alta"
+    },
+    {
+      "id": "fc-174",
+      "chapterId": "cap16",
+      "front": "Tres efectos de los sacramentos",
+      "back": "(1) Gracia santificante (primera, segunda o tercera justificación). (2) Gracia sacramental (gracia propia y actual de cada sacramento). (3) Carácter sacramental (sello indeleble en el alma, solo en algunos).",
+      "priority": "alta"
+    },
+    {
+      "id": "fc-175",
+      "chapterId": "cap16",
+      "front": "¿Qué sacramentos imprimen carácter?",
+      "back": "Bautismo, Confirmación y Orden Sagrado. El carácter es un sello indeleble que NO se imprime más que una sola vez, y por eso estos sacramentos NO pueden recibirse sino una sola vez en la vida.",
+      "priority": "alta"
+    },
+    {
+      "id": "fc-176",
+      "chapterId": "cap16",
+      "front": "Los 7 sacramentos instituidos por Cristo",
+      "back": "(1) Bautismo, (2) Confirmación, (3) Eucaristía, (4) Penitencia o Reconciliación, (5) Unción de los enfermos, (6) Orden Sagrado, (7) Matrimonio.",
+      "priority": "alta",
+      "mnemonic": "BCE-PUOM: 'Bautismo Confirmación Eucaristía / Penitencia Unción Orden Matrimonio'"
+    },
+    {
+      "id": "fc-177",
+      "chapterId": "cap16",
+      "front": "División: Sacramentos de iniciación cristiana",
+      "back": "Bautismo, Confirmación y Eucaristía. (Iniciación = ingreso a la vida cristiana.)",
+      "priority": "alta"
+    },
+    {
+      "id": "fc-178",
+      "chapterId": "cap16",
+      "front": "División: Sacramentos de curación",
+      "back": "Penitencia (o Reconciliación) y Unción de los enfermos.",
+      "priority": "alta"
+    },
+    {
+      "id": "fc-179",
+      "chapterId": "cap16",
+      "front": "División: Sacramentos al servicio de la comunidad",
+      "back": "Orden Sagrado y Matrimonio.",
+      "priority": "alta"
+    },
+    {
+      "id": "fc-180",
+      "chapterId": "cap16",
+      "front": "Sacramentos de muertos vs sacramentos de vivos",
+      "back": "MUERTOS: Bautismo y Penitencia (quitan la muerte del alma producida por el pecado). VIVOS: todos los demás (para recibirlos hay que estar ya en gracia, sin pecado mortal). Los de vivos confieren un AUMENTO de gracia santificante.",
+      "priority": "alta"
+    },
+    {
+      "id": "fc-181",
+      "chapterId": "cap17",
+      "front": "Definición de Bautismo",
+      "back": "Es el primero y más necesario de los sacramentos, en el que se nos da la gracia y el carácter de cristianos. Es el sacramento que nos hace cristianos.",
+      "priority": "alta",
+      "tags": [
+        "bautismo"
+      ]
+    },
+    {
+      "id": "fc-182",
+      "chapterId": "cap17",
+      "front": "Materia y forma del Bautismo",
+      "back": "MATERIA: el agua verdadera y natural, derramando agua sobre el que se bautiza. FORMA: 'Yo te bautizo, NN, en el nombre del Padre y del Hijo y del Espíritu Santo', pronunciado al mismo tiempo en que se emplea la materia.",
+      "priority": "alta",
+      "tags": [
+        "bautismo"
+      ]
+    },
+    {
+      "id": "fc-183",
+      "chapterId": "cap17",
+      "front": "Ministro del Bautismo",
+      "back": "ORDINARIO: el sacerdote (particularmente el párroco). EXTRAORDINARIO: en peligro de muerte, ante la imposibilidad del sacerdote o ateo, CUALQUIER PERSONA con tal de que tenga intención de hacerlo como lo hace la Iglesia.",
+      "priority": "alta",
+      "tags": [
+        "bautismo"
+      ]
+    },
+    {
+      "id": "fc-184",
+      "chapterId": "cap17",
+      "front": "Sujeto del Bautismo",
+      "back": "Cualquier hombre que todavía no lo haya recibido y que, si es adulto, reúna las debidas condiciones. Niños o recién nacidos NO se les exige ninguna disposición. Los adultos deben: (1) desear el Bautismo, (2) conocer y creer la doctrina cristiana, (3) arrepentirse de sus pecados.",
+      "priority": "alta",
+      "tags": [
+        "bautismo"
+      ]
+    },
+    {
+      "id": "fc-185",
+      "chapterId": "cap17",
+      "front": "Efectos del Bautismo (6)",
+      "back": "(1) Quita todo pecado original. (2) Perdona penas (temporal y eterna) debidas por los pecados. (3) Da la gracia santificante: nos eleva al orden sobrenatural, nos hace hijos de Dios y miembros de la Iglesia, nos infunde virtudes teologales (fe, esperanza, caridad), morales y dones del Espíritu Santo. (4) Imprime CARÁCTER indeleble. (5) Nos da derecho a todos los sacramentos. (6) Obliga a las leyes de la Iglesia.",
+      "priority": "alta",
+      "tags": [
+        "bautismo"
+      ]
+    },
+    {
+      "id": "fc-186",
+      "chapterId": "cap17",
+      "front": "Necesidad del Bautismo",
+      "back": "Es el medio normal y ordinario que Cristo ha establecido para incorporarnos a su vida divina. SIN ESTE SACRAMENTO el alma no posee la vida divina, y por tanto no se salvará. Es necesario con necesidad de medio.",
+      "priority": "alta",
+      "tags": [
+        "bautismo"
+      ]
+    },
+    {
+      "id": "fc-187",
+      "chapterId": "cap17",
+      "front": "Bautismo de sangre y bautismo de deseo",
+      "back": "BAUTISMO DE SANGRE: el que reciben los mártires no bautizados al afrontar la muerte por confesar la fe católica. BAUTISMO DE DESEO: el del bautizo quien, no pudiendo recibir el de agua o de sangre, desea no obstante ser bautizado. También quienes vivan según una conciencia honesta tendrían un bautismo de deseo implícito.",
+      "priority": "alta",
+      "tags": [
+        "bautismo"
+      ]
+    },
+    {
+      "id": "fc-188",
+      "chapterId": "cap17",
+      "front": "Definición de Confirmación",
+      "back": "Sacramento por el cual recibimos una gracia especial del Espíritu Santo que nos incorpora más perfectamente a la Iglesia y nos robustece para difundir y defender la fe con mayor fuerza como verdaderos testigos de Cristo.",
+      "priority": "alta",
+      "tags": [
+        "confirmacion"
+      ]
+    },
+    {
+      "id": "fc-189",
+      "chapterId": "cap17",
+      "front": "Materia y forma de la Confirmación",
+      "back": "MATERIA: el santo crisma (mezcla de aceite de oliva y bálsamo bendecidos por el obispo el Jueves Santo) + la imposición de las manos del ministro en la cabeza del confirmando + la crismación o unción en la frente en forma de cruz. FORMA: 'NN, recibe por esta señal el Don del Espíritu Santo'.",
+      "priority": "alta",
+      "tags": [
+        "confirmacion"
+      ]
+    },
+    {
+      "id": "fc-190",
+      "chapterId": "cap17",
+      "front": "Ministro de la Confirmación",
+      "back": "ORDINARIO: el obispo. EXTRAORDINARIO: un simple sacerdote siempre que sea delegado para ello por el obispo.",
+      "priority": "alta",
+      "tags": [
+        "confirmacion"
+      ]
+    },
+    {
+      "id": "fc-191",
+      "chapterId": "cap17",
+      "front": "Sujeto de la Confirmación",
+      "back": "Es sujeto todo bautizado que aún no haya sido confirmado. Si es adulto: tener la intención de recibir el sacramento, estar en gracia de Dios, conocer la doctrina cristiana, conocer las verdades de fe.",
+      "priority": "alta",
+      "tags": [
+        "confirmacion"
+      ]
+    },
+    {
+      "id": "fc-192",
+      "chapterId": "cap17",
+      "front": "Efectos de la Confirmación (4)",
+      "back": "(1) Aumenta la gracia santificante. (2) Da la gracia sacramental: derecho a auxilios para vencer tentaciones, luchar contra los enemigos del alma, y confesar la fe. (3) Da los DONES del Espíritu Santo: sabiduría, entendimiento, consejo, fortaleza, ciencia, piedad y temor de Dios. (4) Imprime CARÁCTER.",
+      "priority": "alta",
+      "tags": [
+        "confirmacion"
+      ]
+    },
+    {
+      "id": "fc-193",
+      "chapterId": "cap17",
+      "front": "Necesidad de la Confirmación",
+      "back": "NO es absolutamente necesaria para salvarse, como lo es el Bautismo. Su necesidad es de PRECEPTO: la Iglesia manda que la reciba todo aquel que pueda hacerlo. Quien por negligencia o desprecio no la recibe peca gravemente.",
+      "priority": "alta",
+      "tags": [
+        "confirmacion"
+      ]
+    },
+    {
+      "id": "fc-194",
+      "chapterId": "cap17",
+      "front": "Definición de Eucaristía como sacramento",
+      "back": "Sacramento en el cual por la admirable conversión de toda la sustancia del pan en el Cuerpo de Jesucristo y la del vino en su preciosa Sangre, se contiene realmente, real y sustancialmente el Cuerpo, la Sangre, el Alma y la Divinidad de Nuestro Señor Jesucristo, bajo las apariencias del pan y del vino, para nuestro fortalecimiento espiritual.",
+      "priority": "alta",
+      "tags": [
+        "eucaristia"
+      ]
+    },
+    {
+      "id": "fc-195",
+      "chapterId": "cap17",
+      "front": "Materia de la Eucaristía",
+      "back": "Pan de TRIGO y vino de VID. La Iglesia manda que el pan esté amasado con agua y harina de trigo, cocido y SIN levadura. El sacerdote consagrante mezcla con el vino algunas gotas de agua.",
+      "priority": "alta",
+      "tags": [
+        "eucaristia"
+      ]
+    },
+    {
+      "id": "fc-196",
+      "chapterId": "cap17",
+      "front": "Forma de la Eucaristía",
+      "back": "Las palabras de la consagración. Sobre el pan: 'Tomad y comed todos de él, porque esto es mi Cuerpo que será entregado por vosotros'. Sobre el vino: 'Tomad y bebed todos de él, porque éste es el cáliz de mi Sangre, Sangre de la Alianza nueva y eterna que será derramada por vosotros y por muchos para el perdón de los pecados'.",
+      "priority": "alta",
+      "tags": [
+        "eucaristia"
+      ]
+    },
+    {
+      "id": "fc-197",
+      "chapterId": "cap17",
+      "front": "Ministro de la Eucaristía",
+      "back": "El sacerdote, que obra 'in persona Christi'. Solo él puede consagrar. La distribución la hace ordinariamente el sacerdote y los diáconos. En caso de necesidad, ministros extraordinarios de la Comunión a laicos que cumplan determinadas condiciones.",
+      "priority": "alta",
+      "tags": [
+        "eucaristia"
+      ]
+    },
+    {
+      "id": "fc-198",
+      "chapterId": "cap17",
+      "front": "Sujeto de la Eucaristía",
+      "back": "VALIDEZ: cualquier bautizado que pertenezca a la Iglesia Católica. LICITUD: requiere uso de razón e instrucción suficiente. Disposiciones del que comulga: (a) ALMA: estar en gracia, sin pecado mortal (si lo está, debe confesarse antes). (b) CUERPO: ayuno eucarístico (1 hora antes), agua no afecta, actitud digna.",
+      "priority": "alta",
+      "tags": [
+        "eucaristia"
+      ]
+    },
+    {
+      "id": "fc-199",
+      "chapterId": "cap17",
+      "front": "Efectos de la Eucaristía (6)",
+      "back": "(1) Es FUENTE de la gracia (contiene a Jesucristo, autor y fuente). (2) Da gracia sacramental: aumenta la caridad. (3) Alimenta el alma. (4) PERDONA pecados VENIALES (los mortales, no). (5) Preserva de pecados mortales. (6) Es prenda de RESURRECCIÓN y de la gloria eterna (Concilio de Trento, Jn 6).",
+      "priority": "alta",
+      "tags": [
+        "eucaristia"
+      ]
+    },
+    {
+      "id": "fc-200",
+      "chapterId": "cap17",
+      "front": "Necesidad de la Eucaristía",
+      "back": "NO es necesaria con necesidad de medio para los niños o adultos sin uso de razón. Sí es deseo (al menos implícito) de la eucaristía. Es OBLIGATORIA por precepto divino y eclesiástico: comulgar al menos UNA VEZ AL AÑO y cuando hubiere peligro de muerte.",
+      "priority": "alta",
+      "tags": [
+        "eucaristia"
+      ]
+    },
+    {
+      "id": "fc-201",
+      "chapterId": "cap17",
+      "front": "Diferencia: Eucaristía como sacramento vs como sacrificio",
+      "back": "Como SACRAMENTO: signo sensible que tiene por objeto comunicar la gracia de Dios en provecho de los hombres. Como SACRIFICIO: ofrecimiento de Jesucristo para reconocer a Dios como dueño, alabarlo, agradecerle, aplacarlo y rogarle. Fin del sacramento: alimentar espiritualmente. Fin del sacrificio: honrar a la Divinidad.",
+      "priority": "alta",
+      "tags": [
+        "eucaristia"
+      ]
+    },
+    {
+      "id": "fc-202",
+      "chapterId": "cap17",
+      "front": "Definición del Santo Sacrificio de la Misa",
+      "back": "La Santa Misa es el verdadero Sacrificio del Cuerpo y de la Sangre de Jesucristo, que se ofrece en nuestros altares bajo las especies de pan y de vino, en memoria y como renovación del Sacrificio de la Cruz. En la Santa Misa se actualiza de modo real e incruento, el Sacrificio cruento del Calvario.",
+      "priority": "alta",
+      "tags": [
+        "eucaristia",
+        "misa"
+      ]
+    },
+    {
+      "id": "fc-203",
+      "chapterId": "cap17",
+      "front": "Identidad entre el Sacrificio de la Misa y el de la Cruz",
+      "back": "Es el MISMO sacrificio: la víctima es la misma (Cristo), el sacerdote es el mismo (Cristo, en la Misa por medio del sacerdote), y el fin es el mismo. Diferencias accidentales: (1) Forma: cruento en la Cruz, INCRUENTO en la Misa. (2) Ministro: en la Cruz fue Cristo en persona; en la Misa, Cristo en la persona del sacerdote. (3) En la Cruz nos MERECIÓ la redención; en la Misa nos la APLICA.",
+      "priority": "alta",
+      "tags": [
+        "eucaristia",
+        "misa"
+      ]
+    },
+    {
+      "id": "fc-204",
+      "chapterId": "cap17",
+      "front": "¿Qué es la transubstanciación?",
+      "back": "La conversión por la cual, en virtud de las palabras de la Consagración, toda la sustancia del pan se convierte en el Cuerpo de Cristo y toda la sustancia del vino en su Sangre. Quedan los accidentes (cantidad, color, sabor, figura, extensión) sin estar sostenidos por la sustancia propia ni por la sustancia del Cuerpo y Sangre del Señor: se sostienen milagrosamente.",
+      "priority": "alta",
+      "tags": [
+        "eucaristia",
+        "misa"
+      ]
+    },
+    {
+      "id": "fc-205",
+      "chapterId": "cap17",
+      "front": "¿Qué es la concomitancia eucarística?",
+      "back": "Por concomitancia (concurrencia, acompañamiento), en virtud de la Resurrección y por la unión hipostática, está presente Jesucristo entero, Dios y Hombre, vivo y verdadero en cada una de esas especies. Por eso al recibir solo una de las dos especies se recibe a Cristo entero.",
+      "priority": "media",
+      "tags": [
+        "eucaristia",
+        "misa"
+      ]
+    },
+    {
+      "id": "fc-206",
+      "chapterId": "cap17",
+      "front": "Los 4 fines del Sacrificio de la Misa",
+      "back": "(1) LATRÉUTICO o de adoración: acto de adoración perfecto. (2) EUCARÍSTICO o de acción de gracias. (3) EXPIATORIO o propiciatorio: aplaca la justa indignación divina contra el pecador. (4) IMPETRATORIO o de súplica: pedir nuevos favores de Dios.",
+      "priority": "alta",
+      "tags": [
+        "eucaristia",
+        "misa"
+      ],
+      "mnemonic": "LEEI: Latréutico-Eucarístico-Expiatorio-Impetratorio"
+    },
+    {
+      "id": "fc-207",
+      "chapterId": "cap17",
+      "front": "Valor y frutos de la Misa",
+      "back": "El valor del Sacrificio es INFINITO (es acción de Jesucristo). Pero los frutos son LIMITADOS por la finitud del que recibe. Beneficiarios: la Iglesia militante, la purgante y la triunfante; el sacerdote celebrante; los unidos a él; aquellos por quienes la Misa se aplica. Puede aplicarse por vivos y difuntos.",
+      "priority": "media",
+      "tags": [
+        "eucaristia",
+        "misa"
+      ]
+    },
+    {
+      "id": "fc-208",
+      "chapterId": "cap17",
+      "front": "Las 4 grandes partes de la Misa",
+      "back": "(a) RITO DE ENTRADA o Inicial. (b) LITURGIA DE LA PALABRA (3 lecturas + homilía + Credo + Oración Universal). (c) LITURGIA DE LA EUCARISTÍA (Ofertorio + Anáfora/Plegaria Eucarística + Rito de la Comunión). (d) RITOS DE CONCLUSIÓN o Finales.",
+      "priority": "alta",
+      "tags": [
+        "eucaristia",
+        "misa"
+      ]
+    },
+    {
+      "id": "fc-209",
+      "chapterId": "cap17",
+      "front": "Definición de Penitencia",
+      "back": "La Penitencia o Confesión o Reconciliación es el sacramento en el cual se perdonan, por medio de la absolución sacerdotal, todos los pecados cometidos después del bautismo, al pecador que, arrepentido de ellos, los confiesa sinceramente y tiene propósito de enmienda.",
+      "priority": "alta",
+      "tags": [
+        "penitencia"
+      ]
+    },
+    {
+      "id": "fc-210",
+      "chapterId": "cap17",
+      "front": "Materia y forma de la Penitencia",
+      "back": "MATERIA: los actos del penitente (contrición, confesión vocal y satisfacción). FORMA: las palabras de la absolución (CATIC 1449): 'Dios, Padre misericordioso, que reconcilió consigo al mundo... y yo te absuelvo de tus pecados en el nombre del Padre y del Hijo y del Espíritu Santo'.",
+      "priority": "alta",
+      "tags": [
+        "penitencia"
+      ]
+    },
+    {
+      "id": "fc-211",
+      "chapterId": "cap17",
+      "front": "Ministro de la Penitencia y sigilo sacramental",
+      "back": "El SACERDOTE (obispos y presbíteros), que debe guardar celosamente el SIGILO SACRAMENTAL. Sigilo = sello, secreto, silencio. Es la obligación grave de guardar absoluto secreto sobre lo oído y dicho durante la confesión. NO PUEDE revelarse nunca, en ninguna circunstancia, ni después de la muerte del penitente.",
+      "priority": "alta",
+      "tags": [
+        "penitencia"
+      ]
+    },
+    {
+      "id": "fc-212",
+      "chapterId": "cap17",
+      "front": "Sujeto de la Penitencia",
+      "back": "Toda persona humana bautizada, llegada al uso de razón (capaz de distinguir entre el bien y el mal), y que haya caído en pecado.",
+      "priority": "alta",
+      "tags": [
+        "penitencia"
+      ]
+    },
+    {
+      "id": "fc-213",
+      "chapterId": "cap17",
+      "front": "Efectos del Sacramento de la Penitencia (6)",
+      "back": "(1) Reconcilia con Dios; vuelve la gracia santificante (si había pecado mortal). (2) Perdona pecados mortales y veniales. (3) Perdona el castigo ETERNO por los pecados mortales. (4) Perdona AL MENOS PARTE del castigo TEMPORAL. (5) Devuelve los méritos perdidos por el pecado mortal. (6) Da gracia sacramental específica: fortalecimiento contra las caídas.",
+      "priority": "alta",
+      "tags": [
+        "penitencia"
+      ]
+    },
+    {
+      "id": "fc-214",
+      "chapterId": "cap17",
+      "front": "Necesidad de la Penitencia",
+      "back": "NECESIDAD DE MEDIO: para todos los que han pecado mortalmente después del Bautismo. Cuando no se puede recibir, suplir con un acto de CONTRICIÓN PERFECTA con propósito de confesarse. NECESIDAD DE PRECEPTO: confesarse al menos UNA VEZ AL AÑO y cuando hubiera peligro de muerte.",
+      "priority": "alta",
+      "tags": [
+        "penitencia"
+      ]
+    },
+    {
+      "id": "fc-215",
+      "chapterId": "cap17",
+      "front": "5 condiciones para una buena confesión",
+      "back": "(1) Examinar la conciencia, pidiendo al Señor su auxilio. (2) Dolerse de los pecados (CONTRICIÓN). (3) Hacer firme propósito de no pecar en adelante. (4) Confesar todos los pecados al sacerdote en forma humilde, breve, discreta y sincera. (5) Querer cumplir la PENITENCIA que el confesor imponga.",
+      "priority": "alta",
+      "tags": [
+        "penitencia"
+      ],
+      "mnemonic": "Examen-Dolor-Propósito-Confesar-Penitencia"
+    },
+    {
+      "id": "fc-216",
+      "chapterId": "cap17",
+      "front": "Contrición perfecta vs imperfecta (atrición)",
+      "back": "CONTRICIÓN: 'reducir a polvo un cuerpo duro'. Dolor del alma y detestación del pecado, con firme propósito de no volver a pecar. PERFECTA: dolor de haber ofendido a Dios, nace de un perfecto amor a Dios. IMPERFECTA o ATRICIÓN: dolor 'más egoísta', motivos: odio al pecado por ser un mal, temor a la justicia divina o a las consecuencias.",
+      "priority": "alta",
+      "tags": [
+        "penitencia"
+      ]
+    },
+    {
+      "id": "fc-217",
+      "chapterId": "cap17",
+      "front": "Cualidades de la confesión",
+      "back": "(1) HUMILDAD: sin altivez ni orgullo. (2) COMPLETA: todos los pecados mortales con sus circunstancias de número y especie. (3) BREVEDAD. (4) DISCRECIÓN: no descubrir defectos ajenos. (5) SINCERIDAD: sin excusarlos ni aumentarlos. (6) SENTIDA: dolorosa y contrita.",
+      "priority": "media",
+      "tags": [
+        "penitencia"
+      ]
+    },
+    {
+      "id": "fc-218",
+      "chapterId": "cap17",
+      "front": "¿Qué es la satisfacción en la Penitencia?",
+      "back": "Es la reparación y compensación de las ofensas hechas a Dios, por medio de la oración y obras buenas que el confesor impone al penitente en expiación de sus pecados. También se llama 'penitencia'.",
+      "priority": "media",
+      "tags": [
+        "penitencia"
+      ]
+    },
+    {
+      "id": "fc-219",
+      "chapterId": "cap17",
+      "front": "¿Qué es la absolución?",
+      "back": "La sentencia que el sacerdote pronuncia en nombre de Jesucristo para perdonar los pecados. El sacerdote puede e incluso DEBE NEGAR o diferir la absolución cuando hay manifiesta falta de contrición, negativa a restituir lo robado o a perdonar enemigos.",
+      "priority": "alta",
+      "tags": [
+        "penitencia"
+      ]
+    },
+    {
+      "id": "fc-220",
+      "chapterId": "cap17",
+      "front": "Definición de Unción de los Enfermos",
+      "back": "Sacramento que se administra a los enfermos de cierta gravedad, para darles la salud del alma y aún la salud del cuerpo si así conviniera al alma. También llamada Extremaunción.",
+      "priority": "alta",
+      "tags": [
+        "uncion"
+      ]
+    },
+    {
+      "id": "fc-221",
+      "chapterId": "cap17",
+      "front": "Materia y forma de la Unción",
+      "back": "MATERIA: el aceite de oliva bendecido por el obispo el Jueves Santo ('óleo de los enfermos') + las unciones en forma de cruz en frente, ojos, oídos, nariz, boca, manos y pies. FORMA: 'Por esta santa Unción y su bondadosa misericordia te ayude el Señor con la gracia del Espíritu Santo, para que te libre de tus pecados, te conceda la salvación y te conforte en tu enfermedad'.",
+      "priority": "alta",
+      "tags": [
+        "uncion"
+      ]
+    },
+    {
+      "id": "fc-222",
+      "chapterId": "cap17",
+      "front": "Ministro de la Unción",
+      "back": "El sacerdote, por derecho el párroco del lugar donde se halla el enfermo. En caso de urgencia, cualquier sacerdote.",
+      "priority": "alta",
+      "tags": [
+        "uncion"
+      ]
+    },
+    {
+      "id": "fc-223",
+      "chapterId": "cap17",
+      "front": "Sujeto de la Unción",
+      "back": "Todo bautizado que, después del uso de razón, se halle en peligro de muerte por enfermedad o vejez. SE PUEDE REPETIR si el enfermo recupera la salud y luego recae en nuevo peligro.",
+      "priority": "alta",
+      "tags": [
+        "uncion"
+      ]
+    },
+    {
+      "id": "fc-224",
+      "chapterId": "cap17",
+      "front": "Efectos de la Unción sobre el cuerpo",
+      "back": "Suaviza los sufrimientos corporales; devuelve la salud al enfermo si así conviene al alma. NO es remedio milagroso contra la muerte, sino sobrenatural; ayuda a las fuerzas naturales y mediante esa ayuda contribuye a dar la salud si así conviene al alma.",
+      "priority": "alta",
+      "tags": [
+        "uncion"
+      ]
+    },
+    {
+      "id": "fc-225",
+      "chapterId": "cap17",
+      "front": "Efectos de la Unción sobre el alma (6)",
+      "back": "(1) Da gracia santificante (es sacramento de vivos = aumento de gracia). (2) Da gracia sacramental: alivio en el sufrimiento, fortaleza contra tentaciones. (3) Perdona pecados veniales (con atrición). (4) Puede perdonar pecados mortales (en trance de muerte sin poder confesarse, con atrición). (5) Borra las RELIQUIAS DEL PECADO (debilidades, desconfianza, temor, angustia). (6) Fortalece para la última lucha espiritual.",
+      "priority": "alta",
+      "tags": [
+        "uncion"
+      ]
+    },
+    {
+      "id": "fc-226",
+      "chapterId": "cap17",
+      "front": "Necesidad de la Unción",
+      "back": "NO es necesaria con necesidad de medio: sin ella también puede alcanzarse la salvación. Es necesaria con necesidad de PRECEPTO. A nadie es lícito despreciarla.",
+      "priority": "alta",
+      "tags": [
+        "uncion"
+      ]
+    },
+    {
+      "id": "fc-227",
+      "chapterId": "cap17",
+      "front": "Definición de Orden Sagrado",
+      "back": "Sacramento que da a quien lo recibe la potestad (poder) y la gracia necesarios para desempeñar los sagrados ministerios, e imprime el carácter indeleble de ministro de Dios.",
+      "priority": "alta",
+      "tags": [
+        "orden"
+      ]
+    },
+    {
+      "id": "fc-228",
+      "chapterId": "cap17",
+      "front": "Diferencia del Orden con los demás sacramentos",
+      "back": "EN CUANTO A SU FIN: los demás sacramentos fueron instituidos para la santificación INDIVIDUAL del que los recibe; el Orden y el Matrimonio fueron instituidos para la santificación de la COMUNIDAD. EN CUANTO A SU NECESIDAD: los demás sacramentos deben recibirse necesariamente, mientras que el Orden y el Matrimonio pueden recibirlos LIBREMENTE quienes se sientan llevados por vocación divina.",
+      "priority": "alta",
+      "tags": [
+        "orden"
+      ]
+    },
+    {
+      "id": "fc-229",
+      "chapterId": "cap17",
+      "front": "Materia y forma del Orden",
+      "back": "MATERIA: la imposición de manos del ministro. FORMA: las palabras que pronuncia el ministro durante el rito esencial. Para el presbiterado: 'Te pedimos Padre Todopoderoso que confieras a este servidor tuyo la dignidad del presbiterado, renueva en su corazón el Espíritu de santidad, recibe el sacerdocio de segundo grado, y sé con tu conducta ejemplo de vida'.",
+      "priority": "alta",
+      "tags": [
+        "orden"
+      ]
+    },
+    {
+      "id": "fc-230",
+      "chapterId": "cap17",
+      "front": "Ministro del Orden",
+      "back": "EL OBISPO es el ministro ordinario, por derecho propio, del sacramento del Orden.",
+      "priority": "alta",
+      "tags": [
+        "orden"
+      ]
+    },
+    {
+      "id": "fc-231",
+      "chapterId": "cap17",
+      "front": "Sujeto del Orden",
+      "back": "TODO VARÓN BAUTIZADO que tenga intención de recibirlo. Para validez además: confirmado, en gracia, buenas costumbres, edad y ciencia necesarias, recibido las órdenes menores. Debe haber VOCACIÓN: un llamado de Dios percibido con claridad por la persona.",
+      "priority": "alta",
+      "tags": [
+        "orden"
+      ]
+    },
+    {
+      "id": "fc-232",
+      "chapterId": "cap17",
+      "front": "Tres poderes del sacerdote",
+      "back": "(1) Consagrar el Santísimo Sacramento de la Eucaristía y ofrecer el sacrificio de la Misa por los vivos y los difuntos. (2) Perdonar los pecados en nombre de Dios. (3) Poder sobre el Cuerpo Místico de Cristo (los fieles): guiar, iluminar y santificar con oraciones, sacramentos, predicación y demás actos de culto.",
+      "priority": "alta",
+      "tags": [
+        "orden"
+      ]
+    },
+    {
+      "id": "fc-233",
+      "chapterId": "cap17",
+      "front": "Efectos del Orden (4)",
+      "back": "(1) POTESTAD SACERDOTAL: poder de 'confeccionar' la Eucaristía, perdonar pecados, etc. (2) Gracia santificante (sacramento de vivos = gracia segunda). (3) Gracia sacramental: gracias actuales para desempeñar los deberes sacerdotales. (4) CARÁCTER indeleble de ministro de Dios. No se pierde jamás.",
+      "priority": "alta",
+      "tags": [
+        "orden"
+      ]
+    },
+    {
+      "id": "fc-234",
+      "chapterId": "cap17",
+      "front": "Definición de Matrimonio",
+      "back": "Sacramento que da a los esposos la gracia para amarse santamente y procrear y educar cristianamente a sus hijos, estableciendo entre los esposos una sagrada e indisoluble unión. Es también una institución de orden natural: contrato natural por el cual el varón y la mujer se unen legítimamente para la procreación de hijos, formando una inseparable unidad de vida.",
+      "priority": "alta",
+      "tags": [
+        "matrimonio"
+      ]
+    },
+    {
+      "id": "fc-235",
+      "chapterId": "cap17",
+      "front": "Etimología de 'matrimonio' y 'cónyuges'",
+      "back": "MATRIMONIO: del latín 'mater munus' = oficio de madre. CÓNYUGES: del verbo latino 'coniugo' = ambos forman una perfecta unidad y se encaminan al mismo fin.",
+      "priority": "media",
+      "tags": [
+        "matrimonio"
+      ]
+    },
+    {
+      "id": "fc-236",
+      "chapterId": "cap17",
+      "front": "Fin primario del Matrimonio",
+      "back": "La PROCREACIÓN Y EDUCACIÓN DE LA PROLE. Dios ha querido asociar a los hombres a la propagación de la especie humana. Cada ser humano que viene al mundo debe ser un servidor y adorador del verdadero Dios, por lo cual la procreación va perfeccionada por la educación cristiana de los hijos (cuidado del alma y del cuerpo).",
+      "priority": "alta",
+      "tags": [
+        "matrimonio"
+      ]
+    },
+    {
+      "id": "fc-237",
+      "chapterId": "cap17",
+      "front": "Fines secundarios del Matrimonio (3)",
+      "back": "(1) La satisfacción del corazón (inclinación natural a unirse en comunidad de vida y amor). (2) La asistencia mutua de los esposos. (3) El remedio para las pasiones (la flaqueza de la naturaleza caída halla fortaleza para ordenar las pasiones de la carne). Los secundarios están subordinados al primario.",
+      "priority": "alta",
+      "tags": [
+        "matrimonio"
+      ]
+    },
+    {
+      "id": "fc-238",
+      "chapterId": "cap17",
+      "front": "Materia y forma del Matrimonio",
+      "back": "MATERIA: los mismos contrayentes y la mutua entrega y aceptación de sus cuerpos, en orden a la procreación de los hijos. FORMA: las palabras por las cuales los esposos se aceptan en matrimonio. Por ejemplo: 'Yo... me entrego a ti por esposo/a, y prometo serte fiel tanto en la prosperidad como en la adversidad, en la salud como en la enfermedad, amándote y respetándote durante toda mi vida'.",
+      "priority": "alta",
+      "tags": [
+        "matrimonio"
+      ]
+    },
+    {
+      "id": "fc-239",
+      "chapterId": "cap17",
+      "front": "Ministros del Matrimonio",
+      "back": "Los MISMOS CONTRAYENTES son los ministros: ellos proporcionan tanto la materia como la forma. EL SACERDOTE es el TESTIGO oficial y calificado de la Iglesia que, con su presencia, autoriza el acto. Esta presencia es necesaria, pues de lo contrario el sacramento sería NULO.",
+      "priority": "alta",
+      "tags": [
+        "matrimonio"
+      ]
+    },
+    {
+      "id": "fc-240",
+      "chapterId": "cap17",
+      "front": "Sujeto del Matrimonio (condiciones)",
+      "back": "Todo varón o mujer que no esté impedido y quiera libremente contraerlo. Condiciones: (1) Al menos uno de los contrayentes debe estar bautizado y ambos tener intención de casarse por la Iglesia. (2) No estar afectados por impedimentos dirimentes. (3) Estar en gracia de Dios para recibir el sacramento fructuosamente.",
+      "priority": "alta",
+      "tags": [
+        "matrimonio"
+      ]
+    },
+    {
+      "id": "fc-241",
+      "chapterId": "cap17",
+      "front": "Diferencia: impedimentos dirimentes vs impedientes",
+      "back": "DIRIMENTES: invalidan y hacen NULO el matrimonio. Algunos pueden ser dispensados por la Iglesia con justa causa. IMPEDIENTES: no invalidan pero hacen ILÍCITO, desprovisto de gracia y pecaminoso el matrimonio. También pueden tener dispensa eclesiástica.",
+      "priority": "alta",
+      "tags": [
+        "matrimonio"
+      ]
+    },
+    {
+      "id": "fc-242",
+      "chapterId": "cap17",
+      "front": "Impedimentos dirimentes principales (8)",
+      "back": "(1) PARENTESCO natural o consanguinidad. (2) VÍNCULO CONYUGAL preexistente. (3) FUERZA o miedo. (4) DISPARIDAD DE CULTO (católico con no bautizado). (5) EDAD inadecuada. (6) IMPOTENCIA (no esterilidad). (7) ORDEN SAGRADO. (8) VOTO SOLEMNE.",
+      "priority": "alta",
+      "tags": [
+        "matrimonio"
+      ]
+    },
+    {
+      "id": "fc-243",
+      "chapterId": "cap17",
+      "front": "Impedimentos impedientes principales (2)",
+      "back": "(1) VOTO SIMPLE de castidad: haber formulado voto simple de no casarse, recibir el Orden o abrazar el estado religioso. (2) MATRIMONIO MIXTO: matrimonio entre un católico y un bautizado no católico. Necesita permiso expreso de la autoridad eclesiástica.",
+      "priority": "media",
+      "tags": [
+        "matrimonio"
+      ]
+    },
+    {
+      "id": "fc-244",
+      "chapterId": "cap17",
+      "front": "Las 2 propiedades esenciales del Matrimonio",
+      "back": "(1) UNIDAD: exige la unión de un solo hombre con una sola mujer. La poligamia (un hombre con varias) y la poliandria (una mujer con varios) atentan contra esto. También el 'matrimonio igualitario'. (2) INDISOLUBILIDAD: el vínculo solo puede deshacerlo la muerte. Fundamentos: divino (designio de Dios), legal-eclesiástico (CIC canon 1141), natural y pacto libre.",
+      "priority": "alta",
+      "tags": [
+        "matrimonio"
+      ]
+    },
+    {
+      "id": "fc-245",
+      "chapterId": "cap17",
+      "front": "Divorcio absoluto vs separación canónica vs nulidad",
+      "back": "DIVORCIO ABSOLUTO o vincular: romper el vínculo y contraer nuevas nupcias. ATENTA contra ley divina, eclesiástica, natural y el pacto libre. Es PECADO GRAVÍSIMO. SEPARACIÓN CANÓNICA: por causas graves la Iglesia 'tolera' la separación temporal o perpetua, SIN romper el vínculo (no pueden contraer nuevo matrimonio). NULIDAD: si el matrimonio fue nulo desde el principio por algún impedimento, la Iglesia DECLARA que nunca hubo matrimonio. La Iglesia NO ANULA un matrimonio válido: declara que no lo había.",
+      "priority": "alta",
+      "tags": [
+        "matrimonio"
+      ]
+    },
+    {
+      "id": "fc-246",
+      "chapterId": "cap17",
+      "front": "Efectos del Matrimonio (5)",
+      "back": "(1) Gracia SANTIFICANTE (sacramento de vivos = gracia segunda). (2) Gracia SACRAMENTAL: gracias actuales para cumplir los deberes conyugales. (3) Vínculo matrimonial INDISOLUBLE. (4) Derechos y deberes recíprocos entre los cónyuges. (5) Legitimidad de los hijos.",
+      "priority": "alta",
+      "tags": [
+        "matrimonio"
+      ]
+    },
+    {
+      "id": "fc-247",
+      "chapterId": "cap17",
+      "front": "Paralelismo: vida natural vs vida cristiana",
+      "back": "NACE: Bautismo. CRECE: Confirmación. SE ALIMENTA: Eucaristía. SE CURA DE ENFERMEDADES (pecados): Penitencia. CONVALECE O MUERE: Unción. AUTORIDADES SOBRENATURALES: Orden Sagrado. DA HIJOS AL REINO: Matrimonio.",
+      "priority": "alta",
+      "tags": [
+        "sacramentos"
+      ]
     }
   ],
   "cheatsheet": [
@@ -1863,6 +2720,447 @@
         ]
       },
       "priority": "alta"
+    },
+    {
+      "id": "ch-030",
+      "chapterId": "cap15",
+      "type": "list",
+      "title": "Liturgia: definición y elementos",
+      "content": [
+        "DEFINICIÓN: el culto público que el Redentor rinde al Padre como Cabeza de la Iglesia, y el culto que la sociedad de los fieles rinde a su Cabeza, y por medio de ella al Padre eterno",
+        "ETIMOLOGÍA: del griego leitourgía = 'obra o quehacer público', 'servicio a favor del pueblo'",
+        "EN LA TRADICIÓN: 'la Iglesia toma parte en la obra de Dios'",
+        "TRES ELEMENTOS ESENCIALES: (1) signos sensibles instituidos por Cristo o la Iglesia, (2) signos eficaces de lo que significan, (3) ordenados a la santificación de los hombres y a la gloria de Dios",
+        "EUCARISTÍA: plenitud de los sacramentos, ápice de la santificación del hombre y glorificación de Dios. La Misa es el centro de toda la liturgia"
+      ],
+      "priority": "alta"
+    },
+    {
+      "id": "ch-031",
+      "chapterId": "cap15",
+      "type": "comparison",
+      "title": "Sagrado vs profano",
+      "content": {
+        "items": [
+          {
+            "label": "SAGRADO",
+            "description": "Lo distinto, separado del común. Lo que se distingue de lo profano"
+          },
+          {
+            "label": "PROFANO",
+            "description": "Del latín pro (fuera) + fanum (templo). Lo que está 'fuera' del santuario. NO significa malo"
+          },
+          {
+            "label": "PROFANAR",
+            "description": "Tomar lo sagrado como si fuera profano. Es peyorativo. Ej: profanar el matrimonio, las elecciones, los derechos humanos"
+          },
+          {
+            "label": "Cuatro cuestiones de la celebración litúrgica",
+            "description": "(a) quién celebra, (b) cómo, (c) cuándo, (d) dónde"
+          }
+        ]
+      },
+      "priority": "alta"
+    },
+    {
+      "id": "ch-032",
+      "chapterId": "cap16",
+      "type": "list",
+      "title": "Sacramentos: definición y elementos",
+      "content": [
+        "DEFINICIÓN: signos sensibles y eficaces de la gracia instituidos por NSJC y administrados por la Iglesia para nuestra salvación",
+        "ELEMENTOS ESENCIALES: (1) deben ser signos SENSIBLES, (2) deben ser EFICACES (producen la gracia), (3) deben ser de INSTITUCIÓN DIVINA",
+        "MATERIA: la cosa sensible que se emplea (ej. agua en Bautismo)",
+        "FORMA: las palabras que se pronuncian al administrarlo",
+        "San Agustín: 'Únese la palabra (forma) al elemento (materia) y se hace el sacramento'",
+        "MINISTRO: persona que administra el sacramento en nombre de Cristo. Ordinarios = los que tienen el Orden (excepto Matrimonio). Extraordinarios = los que pueden administrarlos excepcionalmente",
+        "SUJETO: el ser humano vivo y con capacidad. Las mujeres no pueden recibir el Orden; los niños sin uso de razón no pueden recibir Penitencia ni Unción"
+      ],
+      "priority": "alta"
+    },
+    {
+      "id": "ch-033",
+      "chapterId": "cap16",
+      "type": "comparison",
+      "title": "Ex opere operato vs Opus operantis",
+      "content": {
+        "items": [
+          {
+            "label": "EX OPERE OPERATO",
+            "description": "'Por la obra obrada'. La gracia sacramental se produce por el signo válidamente realizado, NO por la disposición subjetiva del que lo recibe o administra. NO es magia ni causalidad mecánica"
+          },
+          {
+            "label": "OPUS OPERANTIS",
+            "description": "'La obra del que obra'. La disposición subjetiva del que recibe el sacramento. NO es causa de la gracia, sino CONDICIÓN INDISPENSABLE (sine qua non) para que sea conferida. De ella depende la MEDIDA de la gracia"
+          }
+        ]
+      },
+      "priority": "alta"
+    },
+    {
+      "id": "ch-034",
+      "chapterId": "cap16",
+      "type": "list",
+      "title": "Tres efectos de los sacramentos",
+      "content": [
+        "GRACIA SANTIFICANTE: 1ª justificación (Bautismo), 2ª (aumento, ej. Eucaristía), 3ª (devuelve la perdida por pecado mortal, ej. Penitencia)",
+        "GRACIA SACRAMENTAL: gracia propia y actual de cada sacramento, da auxilios para el fin específico que cada uno persigue",
+        "CARÁCTER SACRAMENTAL: sello indeleble en el alma. Solo en BAUTISMO, CONFIRMACIÓN y ORDEN. Por eso solo se reciben UNA VEZ EN LA VIDA"
+      ],
+      "priority": "alta"
+    },
+    {
+      "id": "ch-035",
+      "chapterId": "cap16",
+      "type": "table",
+      "title": "Los 7 sacramentos: clasificaciones",
+      "content": {
+        "headers": [
+          "Clasificación",
+          "Sacramentos"
+        ],
+        "rows": [
+          [
+            "INICIACIÓN cristiana",
+            "Bautismo, Confirmación, Eucaristía"
+          ],
+          [
+            "CURACIÓN",
+            "Penitencia, Unción de los enfermos"
+          ],
+          [
+            "SERVICIO de la comunidad",
+            "Orden Sagrado, Matrimonio"
+          ],
+          [
+            "De MUERTOS (quitan la muerte del alma)",
+            "Bautismo, Penitencia"
+          ],
+          [
+            "De VIVOS (requieren estar en gracia, dan aumento)",
+            "Los otros 5"
+          ],
+          [
+            "Imprimen CARÁCTER (1 sola vez)",
+            "Bautismo, Confirmación, Orden"
+          ]
+        ]
+      },
+      "priority": "alta",
+      "mnemonic": "BCE-PUOM (orden tradicional). De vivos: el Bautismo y la Penitencia 'matan la muerte del alma'"
+    },
+    {
+      "id": "ch-036",
+      "chapterId": "cap17",
+      "type": "table",
+      "title": "Cuadro comparativo de los 7 sacramentos (parte 1: materia, forma, ministro)",
+      "content": {
+        "headers": [
+          "Sacramento",
+          "Materia",
+          "Ministro ord."
+        ],
+        "rows": [
+          [
+            "BAUTISMO",
+            "Agua + 'Yo te bautizo en el Nombre del Padre, del Hijo y del Espíritu Santo'",
+            "Sacerdote"
+          ],
+          [
+            "CONFIRMACIÓN",
+            "Santo Crisma + imposición de manos + unción en frente",
+            "Obispo"
+          ],
+          [
+            "EUCARISTÍA",
+            "Pan de trigo y vino de vid + palabras de la consagración",
+            "Obispo o Presbítero"
+          ],
+          [
+            "PENITENCIA",
+            "Actos del penitente (contrición + confesión + satisfacción) + absolución",
+            "Obispo o Presbítero"
+          ],
+          [
+            "UNCIÓN",
+            "Óleo de los enfermos + unciones en cruz + 'Por esta santa Unción...'",
+            "Obispo o Presbítero"
+          ],
+          [
+            "ORDEN SAGRADO",
+            "Imposición de manos + palabras del rito esencial",
+            "Obispo"
+          ],
+          [
+            "MATRIMONIO",
+            "Los contrayentes + entrega y aceptación mutua + 'Yo... me entrego a ti...'",
+            "Los contrayentes (sacerdote = testigo)"
+          ]
+        ]
+      },
+      "priority": "alta"
+    },
+    {
+      "id": "ch-037",
+      "chapterId": "cap17",
+      "type": "table",
+      "title": "Cuadro comparativo (parte 2: sujeto, frecuencia, carácter)",
+      "content": {
+        "headers": [
+          "Sacramento",
+          "Sujeto",
+          "Frecuencia"
+        ],
+        "rows": [
+          [
+            "BAUTISMO",
+            "No bautizado",
+            "ÚNICA VEZ (carácter)"
+          ],
+          [
+            "CONFIRMACIÓN",
+            "Bautizado/a",
+            "ÚNICA VEZ (carácter)"
+          ],
+          [
+            "EUCARISTÍA",
+            "Bautizado/a en gracia",
+            "Diaria (al menos 1/año)"
+          ],
+          [
+            "PENITENCIA",
+            "Bautizado/a en pecado",
+            "Necesidad (al menos 1/año)"
+          ],
+          [
+            "UNCIÓN",
+            "Bautizado/a en peligro de muerte",
+            "Una o varias (cada peligro)"
+          ],
+          [
+            "ORDEN",
+            "Varón bautizado",
+            "Una vez / 3 grados (carácter)"
+          ],
+          [
+            "MATRIMONIO",
+            "Bautizado/a, soltero/a o viudo/a",
+            "Una o varias (si es soltero/a o viudo/a)"
+          ]
+        ]
+      },
+      "priority": "alta"
+    },
+    {
+      "id": "ch-038",
+      "chapterId": "cap17",
+      "type": "list",
+      "title": "BAUTISMO - Síntesis",
+      "content": [
+        "DEFINICIÓN: primero y más necesario; nos hace cristianos",
+        "MATERIA: agua verdadera y natural. FORMA: 'Yo te bautizo en el nombre del Padre, del Hijo y del Espíritu Santo'",
+        "MINISTRO: ordinario = sacerdote. EXTRAORDINARIO en peligro de muerte: cualquier persona con intención",
+        "EFECTOS: (1) quita pecado original, (2) perdona penas, (3) da gracia santificante, virtudes y dones, (4) imprime CARÁCTER, (5) da derecho a sacramentos, (6) obliga a leyes de la Iglesia",
+        "NECESIDAD: con NECESIDAD DE MEDIO. Sin él, no hay vida divina en el alma",
+        "BAUTISMO DE SANGRE: mártires no bautizados",
+        "BAUTISMO DE DESEO: quien desea no obstante ser bautizado y no puede"
+      ],
+      "priority": "alta"
+    },
+    {
+      "id": "ch-039",
+      "chapterId": "cap17",
+      "type": "list",
+      "title": "CONFIRMACIÓN - Síntesis",
+      "content": [
+        "DEFINICIÓN: gracia especial del Espíritu Santo que nos incorpora más a la Iglesia y robustece para difundir la fe como testigos de Cristo",
+        "MATERIA: SANTO CRISMA + imposición de manos + unción en cruz en la frente",
+        "FORMA: 'Recibe por esta señal el Don del Espíritu Santo'",
+        "MINISTRO: ordinario = OBISPO. Extraordinario = sacerdote delegado",
+        "EFECTOS: (1) aumenta gracia santificante, (2) gracia sacramental para luchar y confesar la fe, (3) DONES del E.S. (sabiduría, ciencia, entendimiento, consejo, fortaleza, piedad, temor de Dios), (4) imprime CARÁCTER",
+        "NECESIDAD: NO de medio (como Bautismo) sino DE PRECEPTO. Quien la rechaza por desprecio peca gravemente"
+      ],
+      "priority": "alta"
+    },
+    {
+      "id": "ch-040",
+      "chapterId": "cap17",
+      "type": "list",
+      "title": "EUCARISTÍA - Síntesis",
+      "content": [
+        "DOBLE NATURALEZA: SACRAMENTO (signo que comunica gracia) y SACRIFICIO (ofrecimiento de Cristo a Dios)",
+        "MATERIA: pan de TRIGO (sin levadura) y vino de VID (con gotas de agua)",
+        "FORMA: 'Tomad y comed... esto es mi Cuerpo... Tomad y bebed... éste es el cáliz de mi Sangre, Sangre de la Alianza nueva y eterna'",
+        "MINISTRO: el sacerdote, in persona Christi. Solo él puede consagrar",
+        "SUJETO: bautizado en gracia (sin pecado mortal). Ayuno eucarístico de 1 hora",
+        "EFECTOS: (1) fuente de la gracia, (2) gracia sacramental (caridad), (3) alimenta el alma, (4) PERDONA pecados VENIALES, (5) preserva de mortales, (6) prenda de RESURRECCIÓN y gloria eterna",
+        "NECESIDAD: por precepto: comulgar al menos UNA VEZ AL AÑO y en peligro de muerte"
+      ],
+      "priority": "alta"
+    },
+    {
+      "id": "ch-041",
+      "chapterId": "cap17",
+      "type": "list",
+      "title": "MISA - Sacrificio: identidad y diferencias con la Cruz",
+      "content": [
+        "DEFINICIÓN: el verdadero Sacrificio del Cuerpo y Sangre de Cristo, ofrecido bajo las especies de pan y vino, en MEMORIA y RENOVACIÓN del Sacrificio de la Cruz",
+        "TRANSUBSTANCIACIÓN: toda la sustancia del pan se convierte en el Cuerpo, y toda la sustancia del vino en su Sangre. Quedan los accidentes (color, sabor, etc.) sostenidos milagrosamente",
+        "CONCOMITANCIA: por la Resurrección y la unión hipostática, está Jesucristo entero (Dios y Hombre) en cada especie",
+        "IDENTIDAD con la CRUZ: misma víctima, mismo sacerdote (Cristo), mismo fin",
+        "TRES DIFERENCIAS ACCIDENTALES: (1) forma: cruenta vs INCRUENTA, (2) ministro: Cristo en persona vs Cristo en la persona del sacerdote, (3) en la Cruz nos MERECIÓ la redención, en la Misa nos la APLICA",
+        "4 FINES de la Misa: LATRÉUTICO (adoración), EUCARÍSTICO (acción de gracias), EXPIATORIO (propiciatorio), IMPETRATORIO (súplica)",
+        "VALOR: INFINITO (es acción de Cristo). FRUTOS: limitados por la finitud del que recibe"
+      ],
+      "priority": "alta",
+      "mnemonic": "Fines: LEEI"
+    },
+    {
+      "id": "ch-042",
+      "chapterId": "cap17",
+      "type": "list",
+      "title": "PARTES de la Santa Misa (4 grandes secciones)",
+      "content": [
+        "(a) RITO DE ENTRADA: procesión, introito, beso al Altar, incensación, señal de la cruz, rito penitencial, Gloria, oración colecta",
+        "(b) LITURGIA DE LA PALABRA: 1ª Lectura (AT), canto interleccional, 2ª Lectura (Apóstoles), Evangelio (solo lo lee el sacerdote o diácono), Homilía, Profesión de Fe (Credo), Oración Universal",
+        "(c) LITURGIA DE LA EUCARISTÍA: Ofertorio, Anáfora o Plegaria Eucarística (Prefacio, Santo, Epíclesis, Consagración, Anámnesis, Ofrenda, Intercesiones, Doxología), Rito de la Comunión (Padrenuestro, Rito de la paz, fracción, inmixión, Agnus Dei, comunión)",
+        "(d) RITOS DE CONCLUSIÓN: abluciones, oración postcomunión, saludo y bendición, despedida ('Hermanos, la Misa ha terminado...')",
+        "Etimología: 'misa' viene del latín missa = envío. La celebración termina pero la MISIÓN comienza: llevar el Evangelio al mundo"
+      ],
+      "priority": "media"
+    },
+    {
+      "id": "ch-043",
+      "chapterId": "cap17",
+      "type": "list",
+      "title": "PENITENCIA - Síntesis",
+      "content": [
+        "DEFINICIÓN: sacramento en el cual se perdonan, por absolución sacerdotal, todos los pecados cometidos después del Bautismo",
+        "MATERIA: actos del penitente (CONTRICIÓN + CONFESIÓN + SATISFACCIÓN). FORMA: palabras de la absolución (CATIC 1449)",
+        "MINISTRO: el SACERDOTE, con SIGILO SACRAMENTAL absoluto (no puede revelar nada, ni después de la muerte del penitente)",
+        "EFECTOS: (1) reconcilia con Dios, (2) perdona pecados mortales y veniales, (3) perdona castigo eterno por mortales, (4) perdona AL MENOS PARTE del castigo temporal, (5) devuelve méritos perdidos, (6) gracia sacramental: fortalece contra caídas",
+        "5 CONDICIONES para una buena confesión: (1) examen, (2) contrición, (3) propósito de no pecar, (4) confesar todos los pecados, (5) cumplir penitencia",
+        "CONTRICIÓN PERFECTA: dolor de haber ofendido a Dios por amor a Él",
+        "ATRICIÓN (imperfecta): dolor por temor al castigo o pérdida del cielo",
+        "NECESIDAD: DE MEDIO para los que pecaron mortalmente. DE PRECEPTO: confesarse al menos 1 vez al año"
+      ],
+      "priority": "alta",
+      "mnemonic": "Condiciones: Examen-Dolor-Propósito-Confesar-Penitencia"
+    },
+    {
+      "id": "ch-044",
+      "chapterId": "cap17",
+      "type": "list",
+      "title": "UNCIÓN DE LOS ENFERMOS - Síntesis",
+      "content": [
+        "DEFINICIÓN: sacramento que se administra a los enfermos de cierta gravedad, para darles la salud del alma y aún del cuerpo si conviene al alma",
+        "MATERIA: aceite de oliva bendecido por el obispo el Jueves Santo (óleo de los enfermos), unciones en cruz",
+        "FORMA: 'Por esta santa Unción y su bondadosa misericordia te ayude el Señor con la gracia del E.S., para que te libre de tus pecados, te conceda la salvación y te conforte en tu enfermedad'",
+        "MINISTRO: SACERDOTE, ordinariamente el párroco. En urgencia: cualquier sacerdote",
+        "SUJETO: bautizado con uso de razón en peligro de muerte por enfermedad o vejez. SE PUEDE REPETIR si recae",
+        "EFECTOS sobre el CUERPO: suaviza sufrimientos, devuelve salud si conviene al alma. NO es milagroso",
+        "EFECTOS sobre el ALMA: gracia santificante y sacramental, perdona veniales, puede perdonar mortales (en trance de muerte sin poder confesarse), borra RELIQUIAS DEL PECADO, fortalece para la última lucha",
+        "NECESIDAD: NO de medio. Sí de precepto. A nadie es lícito despreciarla"
+      ],
+      "priority": "alta"
+    },
+    {
+      "id": "ch-045",
+      "chapterId": "cap17",
+      "type": "list",
+      "title": "ORDEN SAGRADO - Síntesis",
+      "content": [
+        "DEFINICIÓN: sacramento que da potestad y gracia para los sagrados ministerios, e imprime CARÁCTER de ministro de Dios",
+        "DIFERENCIA con los demás: instituido para la santificación de la COMUNIDAD (no individual). Y se recibe LIBREMENTE por vocación",
+        "MATERIA: imposición de manos del ministro. FORMA: palabras del rito esencial",
+        "MINISTRO: el OBISPO (por derecho propio)",
+        "SUJETO: VARÓN bautizado y confirmado, en gracia, edad y ciencia adecuadas. Debe haber VOCACIÓN (llamado de Dios)",
+        "TRES PODERES sacerdotales: (1) consagrar la Eucaristía y ofrecer la Misa, (2) perdonar pecados, (3) poder sobre el Cuerpo Místico (guiar, iluminar, santificar)",
+        "EFECTOS: (1) potestad sacerdotal, (2) gracia santificante (gracia segunda), (3) gracia sacramental, (4) CARÁCTER indeleble"
+      ],
+      "priority": "alta"
+    },
+    {
+      "id": "ch-046",
+      "chapterId": "cap17",
+      "type": "list",
+      "title": "MATRIMONIO - Síntesis",
+      "content": [
+        "DEFINICIÓN: sacramento que da gracia a los esposos para amarse santamente y educar cristianamente a sus hijos. ES TAMBIÉN orden natural (contrato natural)",
+        "ETIMOLOGÍA: matrimonio = mater munus (oficio de madre); cónyuges = coniugo (unidad)",
+        "FIN PRIMARIO: PROCREACIÓN Y EDUCACIÓN de la prole",
+        "FINES SECUNDARIOS: (1) satisfacción del corazón, (2) asistencia mutua, (3) remedio para las pasiones",
+        "MATERIA: los contrayentes mismos y la mutua entrega. FORMA: las palabras de aceptación",
+        "MINISTROS: los CONTRAYENTES. El sacerdote es testigo oficial necesario para la validez",
+        "SUJETO: varón o mujer no impedido, con intención libre de casarse por la Iglesia",
+        "PROPIEDADES: UNIDAD (un hombre con una mujer) e INDISOLUBILIDAD (solo la muerte deshace el vínculo)"
+      ],
+      "priority": "alta"
+    },
+    {
+      "id": "ch-047",
+      "chapterId": "cap17",
+      "type": "table",
+      "title": "MATRIMONIO - Impedimentos",
+      "content": {
+        "headers": [
+          "Tipo",
+          "Efecto",
+          "Ejemplos"
+        ],
+        "rows": [
+          [
+            "DIRIMENTES",
+            "Hacen NULO el matrimonio. Algunos pueden dispensarse",
+            "Parentesco, vínculo previo, fuerza/miedo, disparidad de culto, edad, impotencia, Orden, voto solemne"
+          ],
+          [
+            "IMPEDIENTES",
+            "Lo hacen ILÍCITO (no nulo) y pecaminoso",
+            "Voto simple de castidad, matrimonio mixto"
+          ]
+        ]
+      },
+      "priority": "alta"
+    },
+    {
+      "id": "ch-048",
+      "chapterId": "cap17",
+      "type": "comparison",
+      "title": "MATRIMONIO - Divorcio, separación, nulidad",
+      "content": {
+        "items": [
+          {
+            "label": "DIVORCIO ABSOLUTO (vincular)",
+            "description": "Ruptura del vínculo + nuevas nupcias. ATENTA contra ley divina, eclesiástica, natural y pacto. PECADO GRAVÍSIMO. Impide la Eucaristía a los divorciados que cohabitan con otra persona"
+          },
+          {
+            "label": "SEPARACIÓN CANÓNICA",
+            "description": "Por causas graves la Iglesia 'tolera' separación temporal o perpetua, SIN romper el vínculo. Ningún esposo puede contraer nuevo matrimonio"
+          },
+          {
+            "label": "NULIDAD",
+            "description": "Si el matrimonio fue nulo desde el principio por algún impedimento. La Iglesia DECLARA que no hubo matrimonio. NO ANULA un matrimonio válido: declara que no lo había"
+          }
+        ]
+      },
+      "priority": "alta"
+    },
+    {
+      "id": "ch-049",
+      "chapterId": "cap17",
+      "type": "list",
+      "title": "Paralelismo: vida natural y vida cristiana (los 7 sacramentos)",
+      "content": [
+        "NACE → BAUTISMO",
+        "CRECE → CONFIRMACIÓN",
+        "SE ALIMENTA → EUCARISTÍA",
+        "SE CURA DE ENFERMEDADES (pecados) → PENITENCIA",
+        "CONVALECE O MUERE → UNCIÓN DE LOS ENFERMOS",
+        "AUTORIDADES SOBRENATURALES → ORDEN SAGRADO",
+        "DA HIJOS AL REINO DE DIOS → MATRIMONIO"
+      ],
+      "priority": "alta"
     }
   ],
   "questions": [
@@ -2208,6 +3506,142 @@
       "type": "corta",
       "question": "¿Cuál es la relación entre el Espíritu Santo y la Iglesia?",
       "answer": "El Espíritu Santo es el principio de la santificación de la Iglesia. La Iglesia no nace de acción humana alguna, es creación de Cristo, y su santificación es producida por el Espíritu Santo, que habita en ella. San Agustín lo expresa diciendo que el Espíritu Santo es el principio vital interno, el alma invisible de la Iglesia visible.",
+      "priority": "alta"
+    },
+    {
+      "id": "q-044",
+      "chapterId": "cap15",
+      "type": "corta",
+      "question": "Defina la Liturgia.",
+      "answer": "La Liturgia es el culto público que nuestro Redentor rinde al Padre como Cabeza de la Iglesia, y es el culto que la sociedad de los fieles rinde a su Cabeza, y, por medio de ella, al Padre eterno. La palabra liturgia, del griego leitourgía, significa 'obra o quehacer público', 'servicio de parte de o a favor del pueblo'. En la Tradición cristiana significa que la Iglesia toma parte en 'la obra de Dios'.",
+      "priority": "alta"
+    },
+    {
+      "id": "q-045",
+      "chapterId": "cap15",
+      "type": "corta",
+      "question": "Distinga entre lo sagrado y lo profano.",
+      "answer": "Lo SAGRADO es lo distinto, lo separado del común; es lo que se distingue de aquello que se llama 'profano'. Profano, del latín pro (lo que está fuera) más fanum (templo), es lo que está 'fuera' de lo estrictamente sagrado, pero NO significa malo. PROFANAR, en cambio, sí es peyorativo, porque significa tomar lo sagrado como si fuera profano. También es profanar el considerar sagrado a lo que no lo es, por ejemplo el trabajo, las elecciones, los derechos humanos, los ídolos del rock o del deporte.",
+      "priority": "alta"
+    },
+    {
+      "id": "q-046",
+      "chapterId": "cap16",
+      "type": "corta",
+      "question": "Defina sacramento y enumere sus tres elementos esenciales.",
+      "answer": "Los sacramentos son signos sensibles y eficaces de la gracia instituidos por Nuestro Señor Jesucristo y administrados por la Iglesia para nuestra salvación. Sus tres elementos esenciales son: (1) deben ser signos sensibles, perceptibles por los sentidos; (2) deben ser eficaces, es decir, que produzcan la gracia; (3) deben ser de institución divina, es decir, instituidos por Jesucristo.",
+      "priority": "alta"
+    },
+    {
+      "id": "q-047",
+      "chapterId": "cap16",
+      "type": "desarrollo",
+      "question": "Explique las nociones de 'ex opere operato' y 'opus operantis'.",
+      "answer": "Los teólogos dicen que los sacramentos actúan EX OPERE OPERATO, esto es, obran en virtud del rito sacramental que se realiza. Esto implica negativamente que la gracia sacramental no se confiere por la acción subjetiva del que recibe o administra el sacramento, y positivamente que esa gracia sacramental es producida por el signo sacramental válidamente realizado. NO es causalidad mágica ni mecánica. La doctrina católica no excluye el OPUS OPERANTIS, que es la obra del que obra, es decir, la disposición subjetiva del que recibe el sacramento. Cuando son adultos los que reciben el sacramento, esto se exige expresamente. La disposición subjetiva no es causa de la gracia, sino únicamente condición indispensable (sine qua non, 'sin la cual no') para que ésta sea conferida; es causa dispositiva, no eficiente. Del grado de esta disposición subjetiva depende la medida de la gracia producida ex opere operato.",
+      "priority": "alta"
+    },
+    {
+      "id": "q-048",
+      "chapterId": "cap16",
+      "type": "corta",
+      "question": "Mencione los efectos de los sacramentos.",
+      "answer": "Los efectos son tres: (1) la GRACIA SANTIFICANTE, que en algunos casos es primera justificación (ej. Bautismo), en otros aumento de gracia (ej. Eucaristía) o devolución de la gracia perdida por pecado mortal (ej. Penitencia). (2) La GRACIA SACRAMENTAL: cada sacramento otorga una gracia propia y actual, llamada gracia sacramental, que da los auxilios especiales para obtener el fin específico de cada sacramento. (3) El CARÁCTER SACRAMENTAL: un sello o impresión invisible, una marca imborrable o indeleble que algunos sacramentos imprimen en el alma. Solo lo imprimen el Bautismo, la Confirmación y el Orden Sagrado, y por eso solo pueden recibirse una vez en la vida.",
+      "priority": "alta"
+    },
+    {
+      "id": "q-049",
+      "chapterId": "cap16",
+      "type": "corta",
+      "question": "Enumere los siete sacramentos y las tres divisiones principales.",
+      "answer": "Los siete sacramentos instituidos por Cristo son: (1) Bautismo, (2) Confirmación, (3) Eucaristía, (4) Penitencia o Reconciliación, (5) Unción de los enfermos, (6) Orden Sagrado y (7) Matrimonio. Una primera división los clasifica en: sacramentos de INICIACIÓN cristiana (Bautismo, Confirmación y Eucaristía), sacramentos de CURACIÓN (Penitencia y Unción de los enfermos), y sacramentos AL SERVICIO DE LA COMUNIDAD (Orden Sagrado y Matrimonio). Otra clasificación distingue los sacramentos DE MUERTOS, que son el Bautismo y la Penitencia porque quitan la muerte del alma producida por el pecado, y los sacramentos DE VIVOS, que son los demás y para recibirlos requieren estar ya en gracia, sin pecado mortal.",
+      "priority": "alta"
+    },
+    {
+      "id": "q-050",
+      "chapterId": "cap17",
+      "type": "desarrollo",
+      "question": "Explique el sacramento del Bautismo: definición, materia, forma, ministro, efectos y necesidad.",
+      "answer": "El BAUTISMO es el primero y más necesario de los sacramentos, en el que se nos da la gracia y el carácter de cristianos; es el sacramento que nos hace cristianos. Su MATERIA es el agua verdadera y natural, derramando agua sobre el que se bautiza. Su FORMA son las palabras del bautizante: 'Yo te bautizo, NN, en el nombre del Padre y del Hijo y del Espíritu Santo', que se deben pronunciar al mismo tiempo que se emplea la materia. El MINISTRO ordinario es el sacerdote (particularmente el párroco). El extraordinario, en peligro de muerte ante la imposibilidad de obtener un sacerdote, puede ser cualquier persona, incluso un ateo, con tal de que tenga intención de hacerlo como lo hace la Iglesia. Sus EFECTOS son: quita el pecado original y todos los actuales que hubiera; perdona las penas temporal y eterna debidas por los pecados; da la gracia santificante, las virtudes teologales (fe, esperanza y caridad), las morales y los dones del Espíritu Santo; imprime CARÁCTER indeleble; nos da derecho a los demás sacramentos. Es necesario con NECESIDAD DE MEDIO: sin este sacramento el alma no posee la vida divina y por tanto no se salva.",
+      "priority": "alta"
+    },
+    {
+      "id": "q-051",
+      "chapterId": "cap17",
+      "type": "desarrollo",
+      "question": "Explique el sacramento de la Confirmación.",
+      "answer": "La CONFIRMACIÓN es el sacramento por el cual recibimos una gracia especial del Espíritu Santo que nos incorpora más perfectamente a la Iglesia y nos robustece para difundir y defender la fe con mayor fuerza como verdaderos testigos de Cristo. Su MATERIA es el santo crisma (mezcla de aceite de oliva y bálsamo bendecidos por el obispo el Jueves Santo) y la imposición de las manos del ministro en la cabeza del confirmando, junto con la crismación o unción en la frente en forma de cruz. Su FORMA: 'NN, recibe por esta señal el Don del Espíritu Santo'. El MINISTRO ordinario es el obispo; el extraordinario un sacerdote delegado para ello. El SUJETO es todo bautizado que aún no haya sido confirmado, y si es adulto debe tener la intención, estar en gracia y conocer la doctrina. Los EFECTOS son: aumenta la gracia santificante, da la gracia sacramental para luchar contra los enemigos del alma y confesar la fe, infunde los siete dones del Espíritu Santo (sabiduría, entendimiento, consejo, fortaleza, ciencia, piedad y temor de Dios) e imprime CARÁCTER. Su NECESIDAD no es absoluta como la del Bautismo, sino de precepto: la Iglesia manda que la reciba todo aquel que pueda hacerlo; quien por negligencia o desprecio no la recibe peca gravemente.",
+      "priority": "alta"
+    },
+    {
+      "id": "q-052",
+      "chapterId": "cap17",
+      "type": "corta",
+      "question": "Defina la Eucaristía como sacramento y mencione sus efectos.",
+      "answer": "La EUCARISTÍA como sacramento es aquel en el cual, por la admirable conversión de toda la sustancia del pan en el Cuerpo de Jesucristo y la del vino en su preciosa Sangre, se contiene real y sustancialmente el Cuerpo, la Sangre, el Alma y la Divinidad de Nuestro Señor Jesucristo, bajo las apariencias del pan y del vino, para nuestro fortalecimiento espiritual. Sus EFECTOS son: es fuente de la gracia (porque contiene a Jesucristo, autor y dador de la gracia); da la gracia sacramental, principalmente el aumento de la caridad; alimenta el alma; PERDONA los pecados VENIALES; preserva de los pecados mortales y aleja la debilidad espiritual; es prenda de RESURRECCIÓN y de la gloria eterna, según definió el Concilio de Trento.",
+      "priority": "alta"
+    },
+    {
+      "id": "q-053",
+      "chapterId": "cap17",
+      "type": "desarrollo",
+      "question": "Explique la diferencia entre la Eucaristía como sacramento y como sacrificio, y la relación entre el Sacrificio de la Misa y el de la Cruz.",
+      "answer": "La Eucaristía como SACRAMENTO es un signo sensible que tiene por objeto comunicar la gracia de Dios en provecho de los hombres; el fin del sacramento es alimentar espiritualmente. Como SACRIFICIO es el ofrecimiento de Jesucristo para reconocer a Dios como dueño, alabarlo, darle gracias, aplacarlo y rogarle; el fin del sacrificio es honrar a la Divinidad. La SANTA MISA es el verdadero Sacrificio del Cuerpo y de la Sangre de Jesucristo, ofrecido bajo las especies de pan y de vino, en MEMORIA y como RENOVACIÓN del Sacrificio de la Cruz. La identidad entre la Misa y la Cruz se da en que la víctima es la misma (Cristo), el sacerdote primario es el mismo (Cristo) y el fin es el mismo. Hay tres diferencias accidentales: PRIMERA, la forma de verificarse la inmolación, que en la Cruz fue cruenta y en la Misa es INCRUENTA; SEGUNDA, en el ministro: en la Cruz fue el mismo Jesucristo en persona, mientras que en la Misa es Jesucristo en la persona del sacerdote; TERCERA, en la Cruz Cristo nos MERECIÓ la redención, mientras que en la Misa nos APLICA esa redención. Por la transubstanciación, en virtud de las palabras de la Consagración, toda la sustancia del pan se convierte en el Cuerpo de Cristo y toda la sustancia del vino en su Sangre.",
+      "priority": "alta"
+    },
+    {
+      "id": "q-054",
+      "chapterId": "cap17",
+      "type": "corta",
+      "question": "Mencione los cuatro fines del Sacrificio de la Misa.",
+      "answer": "El sacrificio de la Misa se ofrece a Dios por cuatro fines: (1) el fin LATRÉUTICO o de ADORACIÓN: la Misa es un acto de adoración perfecto y verdaderamente digno de Dios; (2) el fin EUCARÍSTICO o de ACCIÓN DE GRACIAS: con la Misa se da a Dios el agradecimiento condigno por los beneficios recibidos; (3) el fin EXPIATORIO o PROPICIATORIO: por los méritos de Jesucristo, adquiridos en la Cruz y aplicados en la Misa, se aplaca y cesa la justa indignación divina contra el pecador; (4) el fin IMPETRATORIO o de SÚPLICA: el cristiano pide alcanzar nuevos favores de Dios.",
+      "priority": "alta"
+    },
+    {
+      "id": "q-055",
+      "chapterId": "cap17",
+      "type": "desarrollo",
+      "question": "Explique el sacramento de la Penitencia: definición, materia, forma, condiciones para una buena confesión y necesidad.",
+      "answer": "La PENITENCIA, Confesión o Reconciliación es el sacramento en el cual se perdonan, por medio de la absolución sacerdotal, todos los pecados cometidos después del Bautismo al pecador que, arrepentido de ellos, los confiesa sinceramente y tiene propósito de enmienda. Su MATERIA son los actos del penitente: contrición, confesión vocal y satisfacción. Su FORMA son las palabras de la absolución: 'Dios, Padre misericordioso, que reconcilió consigo al mundo... y yo te absuelvo de tus pecados en el nombre del Padre y del Hijo y del Espíritu Santo'. El MINISTRO es el sacerdote, que debe guardar el SIGILO SACRAMENTAL absoluto, no pudiendo revelar nunca, en ninguna circunstancia ni después de la muerte del penitente, lo tratado en la confesión. Las CINCO CONDICIONES para una buena confesión son: (1) examinar la conciencia, (2) dolerse de los pecados (contrición), (3) hacer firme propósito de no pecar en adelante, (4) confesar todos los pecados al sacerdote en forma humilde, breve, discreta y sincera, (5) querer cumplir la penitencia que el confesor imponga. Su NECESIDAD es de MEDIO o absoluta para todos los que han pecado mortalmente después del Bautismo; cuando no se puede recibir, debe suplírselo con un acto de contrición perfecta, con propósito de confesarse en cuanto se pueda. Es además necesaria con necesidad de PRECEPTO: hay obligación de confesarse al menos una vez al año y cuando hubiere peligro de muerte.",
+      "priority": "alta"
+    },
+    {
+      "id": "q-056",
+      "chapterId": "cap17",
+      "type": "corta",
+      "question": "Distinga contrición perfecta y atrición (contrición imperfecta).",
+      "answer": "La CONTRICIÓN (palabra que significa 'reducir a polvo un cuerpo duro') es un dolor del alma y detestación del pecado cometido, con el firme propósito de no volver a pecar. La CONTRICIÓN PERFECTA es el dolor de haber ofendido a Dios; nace de un perfecto amor a Dios. La CONTRICIÓN IMPERFECTA, también llamada ATRICIÓN, es un dolor 'más egoísta'. Sus motivos son el odio al pecado por ser esencialmente un mal o el temor a la justicia divina o a las malas consecuencias de los pecados, como por ejemplo la pérdida del cielo. De todos los actos del penitente, la contrición es el más necesario, sea perfecta o imperfecta. Sin contrición no hay perdón.",
+      "priority": "alta"
+    },
+    {
+      "id": "q-057",
+      "chapterId": "cap17",
+      "type": "corta",
+      "question": "Explique los efectos de la Unción de los Enfermos sobre el alma.",
+      "answer": "Los efectos sobre el alma son varios: (1) da la gracia santificante, ya que es sacramento de vivos y por tanto da la gracia segunda o aumento de gracia santificante; (2) da la gracia sacramental, es decir, gracias actuales propias del sacramento como alivio en el sufrimiento y fortaleza contra las tentaciones; (3) perdona los pecados veniales siempre que el enfermo tenga al menos atrición; (4) puede perdonar los pecados mortales: aunque principalmente es sacramento de vivos, secundariamente también lo es de muertos, de modo que si alguien está en trance de muerte y no puede confesarse, se le perdonan los pecados mortales con solo tener dolor de atrición; (5) BORRA LAS RELIQUIAS DEL PECADO, que son huellas dejadas por el pecado que se manifiestan en debilidades, desconfianza, temor a las tentaciones, angustia y ansiedad ante la muerte; (6) fortalece al enfermo para la última lucha espiritual, dándole fuerzas para obtener la perseverancia final y la eterna salvación.",
+      "priority": "alta"
+    },
+    {
+      "id": "q-058",
+      "chapterId": "cap17",
+      "type": "desarrollo",
+      "question": "Explique el sacramento del Orden Sagrado.",
+      "answer": "El ORDEN SAGRADO es un sacramento que da a quien lo recibe la potestad, es decir el poder y la gracia necesarios para desempeñar los sagrados ministerios, e imprime el CARÁCTER indeleble de ministro de Dios. Se diferencia de los demás sacramentos en cuanto a su fin y su necesidad: en cuanto al fin, los demás sacramentos fueron instituidos para la santificación INDIVIDUAL del que los recibe, mientras que el Orden y el Matrimonio fueron instituidos para la santificación de la COMUNIDAD; en cuanto a la necesidad, los demás sacramentos deben recibirse en cierto modo necesariamente, mientras que el Orden y el Matrimonio pueden recibirlos LIBREMENTE quienes se sientan llevados por vocación divina. Su MATERIA es la imposición de manos del ministro sobre el ordenando, y su FORMA son las palabras del rito esencial. Su MINISTRO es el OBISPO, por derecho propio. El SUJETO debe ser todo varón bautizado con intención de recibirlo; debe haber sido confirmado, hallarse en gracia, tener buenas costumbres, edad y ciencia adecuadas. Debe haber VOCACIÓN, un llamado de Dios percibido con claridad. Los TRES PODERES sacerdotales son: consagrar la Eucaristía y ofrecer el Sacrificio de la Misa, perdonar los pecados en nombre de Dios, y el poder sobre el Cuerpo Místico de Cristo. Sus EFECTOS son: la potestad sacerdotal, la gracia santificante (gracia segunda), la gracia sacramental, y el carácter indeleble que no se pierde jamás.",
+      "priority": "alta"
+    },
+    {
+      "id": "q-059",
+      "chapterId": "cap17",
+      "type": "desarrollo",
+      "question": "Explique el sacramento del Matrimonio: definición, fines, ministros y propiedades esenciales.",
+      "answer": "El MATRIMONIO es un sacramento que da a los esposos la gracia para amarse santamente y procrear y educar cristianamente a sus hijos, estableciendo entre ellos una sagrada e indisoluble unión. Es también una institución de orden natural: una especie de contrato natural por el cual el varón y la mujer se unen legítimamente para la procreación de hijos, formando una inseparable unidad de vida. La palabra matrimonio procede etimológicamente de mater munus (oficio de madre); cónyuges viene del verbo coniugo e indica que ambos forman una perfecta unidad. Su FIN PRIMARIO es la PROCREACIÓN Y EDUCACIÓN DE LA PROLE, ya que Dios ha querido asociar a los hombres a la propagación de la especie humana. Sus FINES SECUNDARIOS son: la satisfacción del corazón, la asistencia mutua de los esposos, y el remedio para las pasiones; los secundarios están subordinados al primario. Sus MINISTROS son los mismos contrayentes, quienes proporcionan tanto la materia (la mutua entrega y aceptación de los cuerpos) como la forma (las palabras de aceptación). El sacerdote, en la ceremonia, es el TESTIGO oficial y calificado de la Iglesia, y su presencia es necesaria pues de lo contrario el sacramento sería NULO. Sus dos PROPIEDADES esenciales son la UNIDAD (un solo hombre con una sola mujer; la poligamia, la poliandria y el llamado 'matrimonio igualitario' atentan contra esto) y la INDISOLUBILIDAD (el vínculo solo puede deshacerlo la muerte; el divorcio absoluto es un pecado gravísimo contra Dios).",
+      "priority": "alta"
+    },
+    {
+      "id": "q-060",
+      "chapterId": "cap17",
+      "type": "corta",
+      "question": "Distinga divorcio absoluto, separación canónica y nulidad del matrimonio.",
+      "answer": "El DIVORCIO ABSOLUTO o vincular consiste en romper el vínculo matrimonial y contraer nuevas nupcias; atenta contra la ley divina, la ley eclesiástica, la ley natural y el contrato celebrado por los cónyuges, siendo un pecado gravísimo. La SEPARACIÓN CANÓNICA se da cuando, por causas graves morales o físicas, se hace imposible o peligrosa la convivencia entre los cónyuges, y la Iglesia permite (o más bien tolera) la separación temporal o aun la perpetua, pero SIN romper el vínculo matrimonial; por tanto ninguno de los esposos puede contraer nuevo matrimonio. La NULIDAD del matrimonio se da cuando, si el matrimonio fue nulo desde el principio por algún impedimento, la autoridad eclesiástica declara que un matrimonio está viciado de nulidad desde su origen. Es un error creer que la Iglesia puede anular un matrimonio perfectamente contraído: la Iglesia no anula el matrimonio, simplemente juzga y sentencia que en determinados casos no hubo matrimonio.",
       "priority": "alta"
     }
   ]

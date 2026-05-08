@@ -84,4 +84,4 @@ export interface QuestionProgress {
 
 // === NAVEGACION ===
 
-export type ViewMode = 'flashcards' | 'chuleta' | 'preguntas' | 'stats';
+export type ViewMode = 'flashcards' | 'chuleta' | 'preguntas' | 'stats' | 'chat';
