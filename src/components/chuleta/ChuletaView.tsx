@@ -1,11 +1,46 @@
-import { useState } from 'react';
+import { useState, useEffect, useCallback } from 'react';
 import { useApp } from '../../context/AppContext';
 import { ChapterFilter } from '../layout/ChapterFilter';
 import { ChapterSection } from './ChapterSection';
 
 export function ChuletaView() {
-  const { content, selectedChapter } = useApp();
+  const { content, selectedChapter, setSelectedChapter } = useApp();
   const [showMnemonics, setShowMnemonics] = useState(true);
+
+  // Flechas para cambiar de capitulo
+  const goNext = useCallback(() => {
+    if (!content) return;
+    if (selectedChapter === 'todos') {
+      setSelectedChapter(content.chapters[0].id);
+      return;
+    }
+    const idx = content.chapters.findIndex((ch) => ch.id === selectedChapter);
+    if (idx < content.chapters.length - 1) {
+      setSelectedChapter(content.chapters[idx + 1].id);
+    }
+  }, [content, selectedChapter, setSelectedChapter]);
+
+  const goPrev = useCallback(() => {
+    if (!content) return;
+    if (selectedChapter === 'todos') return;
+    const idx = content.chapters.findIndex((ch) => ch.id === selectedChapter);
+    if (idx > 0) {
+      setSelectedChapter(content.chapters[idx - 1].id);
+    } else {
+      setSelectedChapter('todos');
+    }
+  }, [content, selectedChapter, setSelectedChapter]);
+
+  useEffect(() => {
+    const handler = (e: KeyboardEvent) => {
+      const tag = (e.target as HTMLElement).tagName;
+      if (tag === 'INPUT' || tag === 'SELECT' || tag === 'TEXTAREA') return;
+      if (e.code === 'ArrowRight') { e.preventDefault(); goNext(); }
+      if (e.code === 'ArrowLeft') { e.preventDefault(); goPrev(); }
+    };
+    window.addEventListener('keydown', handler);
+    return () => window.removeEventListener('keydown', handler);
+  }, [goNext, goPrev]);
 
   if (!content) return null;
 

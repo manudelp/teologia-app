@@ -1,4 +1,4 @@
-import { useMemo, useCallback, useState } from 'react';
+import { useMemo, useCallback, useState, useEffect } from 'react';
 import { useApp } from '../../context/AppContext';
 import { ChapterFilter } from '../layout/ChapterFilter';
 import { PriorityFilter } from '../layout/PriorityFilter';
@@ -6,8 +6,43 @@ import { QuestionCard } from './QuestionCard';
 import type { Priority } from '../../types';
 
 export function PreguntasView() {
-  const { content, selectedChapter, progress, setProgress } = useApp();
+  const { content, selectedChapter, setSelectedChapter, progress, setProgress } = useApp();
   const [priorityFilter, setPriorityFilter] = useState<Priority | 'todas'>('alta');
+
+  // Flechas para cambiar de capitulo
+  const goNext = useCallback(() => {
+    if (!content) return;
+    if (selectedChapter === 'todos') {
+      setSelectedChapter(content.chapters[0].id);
+      return;
+    }
+    const idx = content.chapters.findIndex((ch) => ch.id === selectedChapter);
+    if (idx < content.chapters.length - 1) {
+      setSelectedChapter(content.chapters[idx + 1].id);
+    }
+  }, [content, selectedChapter, setSelectedChapter]);
+
+  const goPrev = useCallback(() => {
+    if (!content) return;
+    if (selectedChapter === 'todos') return;
+    const idx = content.chapters.findIndex((ch) => ch.id === selectedChapter);
+    if (idx > 0) {
+      setSelectedChapter(content.chapters[idx - 1].id);
+    } else {
+      setSelectedChapter('todos');
+    }
+  }, [content, selectedChapter, setSelectedChapter]);
+
+  useEffect(() => {
+    const handler = (e: KeyboardEvent) => {
+      const tag = (e.target as HTMLElement).tagName;
+      if (tag === 'INPUT' || tag === 'SELECT' || tag === 'TEXTAREA') return;
+      if (e.code === 'ArrowRight') { e.preventDefault(); goNext(); }
+      if (e.code === 'ArrowLeft') { e.preventDefault(); goPrev(); }
+    };
+    window.addEventListener('keydown', handler);
+    return () => window.removeEventListener('keydown', handler);
+  }, [goNext, goPrev]);
 
   const filtered = useMemo(() => {
     if (!content) return [];
