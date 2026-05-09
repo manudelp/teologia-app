@@ -2,19 +2,13 @@ import type { ChuletaSection, TableData, ComparisonData } from '../../types';
 
 interface Props {
   section: ChuletaSection;
-  showMnemonics: boolean;
 }
 
-export function ChapterSection({ section, showMnemonics }: Props) {
+export function ChapterSection({ section }: Props) {
   return (
     <div className="chuleta-section mt-8 first:mt-0">
       <h3 className="font-serif text-lg sm:text-xl text-stone-800 dark:text-zinc-200 mb-3">{section.title}</h3>
       {renderContent(section)}
-      {showMnemonics && section.mnemonic && (
-        <div className="mt-4 px-4 py-3 bg-amber-50/50 dark:bg-amber-950/20 border-l-2 border-amber-400 dark:border-amber-600 rounded-r-lg">
-          <p className="font-serif italic text-sm text-amber-800 dark:text-amber-300">{section.mnemonic}</p>
-        </div>
-      )}
     </div>
   );
 }
@@ -66,8 +60,17 @@ function ListContent({ items }: { items: string[] }) {
           )}
           {group.header && group.children.length === 0 && !group.divider && (
             <div className="flex gap-3 text-sm leading-relaxed text-stone-700 dark:text-zinc-300">
-              <span className="text-amber-400 dark:text-amber-600 shrink-0 mt-0.5">&bull;</span>
-              <span>{group.header}</span>
+              {/^\d+\.\s/.test(group.header) ? (
+                <>
+                  <span className="text-amber-500 dark:text-amber-500 shrink-0 mt-0.5 font-medium tabular-nums w-5 text-right">{group.header.match(/^(\d+)\./)?.[1]}.</span>
+                  <span>{group.header.replace(/^\d+\.\s/, '')}</span>
+                </>
+              ) : (
+                <>
+                  <span className="text-amber-400 dark:text-amber-600 shrink-0 mt-0.5">&bull;</span>
+                  <span>{group.header}</span>
+                </>
+              )}
             </div>
           )}
           {group.children.length > 0 && (

@@ -1,73 +1,69 @@
-# React + TypeScript + Vite
+# App — Plataforma de Estudio
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Aplicación web para estudiar Teología. React + TypeScript + Vite + Tailwind.
 
-Currently, two official plugins are available:
+## Setup
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
-
-## React Compiler
-
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
-
-## Expanding the ESLint configuration
-
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
-
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
-
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+```bash
+npm install
+npm run dev
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+## Scripts
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+| Comando | Descripción |
+|---------|-------------|
+| `npm run dev` | Servidor de desarrollo (Vite) |
+| `npm run build` | Build de producción |
+| `npm run preview` | Preview del build |
+| `npm run lint` | ESLint |
 
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+## Estructura
+
 ```
+app/
+├── public/data/
+│   └── contenido.json       ← Todo el contenido de estudio
+├── src/
+│   ├── components/
+│   │   ├── chuleta/         ← Vista "Repaso" (cheatsheets)
+│   │   ├── flashcards/      ← Vista "Flashcards"
+│   │   ├── preguntas/       ← Vista "Preguntas"
+│   │   └── layout/          ← Navegación, filtros
+│   ├── context/             ← AppContext (estado global)
+│   └── types/               ← TypeScript types
+└── index.html
+```
+
+## Datos (contenido.json)
+
+El archivo `public/data/contenido.json` contiene:
+
+- `chapters[]` — lista de capítulos con id, número, título y parte
+- `flashcards[]` — pregunta/respuesta con prioridad (alta/media/baja)
+- `cheatsheet[]` — resúmenes visuales (tipos: list, table, comparison)
+- `questions[]` — preguntas de práctica estilo examen
+
+### Tipos de cheatsheet
+
+| Tipo | Uso |
+|------|-----|
+| `list` | Jerarquía, agrupaciones. Soporta sub-items, números y dividers |
+| `table` | Datos paralelos con columnas (headers + rows) |
+| `comparison` | Pares cortos label — description |
+
+### Sintaxis especial en listas
+
+| Patrón | Renderizado |
+|--------|-------------|
+| `"Texto normal"` | Bullet ámbar |
+| `"1. Texto"` | Número ámbar |
+| `"Header"` + `"  - sub"` | Header destacado + children indentados |
+| `"— TITULO —"` | Divider horizontal centrado |
+
+## Vistas
+
+- **Repaso**: renderiza cheatsheets agrupados por capítulo. Filtrable por capítulo.
+- **Flashcards**: cards con front/back, navegación por flechas.
+- **Preguntas**: preguntas de práctica con respuesta oculta.
+- **Stats**: progreso de estudio.

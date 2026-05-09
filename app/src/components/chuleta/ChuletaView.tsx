@@ -1,20 +1,11 @@
-import { useState, useEffect, useCallback } from 'react';
-import { Lightbulb, Printer } from 'lucide-react';
+import { useEffect, useCallback } from 'react';
+import { Printer } from 'lucide-react';
 import { useApp } from '../../context/AppContext';
 import { ChapterFilter } from '../layout/ChapterFilter';
 import { ChapterSection } from './ChapterSection';
 
 export function ChuletaView() {
   const { content, selectedChapter, setSelectedChapter } = useApp();
-  const [showMnemonics, setShowMnemonics] = useState(() => {
-    const saved = localStorage.getItem('showMnemonics');
-    return saved !== null ? JSON.parse(saved) : true;
-  });
-
-  useEffect(() => {
-    localStorage.setItem('showMnemonics', JSON.stringify(showMnemonics));
-  }, [showMnemonics]);
-
   // Flechas para cambiar de capitulo
   const goNext = useCallback(() => {
     if (!content) return;
@@ -73,18 +64,6 @@ export function ChuletaView() {
           <ChapterFilter />
           <div className="flex items-center gap-1.5 shrink-0">
             <button
-              onClick={() => setShowMnemonics(!showMnemonics)}
-              className={`p-2 rounded-lg transition-colors ${
-                showMnemonics
-                  ? 'bg-amber-100 dark:bg-amber-950/40 text-amber-700 dark:text-amber-300'
-                  : 'bg-stone-100 dark:bg-zinc-800 text-stone-500 dark:text-zinc-500 hover:bg-stone-200 dark:hover:bg-zinc-700'
-              }`}
-              aria-pressed={showMnemonics}
-              title="Mnemotécnicos"
-            >
-              <Lightbulb size={16} strokeWidth={1.75} />
-            </button>
-            <button
               onClick={handlePrint}
               className="p-2 rounded-lg bg-stone-100 dark:bg-zinc-800 text-stone-500 dark:text-zinc-500 hover:bg-stone-200 dark:hover:bg-zinc-700 hover:text-stone-700 dark:hover:text-zinc-300 transition-colors"
               title="Imprimir"
@@ -104,7 +83,7 @@ export function ChuletaView() {
             <p className="text-xs text-stone-400 dark:text-zinc-600 mt-1">{chapter.part}</p>
           </div>
           {items.map((section) => (
-            <ChapterSection key={section.id} section={section} showMnemonics={showMnemonics} />
+            <ChapterSection key={section.id} section={section} />
           ))}
         </div>
       ))}
