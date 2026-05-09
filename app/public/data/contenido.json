@@ -827,14 +827,14 @@
       "id": "fc-102",
       "chapterId": "cap13",
       "front": "Definición de Gracia",
-      "back": "Don sobrenatural que Dios concede a la criatura racional por los méritos de Jesucristo, totalmente inmerecido por parte de la criatura, que hace al hombre hijo de Dios y heredero del Cielo. Es participación en la vida de Dios.",
+      "back": "Don sobrenatural que Dios concede al hombre, totalmente inmerecido, que se recibe a través de los sacramentos. Hace al hombre hijo de Dios y heredero del Cielo. Es participación en la vida divina.",
       "priority": "alta"
     },
     {
       "id": "fc-103",
       "chapterId": "cap13",
       "front": "Diferencia entre gracia habitual y gracia actual",
-      "back": "Habitual (santificante): cualidad permanente y sobrenatural del alma que santifica intrínsecamente. Actual: influjo sobrenatural y transitorio sobre las potencias del alma para alguna acción saludable.",
+      "back": "Habitual (santificante): gracia permanente del alma que se adquiere por los sacramentos. Me hace hijo de Dios, templo del Espíritu Santo. Se puede perder (pecado mortal) y recuperar (confesión). Actual: influjo transitorio de Dios sobre la inteligencia y la voluntad que ayuda a convertirse, preservar la gracia y evitar el pecado. Opera en momentos puntuales.",
       "priority": "alta"
     },
     {
@@ -891,28 +891,28 @@
       "id": "fc-111",
       "chapterId": "cap13",
       "front": "Definición de Pecado",
-      "back": "Transgresión voluntaria de la ley de Dios. (CATIC 1849: falta contra la razón, la verdad, la conciencia recta; faltar al amor verdadero para con Dios y para con el prójimo, a causa de un apego perverso a ciertos bienes.)",
+      "back": "Transgresión voluntaria de la ley de Dios. Se peca con el pensamiento, la palabra, la obra y la omisión (no hacer lo que se debería hacer). Siempre debe ser contra la ley divina y siempre debe ser voluntario (libre).",
       "priority": "alta"
     },
     {
       "id": "fc-112",
       "chapterId": "cap13",
       "front": "Las 3 condiciones del pecado",
-      "back": "(1) Materia prohibida (grave o leve). (2) Advertencia (la inteligencia advierte que es malo). (3) Consentimiento (la voluntad acepta libremente).",
+      "back": "(1) Materia prohibida: grave o leve, o estimada como tal por la conciencia del pecador (si creo que algo es malo y lo hago, peco aunque objetivamente no sea malo). (2) Advertencia: la inteligencia advierte que esa acción es mala. (3) Consentimiento: la voluntad acepta libremente realizar esa acción.",
       "priority": "alta"
     },
     {
       "id": "fc-113",
       "chapterId": "cap13",
       "front": "Pecado mortal",
-      "back": "Transgresión voluntaria de la ley de Dios EN MATERIA GRAVE, con plena advertencia y perfecto consentimiento. Separa al hombre de Dios y hace perder la gracia santificante.",
+      "back": "Transgresión voluntaria de la ley de Dios en MATERIA GRAVE, con PLENA advertencia y PERFECTO consentimiento. Separa al hombre de Dios. Consecuencias: muerte del alma (privación de la gracia), pérdida de virtudes infusas y dones del E.S., pérdida de la inhabitación divina (Santísima Trinidad), pérdida de méritos sobrenaturales, oscurecimiento de la inteligencia, pérdida del derecho a la gloria eterna, sometimiento al poder del demonio. También repercute en el cuerpo y en la sociedad.",
       "priority": "alta"
     },
     {
       "id": "fc-114",
       "chapterId": "cap13",
       "front": "Pecado venial",
-      "back": "Transgresión voluntaria de la ley de Dios en materia leve. Venial viene de venia (perdón). No supone aversión a Dios, solo desviación del recto camino.",
+      "back": "Transgresión voluntaria de la ley de Dios en materia LEVE. Viene de 'venia' (perdón). No supone separación de Dios, solo desviación del recto camino. En esta vida: priva de gracias actuales, disminuye la caridad, produce tibieza espiritual, predispone al pecado mortal. En la otra vida: aumenta el tiempo de purgatorio y disminuye el grado de gloria en el cielo.",
       "priority": "alta"
     },
     {
@@ -926,7 +926,28 @@
       "id": "fc-116",
       "chapterId": "cap13",
       "front": "Las 3 fuentes de tentación",
-      "back": "El demonio, la propia carne, el mundo.",
+      "back": "El demonio, la propia carne (concupiscencia), el mundo. IMPORTANTE: la tentación NO es pecado. No es pecado cuando se la siente, sino cuando se la consiente. Jesús mismo fue tentado en el desierto sin pecar. Ninguna tentación es superior a las propias fuerzas con el auxilio de la gracia. No hay que negociar con las tentaciones, hay que evitar las ocasiones de pecado.",
+      "priority": "alta"
+    },
+    {
+      "id": "fc-117",
+      "chapterId": "cap13",
+      "front": "Consecuencias del pecado mortal (con relación a Dios y al hombre)",
+      "back": "Con relación a Dios: gravísima injusticia contra su ley, desprecio de la amistad divina, renovación de la causa de la muerte de Cristo, violación del cuerpo como templo del E.S. Con relación al hombre: muerte del alma (privación de gracia), pérdida de virtudes, dones y méritos sobrenaturales, pérdida de la inhabitación divina, oscurecimiento de la inteligencia, disminución de inclinación a la virtud, desorden en potencias y afectos, separación social, pérdida del derecho a la gloria, castigo eterno, sometimiento al demonio.",
+      "priority": "alta"
+    },
+    {
+      "id": "fc-118",
+      "chapterId": "cap13",
+      "front": "Psicología del pecado (¿cómo es posible el pecado?)",
+      "back": "La voluntad solo quiere lo que la inteligencia le presenta como bien. Nadie busca el mal por el mal mismo. El pecado ocurre cuando la inteligencia, ofuscada por las pasiones desordenadas, confunde el BIEN APARENTE con el BIEN REAL. Presenta un objeto finito (placer, criatura) como si fuera un verdadero bien, y la voluntad se lanza hacia él. El pecado es preferir un bien caduco y finito a la posesión eterna del bien infinito (Dios).",
+      "priority": "alta"
+    },
+    {
+      "id": "fc-119",
+      "chapterId": "cap13",
+      "front": "Dinamismo de la gracia (¿se puede perder y recuperar?)",
+      "back": "La gracia es dinámica: puede AUMENTAR (por los sacramentos y obras meritorias), se puede PERDER (por el pecado mortal) y se puede RECUPERAR (por el sacramento de la confesión, con verdadero arrepentimiento y propósito de enmienda). Para adquirir mérito para la vida eterna hay que estar en estado de gracia. Las acciones buenas hechas en pecado mortal no tienen mérito sobrenatural.",
       "priority": "alta"
     },
     {
@@ -2395,26 +2416,136 @@
         "items": [
           {
             "label": "Pecado mortal",
-            "description": "Materia GRAVE + plena advertencia + perfecto consentimiento. Pierde la gracia santificante. Aversión a Dios."
+            "description": "Materia GRAVE + plena advertencia + perfecto consentimiento. Pierde la gracia santificante, virtudes infusas, dones del E.S., inhabitación divina, méritos sobrenaturales. Muerte del alma. Pierde derecho a la gloria eterna. Repercute en cuerpo y sociedad."
           },
           {
             "label": "Pecado venial",
-            "description": "Materia LEVE. No supone aversión a Dios, solo desviación. 'Venial' viene de venia (perdón)."
+            "description": "Materia LEVE (viene de 'venia' = perdón). No separa de Dios, solo desvía. En esta vida: priva de gracias actuales, disminuye caridad, tibieza espiritual, predispone al mortal. En la otra vida: aumenta purgatorio, disminuye grado de gloria."
           }
         ]
       },
       "priority": "alta"
     },
     {
+      "id": "ch-050",
+      "chapterId": "cap13",
+      "type": "list",
+      "title": "La Gracia — Definición y tipos",
+      "content": [
+        "GRACIA: don sobrenatural que se recibe a través de los sacramentos. Hace al hombre hijo de Dios y heredero del Cielo.",
+        "HABITUAL (santificante): gracia permanente del alma. Me hace templo del Espíritu Santo (inhabitación divina).",
+        "ACTUAL: influjo transitorio de Dios sobre la inteligencia y la voluntad. Ayuda a convertirse, preservar la gracia, evitar el pecado.",
+        "DINÁMICA: la gracia AUMENTA (sacramentos, obras meritorias), se PIERDE (pecado mortal), se RECUPERA (confesión + arrepentimiento + propósito de enmienda).",
+        "Para adquirir MÉRITO para la vida eterna hay que estar en estado de gracia."
+      ],
+      "priority": "alta"
+    },
+    {
+      "id": "ch-051",
+      "chapterId": "cap13",
+      "type": "list",
+      "title": "El Pecado — Definición y condiciones",
+      "content": [
+        "DEFINICIÓN: transgresión VOLUNTARIA de la ley de Dios.",
+        "FORMAS: pensamiento, palabra, obra, omisión (no hacer lo que se debería).",
+        "3 CONDICIONES para que algo sea pecado:",
+        "  1. Materia prohibida (grave o leve), o estimada como tal por la conciencia del pecador.",
+        "  2. Advertencia: la INTELIGENCIA advierte que la acción es mala.",
+        "  3. Consentimiento: la VOLUNTAD acepta libremente realizarla.",
+        "San Agustín: 'El pecado es la aversión a Dios y la conversión a la criatura.'"
+      ],
+      "priority": "alta"
+    },
+    {
+      "id": "ch-052",
+      "chapterId": "cap13",
+      "type": "list",
+      "title": "Consecuencias del pecado mortal",
+      "content": [
+        "CON RELACIÓN A DIOS:",
+        "  • Gravísima injusticia contra la ley divina",
+        "  • Desprecio de la amistad divina",
+        "  • Renovación de la causa de la muerte de Cristo",
+        "  • Violación del cuerpo como templo del Espíritu Santo",
+        "CON RELACIÓN AL HOMBRE:",
+        "  • Muerte del alma (privación de la gracia)",
+        "  • Pérdida de virtudes infusas y dones del E.S.",
+        "  • Pérdida de la inhabitación divina (Santísima Trinidad)",
+        "  • Pérdida de méritos sobrenaturales",
+        "  • Oscurecimiento de la inteligencia, debilitamiento de la voluntad",
+        "  • Disminución de inclinación a la virtud",
+        "  • Desorden en potencias, afectos y relaciones sociales",
+        "  • Pérdida del derecho a la gloria eterna",
+        "  • Sometimiento al poder del demonio",
+        "  • Secuelas en el cuerpo (unión sustancial cuerpo-alma)"
+      ],
+      "priority": "alta"
+    },
+    {
+      "id": "ch-053",
+      "chapterId": "cap13",
+      "type": "comparison",
+      "title": "Efectos del pecado venial — esta vida vs otra vida",
+      "content": {
+        "items": [
+          {
+            "label": "En esta vida",
+            "description": "Priva de gracias actuales. Disminuye el fervor de la caridad. Produce tibieza espiritual ('a los tibios los vomitaré de mi boca'). Aumenta dificultad para practicar la virtud. PREDISPONE AL PECADO MORTAL."
+          },
+          {
+            "label": "En la otra vida",
+            "description": "Aumenta el tiempo de purificación en el purgatorio. Disminuye el grado de gloria en el cielo. (Al cielo se entra inmaculado — no se puede entrar con pecado, ni siquiera venial.)"
+          }
+        ]
+      },
+      "priority": "alta"
+    },
+    {
+      "id": "ch-054",
+      "chapterId": "cap13",
+      "type": "list",
+      "title": "Psicología del pecado",
+      "content": [
+        "La voluntad SOLO quiere lo que la inteligencia le presenta como BIEN.",
+        "Nadie busca el mal por el mal mismo.",
+        "PROBLEMA: la inteligencia, ofuscada por las pasiones desordenadas, confunde el BIEN APARENTE con el BIEN REAL.",
+        "Presenta un objeto finito (placer, criatura) como si fuera un verdadero bien.",
+        "La voluntad se lanza 'ciegamente' hacia ese objeto → se consuma el pecado.",
+        "El pecado = preferir un bien caduco y finito a la posesión eterna del bien infinito (Dios).",
+        "Si la inteligencia presentara el objeto como MAL, la voluntad lo rechazaría sin vacilación."
+      ],
+      "priority": "alta"
+    },
+    {
+      "id": "ch-055",
+      "chapterId": "cap13",
+      "type": "list",
+      "title": "La tentación — NO es pecado",
+      "content": [
+        "La tentación NO es pecado cuando se la SIENTE, SÍ cuando se la CONSIENTE.",
+        "Jesús fue tentado en el desierto sin pecar.",
+        "3 FUENTES: el mundo, el demonio, la carne (concupiscencia).",
+        "Ninguna tentación es superior a las propias fuerzas + auxilio de la gracia.",
+        "No negociar con las tentaciones. Evitar las ocasiones de pecado.",
+        "Si logro salir victorioso de una tentación, adquiero más mérito.",
+        "El mayor arma contra la tentación: estar en estado de gracia (amistad con Dios)."
+      ],
+      "priority": "alta"
+    },
+    {
       "id": "ch-015",
       "chapterId": "cap14",
       "type": "list",
-      "title": "Las 4 notas de la Iglesia (Credo)",
+      "title": "Las 7 propiedades esenciales de la Iglesia (4 son notas del Credo)",
       "content": [
-        "UNA (unidad de fe, comunión, participación)",
-        "SANTA (en su origen, fin y medios)",
-        "CATÓLICA (universal, para todos los hombres y tiempos)",
-        "APOSTÓLICA (sucesión apostólica continua)"
+        "INDEFECTIBILIDAD: la Iglesia subsistirá firme hasta el fin de los tiempos. No sufrirá cambios sustanciales en doctrina, constitución ni culto.",
+        "INFALIBILIDAD: cuando sus legítimas autoridades definen en materia de fe y moral, no hay error. (Ver condiciones aparte.)",
+        "VISIBILIDAD: sociedad perceptible por los sentidos (material) y distinguible de otras religiones (formal).",
+        "— NOTAS DISTINTIVAS (las 4 del Credo) —",
+        "UNA: una sola Iglesia, nunca varias simultáneas. Fundamento = la FE (no la caridad). Unidad de fe + unidad de comunión + unidad de participación.",
+        "SANTA: en su origen (fundador santo, alma = E.S.), en su fin (gloria de Dios + salvación), en sus medios (doctrina, misa, sacramentos), en sus frutos (santos, almas en gracia).",
+        "CATÓLICA: universal. De espacio (todo el mundo), de tiempo (no será superada), de personas (todos los pueblos), de medios (un solo credo, una moral, mismos sacramentos).",
+        "APOSTÓLICA: sucesión ininterrumpida. Obispos suceden a apóstoles. Papa sucede a Pedro. Misma fe, predicación y autoridad desde los orígenes."
       ],
       "mnemonic": "USCA",
       "priority": "alta"
@@ -2443,6 +2574,133 @@
           ]
         ]
       },
+      "priority": "alta"
+    },
+    {
+      "id": "ch-056",
+      "chapterId": "cap14",
+      "type": "list",
+      "title": "Definición de Iglesia (intento de definición)",
+      "content": [
+        "COMUNIDAD DE TODOS LOS BAUTIZADOS (distingue del pueblo del A.T. y de no bautizados).",
+        "VÍNCULO: la misma fe (distingue de herejes).",
+        "GOBIERNO UNITARIO instituido por Cristo, no por el pueblo (distingue de cismáticos). NO es democrática.",
+        "SOCIEDAD VISIBLE y ORGANIZADA (distingue de grupos espiritualistas).",
+        "Es de ORIGEN DIVINO: institución de Dios, viene de arriba. Cristo la fundó.",
+        "CARÁCTER DIVINO-HUMANO: humano (hombres, gobierno, doctrina, culto) + divino (asistencia del E.S., gracia, dones).",
+        "Es la PROLONGACIÓN DE CRISTO en el mundo. Si creo en Cristo, creo en la Iglesia que Él fundó."
+      ],
+      "priority": "alta"
+    },
+    {
+      "id": "ch-057",
+      "chapterId": "cap14",
+      "type": "list",
+      "title": "Figuras / nombres de la Iglesia",
+      "content": [
+        "PUEBLO DE DIOS: nuevo pueblo (antes era Israel). Se es miembro por nacimiento sobrenatural (bautismo), no natural.",
+        "CUERPO MÍSTICO DE CRISTO: cabeza invisible = Cristo, cabeza visible = Papa, alma = Espíritu Santo, cuerpo = los bautizados.",
+        "TEMPLO DEL ESPÍRITU SANTO: el E.S. es el principio vital (como el alma da vida al cuerpo). Actúa por la Palabra de Dios, los sacramentos, las virtudes, los carismas.",
+        "SACRAMENTO UNIVERSAL DE SALVACIÓN: solo ella realiza la salvación de Cristo en el mundo. Es causa instrumental movida por Cristo (agente principal)."
+      ],
+      "priority": "alta"
+    },
+    {
+      "id": "ch-058",
+      "chapterId": "cap14",
+      "type": "list",
+      "title": "Condiciones de la infalibilidad papal",
+      "content": [
+        "El Papa habla EX CÁTEDRA (desde su asiento, su lugar de autoridad).",
+        "Como PASTOR Y DOCTOR SUPREMO (no como teólogo privado ni como obispo de Roma).",
+        "Como SUCESOR DE PEDRO.",
+        "Define doctrina sobre FE Y MORAL (no sobre ciencia, política, etc.).",
+        "También: obispos reunidos en CONCILIO ECUMÉNICO, confirmado por el Papa.",
+        "— QUÉ NO ES la infalibilidad —",
+        "No es que la formulación dogmática sea la más perfecta (cabe profundización).",
+        "No es impecabilidad personal del Papa.",
+        "No limita su capacidad de error en ciencia adquirida o como teólogo privado.",
+        "No implica nueva revelación (la revelación pública terminó con el último apóstol).",
+        "Es asistencia del E.S. en favor de toda la Iglesia, no virtud personal del Papa."
+      ],
+      "priority": "alta"
+    },
+    {
+      "id": "ch-059",
+      "chapterId": "cap14",
+      "type": "table",
+      "title": "Jerarquía de la Iglesia",
+      "content": {
+        "headers": [
+          "Nivel",
+          "Quiénes",
+          "Suceden a"
+        ],
+        "rows": [
+          [
+            "Primado",
+            "Papa (cabeza visible)",
+            "Pedro"
+          ],
+          [
+            "Episcopado",
+            "Obispos",
+            "Apóstoles"
+          ],
+          [
+            "Presbiterado",
+            "Sacerdotes",
+            "—"
+          ],
+          [
+            "Diaconado",
+            "Diáconos",
+            "—"
+          ],
+          [
+            "— No jerárquico —",
+            "Laicos (bautizados sin orden) + Religiosos",
+            "—"
+          ]
+        ]
+      },
+      "priority": "alta"
+    },
+    {
+      "id": "ch-060",
+      "chapterId": "cap14",
+      "type": "list",
+      "title": "Requisitos para ser miembro + Misión de la Iglesia",
+      "content": [
+        "3 REQUISITOS para pertenecer a la Iglesia:",
+        "  1. Recibir válidamente el BAUTISMO (ministerio sacerdotal)",
+        "  2. Profesar la VERDADERA FE (ministerio doctrinal)",
+        "  3. Estar en COMUNIÓN con la Iglesia — sujeto al Papa (misión pastoral)",
+        "MISIÓN (doble fin):",
+        "  • LATRÉUTICO: glorificación de Dios (primer fin, siempre)",
+        "  • SOTERIOLÓGICO: salvación de los hombres",
+        "La Iglesia es necesaria para la salvación porque en ella Cristo puso los medios para salvarse.",
+        "Triple oficio dado por Cristo a los apóstoles: ENSEÑAR (profeta), GOBERNAR (rey/pastor), SANTIFICAR (sacerdote)."
+      ],
+      "priority": "alta"
+    },
+    {
+      "id": "ch-061",
+      "chapterId": "cap14",
+      "type": "list",
+      "title": "La Comunión de los Santos",
+      "content": [
+        "IGLESIA MILITANTE: los que peregrinamos en la tierra.",
+        "IGLESIA PURGANTE: los que murieron en gracia pero necesitan purificarse.",
+        "IGLESIA TRIUNFANTE: los bienaventurados que ya ven a Dios cara a cara.",
+        "COMUNIÓN: intercomunicación de bienes espirituales entre los tres estados.",
+        "Los de la tierra se benefician con oraciones, obras y sacrificios mutuos.",
+        "Los del purgatorio se benefician con sufragios de los vivos (misas, oraciones).",
+        "Los del cielo interceden por los militantes y las almas del purgatorio.",
+        "Los que están en pecado mortal NO participan de esta comunión perfecta (no son miembros vivos).",
+        "Pero conservan el carácter de cristiano y pueden ser ayudados por oraciones de los fieles.",
+        "BIENES: internos (gracia, virtudes teologales, méritos de Cristo y los santos) + externos (sacramentos, misa, oraciones públicas)."
+      ],
       "priority": "alta"
     },
     {
@@ -2850,6 +3108,41 @@
       "mnemonic": "BCE-PUOM (orden tradicional). De vivos: el Bautismo y la Penitencia 'matan la muerte del alma'"
     },
     {
+      "id": "ch-062",
+      "chapterId": "cap16",
+      "type": "list",
+      "title": "Sacramentos de vivos vs de muertos",
+      "content": [
+        "SACRAMENTOS DE MUERTOS (quitan la muerte del alma por el pecado):",
+        "  • Bautismo — borra pecado original + todos los pecados actuales",
+        "  • Penitencia — devuelve la gracia perdida por pecado mortal",
+        "SACRAMENTOS DE VIVOS (requieren estar en gracia para recibirlos):",
+        "  • Confirmación, Eucaristía, Unción, Matrimonio, Orden Sagrado",
+        "  • Aumentan la gracia que ya se posee",
+        "OTRA CLASIFICACIÓN:",
+        "  • Iniciación cristiana: Bautismo, Confirmación, Eucaristía",
+        "  • Curación: Penitencia, Unción de los enfermos",
+        "  • Servicio a la comunidad: Matrimonio, Orden Sagrado"
+      ],
+      "priority": "alta"
+    },
+    {
+      "id": "ch-063",
+      "chapterId": "cap16",
+      "type": "list",
+      "title": "Ex opere operato — Eficacia objetiva",
+      "content": [
+        "Los sacramentos obran EN VIRTUD DEL RITO validamente realizado (ex opere operato).",
+        "La gracia NO se confiere por la acción subjetiva del que recibe o administra.",
+        "Es producida por el signo sacramental validamente realizado.",
+        "PERO: la Iglesia exige el opus operantis (disposición del que recibe) cuando son adultos.",
+        "La disposición subjetiva NO causa la gracia, pero es condición indispensable.",
+        "Del grado de disposición depende la MEDIDA de gracia producida.",
+        "Ejemplo: dos personas comulgan, pero la que tiene mejor disposición recibe más gracia."
+      ],
+      "priority": "alta"
+    },
+    {
       "id": "ch-036",
       "chapterId": "cap17",
       "type": "table",
@@ -3159,6 +3452,71 @@
         "CONVALECE O MUERE → UNCIÓN DE LOS ENFERMOS",
         "AUTORIDADES SOBRENATURALES → ORDEN SAGRADO",
         "DA HIJOS AL REINO DE DIOS → MATRIMONIO"
+      ],
+      "priority": "alta"
+    },
+    {
+      "id": "ch-064",
+      "chapterId": "cap17",
+      "type": "list",
+      "title": "Eucaristía como SACRIFICIO vs como SACRAMENTO",
+      "content": [
+        "COMO SACRAMENTO: signo sensible que comunica la gracia. Fin = alimento espiritual del alma.",
+        "COMO SACRIFICIO (la Misa): ofrecimiento de Cristo al Padre. Fin = gloria de Dios + salvación.",
+        "La Misa es la RENOVACIÓN INCRUENTA del sacrificio CRUENTO de la cruz.",
+        "NO es un recuerdo ni una representación del pasado. Es reactualización REAL.",
+        "IDENTIDAD con la cruz: misma víctima (Cristo), mismo sacerdote principal (Cristo), mismo fin.",
+        "DIFERENCIAS (accidentales): inmolación incruenta vs cruenta; ministro secundario (sacerdote); aplica los frutos vs los mereció.",
+        "TRANSUBSTANCIACIÓN: toda la sustancia del pan → cuerpo; toda la sustancia del vino → sangre. Quedan solo los accidentes (color, sabor, etc.) sostenidos milagrosamente sin sustancia.",
+        "4 FINES DE LA MISA: latréutico (adoración), eucarístico (acción de gracias), expiatorio (aplaca la ira divina), impetratorio (súplica de favores)."
+      ],
+      "priority": "alta"
+    },
+    {
+      "id": "ch-065",
+      "chapterId": "cap17",
+      "type": "list",
+      "title": "Bautismo — Lo que la profesora enfatiza",
+      "content": [
+        "Es el PRIMERO y MÁS NECESARIO (habilita a recibir los demás).",
+        "El más EXCELENTE es la Eucaristía (contiene al autor de la gracia).",
+        "BORRA: pecado original + TODOS los pecados actuales + pena eterna Y temporal.",
+        "Diferencia con confesión: la confesión perdona pena eterna pero NO la temporal.",
+        "Si muere recién bautizado sin pecar → directo al cielo (sin purgatorio).",
+        "MINISTRO EXTRAORDINARIO: en peligro de muerte, CUALQUIER persona (incluso un ateo) con intención de hacer lo que hace la Iglesia.",
+        "Bautismo de SANGRE: mártires no bautizados que mueren por Cristo.",
+        "Bautismo de DESEO: quien no puede recibirlo pero vive según la ley natural y desea (al menos implícitamente) ser bautizado.",
+        "BAUTIZAR CUANTO ANTES: no esperar fiestas ni conveniencias. Abre las puertas del cielo."
+      ],
+      "priority": "alta"
+    },
+    {
+      "id": "ch-066",
+      "chapterId": "cap17",
+      "type": "list",
+      "title": "Disposiciones para comulgar",
+      "content": [
+        "DEL ALMA: estar en estado de gracia (sin pecado mortal). Si tengo pecado grave → confesarme primero. Saber a quién voy a recibir.",
+        "DEL CUERPO: ayuno eucarístico de 1 HORA antes (agua no afecta). Actitud corporal digna, vestimenta apropiada.",
+        "La Eucaristía PERDONA pecados veniales (no los mortales).",
+        "PRECEPTO: comulgar al menos 1 vez al año + en peligro de muerte.",
+        "EFECTOS: aumento de gracia y caridad, alimento espiritual, perdón de veniales, preserva de mortales, garantía de resurrección."
+      ],
+      "priority": "alta"
+    },
+    {
+      "id": "ch-067",
+      "chapterId": "cap17",
+      "type": "list",
+      "title": "Última Cena — Cruz — Santa Misa (relación)",
+      "content": [
+        "ÚLTIMA CENA (Jueves Santo): Cristo instituyó la Eucaristía. Primera transubstanciación. ANTICIPÓ sacramentalmente su muerte.",
+        "CRUZ (Viernes Santo): Cristo consumó el sacrificio redentor. Inmolación CRUENTA (con derramamiento de sangre).",
+        "SANTA MISA: PERPETÚA el sacrificio de la cruz. Inmolación INCRUENTA (sin derramamiento de sangre). Es RENOVACIÓN REAL, no representación ni recuerdo.",
+        "ERROR: pensar que la misa es representación de la última cena. NO. La misa remite al sacrificio de la CRUZ.",
+        "La misa fue instituida en la última cena, pero NO para perpetuar la cena, sino para perpetuar el SACRIFICIO DE LA CRUZ.",
+        "En la última cena: cuerpo de Cristo era pasible (podía sufrir). En la misa: es glorioso.",
+        "La separación de las especies (pan/vino por separado) significa la muerte: cuerpo sin sangre = cuerpo sin vida."
       ],
       "priority": "alta"
     }

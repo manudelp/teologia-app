@@ -33,15 +33,43 @@ function renderContent(section: ChuletaSection) {
 }
 
 function ListContent({ items }: { items: string[] }) {
+  // Group items: main items with sub-items become groups, standalone items stay as bullets
+  const groups: { header: string | null; children: string[] }[] = [];
+  for (const item of items) {
+    if (item.match(/^\s+[•\-]\s/)) {
+      const text = item.replace(/^\s+[•\-]\s/, '');
+      if (groups.length === 0) groups.push({ header: null, children: [] });
+      groups[groups.length - 1].children.push(text);
+    } else {
+      groups.push({ header: item, children: [] });
+    }
+  }
+
   return (
-    <ul className="space-y-2">
-      {items.map((item, i) => (
-        <li key={i} className="flex gap-3 text-sm leading-relaxed text-stone-700 dark:text-zinc-300">
-          <span className="text-amber-400 dark:text-amber-600 shrink-0 mt-0.5">&bull;</span>
-          <span>{item}</span>
-        </li>
+    <div className="space-y-3">
+      {groups.map((group, i) => (
+        <div key={i}>
+          {group.header && group.children.length > 0 && (
+            <div className="px-3 py-1.5 bg-stone-100/60 dark:bg-zinc-800/50 rounded-md mb-1.5">
+              <span className="text-sm font-medium text-stone-800 dark:text-zinc-200">{group.header}</span>
+            </div>
+          )}
+          {group.header && group.children.length === 0 && (
+            <div className="flex gap-3 text-sm leading-relaxed text-stone-700 dark:text-zinc-300">
+              <span className="text-amber-400 dark:text-amber-600 shrink-0 mt-0.5">&bull;</span>
+              <span>{group.header}</span>
+            </div>
+          )}
+          {group.children.length > 0 && (
+            <div className="ml-3 border-l-2 border-amber-400/40 dark:border-amber-600/40 pl-3 space-y-1">
+              {group.children.map((child, j) => (
+                <p key={j} className="text-sm text-stone-600 dark:text-zinc-400 leading-relaxed">{child}</p>
+              ))}
+            </div>
+          )}
+        </div>
       ))}
-    </ul>
+    </div>
   );
 }
 
