@@ -13,6 +13,8 @@ interface AppState {
   setView: (v: ViewMode) => void;
   selectedChapter: string;
   setSelectedChapter: (c: string) => void;
+  chatRef: string;
+  sendToChat: (text: string) => void;
 }
 
 const defaultProgress: UserProgress = {
@@ -30,6 +32,7 @@ export function AppProvider({ children }: { children: ReactNode }) {
   const [progress, setProgress] = useLocalStorage<UserProgress>('teo-progress', defaultProgress);
   const [view, setView] = useState<ViewMode>('chuleta');
   const [selectedChapter, setSelectedChapter] = useState<string>(progress.lastChapter || 'todos');
+  const [chatRef, setChatRef] = useState('');
 
   // Cargar contenido: primero localStorage (custom), si no el JSON original
   useEffect(() => {
@@ -55,6 +58,11 @@ export function AppProvider({ children }: { children: ReactNode }) {
     localStorage.setItem('teo-custom-content', JSON.stringify(data));
   }, []);
 
+  const sendToChat = useCallback((text: string) => {
+    setChatRef(text);
+    setView('chat');
+  }, []);
+
   // Persistir dark mode en el DOM
   useEffect(() => {
     document.documentElement.classList.toggle('dark', progress.darkMode);
@@ -66,7 +74,7 @@ export function AppProvider({ children }: { children: ReactNode }) {
   }, [selectedChapter]);
 
   return (
-    <AppContext.Provider value={{ content, setContent, loading, progress, setProgress, view, setView, selectedChapter, setSelectedChapter }}>
+    <AppContext.Provider value={{ content, setContent, loading, progress, setProgress, view, setView, selectedChapter, setSelectedChapter, chatRef, sendToChat }}>
       {children}
     </AppContext.Provider>
   );

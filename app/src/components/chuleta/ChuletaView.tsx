@@ -83,7 +83,7 @@ export function ChuletaView() {
             <p className="text-xs text-stone-400 dark:text-zinc-600 mt-1">{chapter.part}</p>
           </div>
           {items.map((section) => (
-            <ChapterSection key={section.id} section={section} />
+            <ChapterSection key={section.id} section={section} chapterLabel={`Cap. ${chapter.number} — ${chapter.title}`} />
           ))}
         </div>
       ))}

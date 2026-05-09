@@ -1,32 +1,49 @@
+import { MessageCircle } from 'lucide-react';
 import type { ChuletaSection, TableData, ComparisonData } from '../../types';
+import { useApp } from '../../context/AppContext';
 
 interface Props {
   section: ChuletaSection;
+  chapterLabel?: string;
 }
 
-export function ChapterSection({ section }: Props) {
+export function ChapterSection({ section, chapterLabel }: Props) {
   return (
     <div className="chuleta-section mt-8 first:mt-0">
       <h3 className="font-serif text-lg sm:text-xl text-stone-800 dark:text-zinc-200 mb-3">{section.title}</h3>
-      {renderContent(section)}
+      {renderContent(section, chapterLabel)}
     </div>
   );
 }
 
-function renderContent(section: ChuletaSection) {
+function renderContent(section: ChuletaSection, chapterLabel?: string) {
   switch (section.type) {
     case 'list':
-      return <ListContent items={section.content as string[]} />;
+      return <ListContent items={section.content as string[]} chapterLabel={chapterLabel} />;
     case 'table':
-      return <TableContent data={section.content as TableData} />;
+      return <TableContent data={section.content as TableData} chapterLabel={chapterLabel} />;
     case 'comparison':
-      return <ComparisonContent data={section.content as ComparisonData} />;
+      return <ComparisonContent data={section.content as ComparisonData} chapterLabel={chapterLabel} />;
     default:
       return null;
   }
 }
 
-function ListContent({ items }: { items: string[] }) {
+function RefBtn({ text, chapter }: { text: string; chapter?: string }) {
+  const { sendToChat } = useApp();
+  const ref = chapter ? `${chapter} · ${text}` : text;
+  return (
+    <button
+      onClick={() => sendToChat(ref)}
+      className="opacity-0 group-hover:opacity-100 shrink-0 ml-1 p-0.5 text-stone-300 dark:text-zinc-700 hover:text-amber-500 dark:hover:text-amber-500 transition-all"
+      title="Preguntar a Dios"
+    >
+      <MessageCircle size={12} />
+    </button>
+  );
+}
+
+function ListContent({ items, chapterLabel }: { items: string[]; chapterLabel?: string }) {
   // Group items: main items with sub-items become groups, standalone items stay as bullets
   const isDivider = (s: string) => /^\s*—/.test(s) && /—\s*$/.test(s);
   const groups: { header: string | null; children: string[]; divider?: boolean }[] = [];
@@ -54,29 +71,34 @@ function ListContent({ items }: { items: string[] }) {
             </div>
           )}
           {group.header && group.children.length > 0 && !group.divider && (
-            <div className="px-3 py-1.5 bg-stone-100/60 dark:bg-zinc-800/50 rounded-md mb-1.5">
-              <span className="text-sm font-medium text-stone-800 dark:text-zinc-200">{group.header}</span>
+            <div className="group flex items-center px-3 py-1.5 bg-stone-100/60 dark:bg-zinc-800/50 rounded-md mb-1.5">
+              <span className="flex-1 text-sm font-medium text-stone-800 dark:text-zinc-200">{group.header}</span>
+              <RefBtn text={`${group.header}: ${group.children.join(', ')}`} chapter={chapterLabel} />
             </div>
           )}
           {group.header && group.children.length === 0 && !group.divider && (
-            <div className="flex gap-3 text-sm leading-relaxed text-stone-700 dark:text-zinc-300">
+            <div className="group flex items-center gap-3 text-sm leading-relaxed text-stone-700 dark:text-zinc-300">
               {/^\d+\.\s/.test(group.header) ? (
                 <>
                   <span className="text-amber-500 dark:text-amber-500 shrink-0 mt-0.5 font-medium tabular-nums w-5 text-right">{group.header.match(/^(\d+)\./)?.[1]}.</span>
-                  <span>{group.header.replace(/^\d+\.\s/, '')}</span>
+                  <span className="flex-1">{group.header.replace(/^\d+\.\s/, '')}</span>
                 </>
               ) : (
                 <>
                   <span className="text-amber-400 dark:text-amber-600 shrink-0 mt-0.5">&bull;</span>
-                  <span>{group.header}</span>
+                  <span className="flex-1">{group.header}</span>
                 </>
               )}
+              <RefBtn text={group.header} chapter={chapterLabel} />
             </div>
           )}
           {group.children.length > 0 && (
             <div className="ml-3 border-l-2 border-amber-400/40 dark:border-amber-600/40 pl-3 space-y-1">
               {group.children.map((child, j) => (
-                <p key={j} className="text-sm text-stone-600 dark:text-zinc-400 leading-relaxed">{child}</p>
+                <div key={j} className="group flex items-center gap-1">
+                  <p className="flex-1 text-sm text-stone-600 dark:text-zinc-400 leading-relaxed">{child}</p>
+                  <RefBtn text={child} chapter={chapterLabel} />
+                </div>
               ))}
             </div>
           )}
@@ -86,7 +108,7 @@ function ListContent({ items }: { items: string[] }) {
   );
 }
 
-function TableContent({ data }: { data: TableData }) {
+function TableContent({ data, chapterLabel }: { data: TableData; chapterLabel?: string }) {
   return (
     <div className="overflow-x-auto rounded-lg">
       <table className="w-full text-sm border-collapse">
@@ -101,12 +123,15 @@ function TableContent({ data }: { data: TableData }) {
         </thead>
         <tbody>
           {data.rows.map((row, i) => (
-            <tr key={i} className="hover:bg-stone-50 dark:hover:bg-zinc-900/30 transition-colors">
+            <tr key={i} className="group hover:bg-stone-50 dark:hover:bg-zinc-900/30 transition-colors">
               {row.map((cell, j) => (
                 <td key={j} className="px-3 py-2 border-b border-stone-100/80 dark:border-zinc-800/50 text-stone-700 dark:text-zinc-300">
                   {cell}
                 </td>
               ))}
+              <td className="px-1 py-2 border-b border-stone-100/80 dark:border-zinc-800/50 w-6">
+                <RefBtn text={row.join(' — ')} chapter={chapterLabel} />
+              </td>
             </tr>
           ))}
         </tbody>
@@ -115,14 +140,15 @@ function TableContent({ data }: { data: TableData }) {
   );
 }
 
-function ComparisonContent({ data }: { data: ComparisonData }) {
+function ComparisonContent({ data, chapterLabel }: { data: ComparisonData; chapterLabel?: string }) {
   return (
     <div className="space-y-3">
       {data.items.map((item, i) => (
-        <div key={i} className="text-sm leading-relaxed">
+        <div key={i} className="group flex items-center text-sm leading-relaxed">
           <span className="font-medium text-stone-800 dark:text-zinc-200">{item.label}</span>
           <span className="text-stone-400 dark:text-zinc-600 mx-2">&mdash;</span>
-          <span className="text-stone-600 dark:text-zinc-400">{item.description}</span>
+          <span className="flex-1 text-stone-600 dark:text-zinc-400">{item.description}</span>
+          <RefBtn text={`${item.label}: ${item.description}`} chapter={chapterLabel} />
         </div>
       ))}
     </div>

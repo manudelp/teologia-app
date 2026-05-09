@@ -1,5 +1,5 @@
 import { useState, useRef, useEffect, useCallback } from 'react';
-import { Send, Trash2, Speech, Copy, RefreshCw } from 'lucide-react';
+import { Send, Trash2, Speech, Copy, RefreshCw, X } from 'lucide-react';
 import { GoogleGenerativeAI } from '@google/generative-ai';
 import { useApp } from '../../context/AppContext';
 import { useQuota } from '../../context/QuotaContext';
@@ -256,7 +256,7 @@ function InlineFormat({ text }: { text: string }) {
 }
 
 export function ChatView() {
-  const { content } = useApp();
+  const { content, chatRef, sendToChat } = useApp();
   const { isLimited, recordRequest, currentModel } = useQuota();
   const [messages, setMessages] = useState<Message[]>(() => {
     try {
@@ -266,12 +266,21 @@ export function ChatView() {
   });
   const [input, setInput] = useState('');
   const [loading, setLoading] = useState(false);
+  const [activeRef, setActiveRef] = useState<string | null>(null);
   const bottomRef = useRef<HTMLDivElement>(null);
 
   // Persist messages
   useEffect(() => {
     localStorage.setItem('teo-chat-history', JSON.stringify(messages));
   }, [messages]);
+
+  // Consume chatRef from cheatsheet as a chip
+  useEffect(() => {
+    if (chatRef) {
+      setActiveRef(chatRef);
+      sendToChat('');
+    }
+  }, [chatRef, sendToChat]);
 
   useEffect(() => {
     bottomRef.current?.scrollIntoView({ behavior: 'smooth' });
@@ -281,9 +290,13 @@ export function ChatView() {
     const msg = (text || input).trim();
     if (!msg || loading || isLimited) return;
 
-    const userMsg: Message = { role: 'user', text: msg, timestamp: Date.now() };
+    const fullMsg = activeRef ? `Sobre esto: "${activeRef}"
+
+${msg}` : msg;
+    const userMsg: Message = { role: 'user', text: fullMsg, timestamp: Date.now() };
     setMessages(prev => [...prev, userMsg]);
     setInput('');
+    setActiveRef(null);
     setLoading(true);
 
     try {
@@ -337,16 +350,16 @@ export function ChatView() {
     } catch (e) {
       const raw = e instanceof Error ? e.message : '';
       let errMsg: string;
-      if (raw.includes('429') || raw.includes('quota') || raw.includes('rate')) {
+      if (raw.includes('503') || raw.includes('overloaded')) {
+        errMsg = 'Servidor sobrecargado. Intenta de nuevo en unos segundos.';
+      } else if (raw.includes('429') || raw.includes('quota') || raw.includes('rate')) {
         errMsg = 'Cuota excedida. Cambia de modelo desde el selector.';
       } else if (raw.includes('404') || raw.includes('not found') || raw.includes('is not supported')) {
         errMsg = 'Modelo no disponible. Selecciona otro desde el selector.';
-      } else if (raw.includes('503') || raw.includes('overloaded')) {
-        errMsg = 'Servidor sobrecargado. Intenta de nuevo en unos segundos.';
-      } else if (raw.includes('fetch') || raw.includes('network') || raw.includes('Failed')) {
-        errMsg = 'No se pudo conectar. Verifica tu conexión a internet.';
       } else if (raw.includes('API_KEY') || raw.includes('401') || raw.includes('403')) {
         errMsg = 'Error de autenticación. Verifica la API key.';
+      } else if (raw.includes('fetch') || raw.includes('network') || raw.includes('Failed')) {
+        errMsg = 'No se pudo conectar. Verifica tu conexión a internet.';
       } else {
         errMsg = 'Ocurrió un error. Intenta de nuevo en unos segundos.';
       }
@@ -354,7 +367,7 @@ export function ChatView() {
     } finally {
       setLoading(false);
     }
-  }, [input, loading, isLimited, currentModel, content, messages, recordRequest]);
+  }, [input, loading, isLimited, currentModel, content, messages, recordRequest, activeRef]);
 
   const clearHistory = () => {
     setMessages([]);
@@ -434,7 +447,15 @@ export function ChatView() {
 
       {/* Input */}
       <div className="shrink-0 pt-3 max-w-3xl mx-auto w-full px-6">
-        <div className={`flex items-center gap-2 px-4 rounded-full bg-stone-100 dark:bg-zinc-900 border border-stone-200 dark:border-zinc-800/50 ${messages.length === 0 ? 'h-14' : 'h-12'}`}>
+        {activeRef && (
+          <div className="flex items-center gap-2 mx-6 px-3 py-2.5 -mb-1.5 rounded-t-lg bg-stone-200/60 dark:bg-zinc-800 border border-b-0 border-stone-300/60 dark:border-zinc-700/50">
+            <span className="text-[11px] text-stone-600 dark:text-zinc-300 truncate flex-1">“{activeRef}”</span>
+            <button onClick={() => setActiveRef(null)} className="shrink-0 text-stone-400 dark:text-zinc-600 hover:text-stone-600 dark:hover:text-zinc-400">
+              <X size={11} />
+            </button>
+          </div>
+        )}
+        <div className={`flex items-center gap-2 px-4 bg-stone-100 dark:bg-zinc-900 border border-stone-200 dark:border-zinc-800/50 rounded-full ${messages.length === 0 && !activeRef ? 'h-14' : 'h-12'}`}>
           <input
             type="text"
             value={input}
