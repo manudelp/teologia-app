@@ -70,7 +70,7 @@ export function QuotaProvider({ children }: { children: ReactNode }) {
     return initial;
   });
 
-  const minuteTimerRef = useRef<ReturnType<typeof setInterval>>();
+  const minuteTimerRef = useRef<ReturnType<typeof setInterval> | undefined>(undefined);
 
   const currentModel = AVAILABLE_MODELS.find(m => m.id === currentModelId) || AVAILABLE_MODELS[0];
   const quota = quotas[currentModel.id] || { requestsMinute: 0, requestsToday: 0, tokensUsed: 0 };
