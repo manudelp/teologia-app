@@ -70,6 +70,7 @@ export interface UserProgress {
   questions: QuestionProgress;
   lastChapter: string;
   darkMode: boolean;
+  activityLog?: Record<string, number>; // { "2025-05-08": 3 }
 }
 
 export interface LeitnerState {

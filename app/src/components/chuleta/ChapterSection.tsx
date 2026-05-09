@@ -34,12 +34,15 @@ function renderContent(section: ChuletaSection) {
 
 function ListContent({ items }: { items: string[] }) {
   // Group items: main items with sub-items become groups, standalone items stay as bullets
-  const groups: { header: string | null; children: string[] }[] = [];
+  const isDivider = (s: string) => /^\s*—/.test(s) && /—\s*$/.test(s);
+  const groups: { header: string | null; children: string[]; divider?: boolean }[] = [];
   for (const item of items) {
     if (item.match(/^\s+[•\-]\s/)) {
       const text = item.replace(/^\s+[•\-]\s/, '');
       if (groups.length === 0) groups.push({ header: null, children: [] });
       groups[groups.length - 1].children.push(text);
+    } else if (isDivider(item)) {
+      groups.push({ header: item, children: [], divider: true });
     } else {
       groups.push({ header: item, children: [] });
     }
@@ -49,12 +52,19 @@ function ListContent({ items }: { items: string[] }) {
     <div className="space-y-3">
       {groups.map((group, i) => (
         <div key={i}>
-          {group.header && group.children.length > 0 && (
+          {group.divider && group.header && (
+            <div className="flex items-center gap-3 my-2">
+              <div className="flex-1 h-px bg-stone-200 dark:bg-zinc-700" />
+              <span className="text-xs font-medium text-stone-500 dark:text-zinc-500 uppercase tracking-wide">{group.header.replace(/—/g, '').trim()}</span>
+              <div className="flex-1 h-px bg-stone-200 dark:bg-zinc-700" />
+            </div>
+          )}
+          {group.header && group.children.length > 0 && !group.divider && (
             <div className="px-3 py-1.5 bg-stone-100/60 dark:bg-zinc-800/50 rounded-md mb-1.5">
               <span className="text-sm font-medium text-stone-800 dark:text-zinc-200">{group.header}</span>
             </div>
           )}
-          {group.header && group.children.length === 0 && (
+          {group.header && group.children.length === 0 && !group.divider && (
             <div className="flex gap-3 text-sm leading-relaxed text-stone-700 dark:text-zinc-300">
               <span className="text-amber-400 dark:text-amber-600 shrink-0 mt-0.5">&bull;</span>
               <span>{group.header}</span>

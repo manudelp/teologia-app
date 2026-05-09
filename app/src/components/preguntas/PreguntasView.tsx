@@ -1,5 +1,6 @@
 import { useMemo, useCallback, useState, useEffect } from 'react';
 import { useApp } from '../../context/AppContext';
+import { recordActivity } from '../../utils/activity';
 import { ChapterFilter } from '../layout/ChapterFilter';
 import { PriorityFilter } from '../layout/PriorityFilter';
 import { QuestionCard } from './QuestionCard';
@@ -63,13 +64,18 @@ export function PreguntasView() {
 
   const handleMark = useCallback((id: string, status: 'dominada' | 'fallada' | 'pendiente') => {
     setProgress((prev) => {
+      const prevStatus = prev.questions.status[id];
       const newStatus = { ...prev.questions.status };
       if (status === 'pendiente') {
         delete newStatus[id];
       } else {
         newStatus[id] = status;
       }
-      return { ...prev, questions: { status: newStatus } };
+      let result = { ...prev, questions: { status: newStatus } };
+      if (status === 'dominada' && prevStatus !== 'dominada') {
+        result = recordActivity(result);
+      }
+      return result;
     });
   }, [setProgress]);
 

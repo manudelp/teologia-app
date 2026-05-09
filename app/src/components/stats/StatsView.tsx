@@ -1,6 +1,43 @@
 import { useMemo } from 'react';
 import { useApp } from '../../context/AppContext';
 
+function ActivityHeatmap({ log }: { log: Record<string, number> }) {
+  const { days, maxCount } = useMemo(() => {
+    const today = new Date();
+    const days: { date: string; count: number; label: string }[] = [];
+    for (let i = 20; i >= 0; i--) {
+      const d = new Date(today);
+      d.setDate(d.getDate() - i);
+      const key = d.toISOString().slice(0, 10);
+      const label = d.toLocaleDateString('es', { day: 'numeric', month: 'short' });
+      days.push({ date: key, count: log[key] || 0, label });
+    }
+    const maxCount = Math.max(1, ...days.map((d) => d.count));
+    return { days, maxCount };
+  }, [log]);
+
+  const getColor = (count: number) => {
+    if (count === 0) return 'bg-stone-100 dark:bg-zinc-800';
+    const intensity = count / maxCount;
+    if (intensity <= 0.25) return 'bg-emerald-200 dark:bg-emerald-900';
+    if (intensity <= 0.5) return 'bg-emerald-300 dark:bg-emerald-700';
+    if (intensity <= 0.75) return 'bg-emerald-400 dark:bg-emerald-500';
+    return 'bg-emerald-500 dark:bg-emerald-400';
+  };
+
+  return (
+    <div className="flex gap-1">
+      {days.map((day) => (
+        <div
+          key={day.date}
+          className={`flex-1 aspect-square rounded-sm ${getColor(day.count)}`}
+          title={`${day.label}: ${day.count} dominados`}
+        />
+      ))}
+    </div>
+  );
+}
+
 export function StatsView() {
   const { content, progress, setProgress } = useApp();
 
@@ -60,6 +97,12 @@ export function StatsView() {
           />
         </div>
         <p className="text-xs text-stone-400 dark:text-zinc-600 mt-1">{globalPct}%</p>
+      </div>
+
+      {/* Actividad */}
+      <div className="mb-12">
+        <h3 className="font-serif text-lg text-stone-800 dark:text-zinc-200 mb-4">Actividad</h3>
+        <ActivityHeatmap log={progress.activityLog || {}} />
       </div>
 
       {/* Distribucion Leitner */}

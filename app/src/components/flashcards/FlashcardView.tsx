@@ -1,4 +1,5 @@
 import { useState, useCallback, useMemo } from 'react';
+import { RotateCcw } from 'lucide-react';
 import { useApp } from '../../context/AppContext';
 import { useLeitner } from '../../hooks/useLeitner';
 import { useKeyboard } from '../../hooks/useKeyboard';
@@ -91,10 +92,10 @@ export function FlashcardView() {
         <ChapterFilter />
         <button
           onClick={startNewSession}
-          className="shrink-0 px-3 py-1.5 text-xs font-medium text-stone-500 dark:text-zinc-500 hover:text-stone-700 dark:hover:text-zinc-300 bg-stone-100 dark:bg-zinc-800 hover:bg-stone-200 dark:hover:bg-zinc-700 rounded-lg transition-colors"
-          title="Incrementa el contador de sesion para rotar cards de caja 3"
+          className="shrink-0 p-2 text-stone-500 dark:text-zinc-500 hover:text-stone-700 dark:hover:text-zinc-300 bg-stone-100 dark:bg-zinc-800 hover:bg-stone-200 dark:hover:bg-zinc-700 rounded-lg transition-colors"
+          title="Nueva sesión"
         >
-          Nueva sesion
+          <RotateCcw size={16} strokeWidth={1.75} />
         </button>
       </div>
 
@@ -102,10 +103,10 @@ export function FlashcardView() {
       <div className="max-w-2xl mx-auto">
 
       {/* Indicador de cajas */}
-      <ProgressBar counts={counts} />
+      <ProgressBar counts={counts} current={index + 1} total={studyQueue.length} />
 
       {/* Card */}
-      <div className="mt-6 animate-fadeUp" key={currentCard?.id}>
+      <div className="mt-4 animate-fadeUp" key={currentCard?.id}>
         {currentCard && (
           <Card
             front={currentCard.front}
@@ -114,61 +115,50 @@ export function FlashcardView() {
             onFlip={flip}
             mnemonic={currentCard.mnemonic}
             box={getBox(currentCard.id)}
-            position={`${index + 1} / ${studyQueue.length}`}
           />
         )}
       </div>
 
-      {/* Botones de rating */}
-      <div className="mt-6 flex flex-col sm:flex-row gap-2 sm:gap-3">
-        <button
-          onClick={() => rate(1)}
-          aria-label="No la se, volver a caja 1"
-          className="flex-1 py-3 px-4 text-sm font-medium bg-rose-50 dark:bg-rose-950/30 text-rose-700 dark:text-rose-300 rounded-xl hover:bg-rose-100 dark:hover:bg-rose-950/50 active:scale-[0.98] transition-all"
-        >
-          <span className="text-xs text-rose-400 dark:text-rose-500 mr-1">1</span> No la se
-        </button>
-        <button
-          onClick={() => rate(2)}
-          aria-label="Mas o menos, subir a caja 2"
-          className="flex-1 py-3 px-4 text-sm font-medium bg-amber-50 dark:bg-amber-950/30 text-amber-700 dark:text-amber-300 rounded-xl hover:bg-amber-100 dark:hover:bg-amber-950/50 active:scale-[0.98] transition-all"
-        >
-          <span className="text-xs text-amber-400 dark:text-amber-500 mr-1">2</span> Mas o menos
-        </button>
-        <button
-          onClick={() => rate(3)}
-          aria-label="La se, subir de caja"
-          className="flex-1 py-3 px-4 text-sm font-medium bg-emerald-50 dark:bg-emerald-950/30 text-emerald-700 dark:text-emerald-300 rounded-xl hover:bg-emerald-100 dark:hover:bg-emerald-950/50 active:scale-[0.98] transition-all"
-        >
-          <span className="text-xs text-emerald-400 dark:text-emerald-500 mr-1">3</span> La se
-        </button>
-      </div>
-
-      {/* Navegacion manual */}
-      <div className="mt-4 flex items-center justify-between text-sm text-stone-400 dark:text-zinc-500">
+      {/* Rating + Navigation */}
+      <div className="mt-5 flex items-center gap-2">
         <button
           onClick={goPrev}
           disabled={index === 0}
           aria-label="Card anterior"
-          className="px-3 py-1.5 rounded-lg hover:bg-stone-100 dark:hover:bg-zinc-800/60 disabled:opacity-30 transition-colors"
+          className="p-2.5 rounded-xl text-stone-400 dark:text-zinc-600 hover:bg-stone-100 dark:hover:bg-zinc-800/60 disabled:opacity-20 transition-colors"
         >
           &larr;
         </button>
-        <span aria-live="polite" className="text-xs">{index + 1} / {studyQueue.length}</span>
+        <button
+          onClick={() => rate(1)}
+          aria-label="No la se"
+          className="flex-1 py-2.5 text-sm font-medium bg-rose-50 dark:bg-rose-950/30 text-rose-700 dark:text-rose-300 rounded-xl hover:bg-rose-100 dark:hover:bg-rose-950/50 active:scale-[0.98] transition-all"
+        >
+          No la sé
+        </button>
+        <button
+          onClick={() => rate(2)}
+          aria-label="Mas o menos"
+          className="flex-1 py-2.5 text-sm font-medium bg-amber-50 dark:bg-amber-950/30 text-amber-700 dark:text-amber-300 rounded-xl hover:bg-amber-100 dark:hover:bg-amber-950/50 active:scale-[0.98] transition-all"
+        >
+          Más o menos
+        </button>
+        <button
+          onClick={() => rate(3)}
+          aria-label="La se"
+          className="flex-1 py-2.5 text-sm font-medium bg-emerald-50 dark:bg-emerald-950/30 text-emerald-700 dark:text-emerald-300 rounded-xl hover:bg-emerald-100 dark:hover:bg-emerald-950/50 active:scale-[0.98] transition-all"
+        >
+          La sé
+        </button>
         <button
           onClick={goNext}
           disabled={index >= studyQueue.length - 1}
           aria-label="Card siguiente"
-          className="px-3 py-1.5 rounded-lg hover:bg-stone-100 dark:hover:bg-zinc-800/60 disabled:opacity-30 transition-colors"
+          className="p-2.5 rounded-xl text-stone-400 dark:text-zinc-600 hover:bg-stone-100 dark:hover:bg-zinc-800/60 disabled:opacity-20 transition-colors"
         >
           &rarr;
         </button>
       </div>
-
-      {/* Ayuda de atajos */}
-      <p className="mt-6 text-center text-xs text-stone-400 dark:text-zinc-600 hidden sm:block">
-        Espacio = voltear &middot; 1/2/3 = marcar &middot; &larr; &rarr; = navegar &middot; ? = atajos
-      </p>
       </div>
     </div>
   );

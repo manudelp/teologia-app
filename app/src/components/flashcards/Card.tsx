@@ -7,7 +7,6 @@ interface Props {
   onFlip: () => void;
   mnemonic?: string;
   box: 1 | 2 | 3;
-  position: string;
 }
 
 const boxBg = {
@@ -15,14 +14,6 @@ const boxBg = {
   2: 'bg-amber-50/60 dark:bg-amber-950/20',
   3: 'bg-emerald-50/60 dark:bg-emerald-950/20',
 };
-
-const boxText = {
-  1: 'text-rose-600/70 dark:text-rose-400/70',
-  2: 'text-amber-600/70 dark:text-amber-400/70',
-  3: 'text-emerald-600/70 dark:text-emerald-400/70',
-};
-
-const boxLabels = { 1: 'Caja 1', 2: 'Caja 2', 3: 'Caja 3' };
 
 // Calcula el font-size maximo que permite que todo el contenido entre en el contenedor
 function useAutoFit(text: string, hasMnemonic: boolean) {
@@ -65,7 +56,7 @@ function useAutoFit(text: string, hasMnemonic: boolean) {
   return { containerRef, contentRef, textRef, fontSize };
 }
 
-export function Card({ front, back, flipped, onFlip, mnemonic, box, position }: Props) {
+export function Card({ front, back, flipped, onFlip, mnemonic, box }: Props) {
   const { containerRef, contentRef, textRef, fontSize } = useAutoFit(back, !!mnemonic);
 
   return (
@@ -80,12 +71,7 @@ export function Card({ front, back, flipped, onFlip, mnemonic, box, position }: 
       <div className={`card-flip-inner min-h-[320px] sm:min-h-[400px] ${flipped ? 'flipped' : ''}`}>
         {/* Frente */}
         <div className={`card-flip-face rounded-2xl ${boxBg[box]} px-8 py-12`}>
-          <div className="absolute top-4 left-5 right-5 flex justify-between">
-            <span className={`text-xs font-medium ${boxText[box]}`}>{boxLabels[box]}</span>
-            <span className="text-xs text-stone-400 dark:text-zinc-600">{position}</span>
-          </div>
           <p className="font-serif text-2xl sm:text-3xl leading-snug text-stone-800 dark:text-zinc-100">{front}</p>
-          <p className="mt-6 text-xs text-stone-400 dark:text-zinc-600">Espacio o click para voltear</p>
         </div>
 
         {/* Dorso */}
@@ -93,10 +79,6 @@ export function Card({ front, back, flipped, onFlip, mnemonic, box, position }: 
           ref={containerRef}
           className={`card-flip-face card-flip-back rounded-2xl ${boxBg[box]} px-8 py-12`}
         >
-          <div className="absolute top-4 left-5 right-5 flex justify-between">
-            <span className={`text-xs font-medium ${boxText[box]}`}>{boxLabels[box]}</span>
-            <span className="text-xs text-stone-400 dark:text-zinc-600">{position}</span>
-          </div>
           <div ref={contentRef} className="w-full">
             <p
               ref={textRef}

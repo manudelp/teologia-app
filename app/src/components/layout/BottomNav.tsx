@@ -4,8 +4,8 @@ import type { ViewMode } from '../../types';
 import type { LucideIcon } from 'lucide-react';
 
 const leftTabs: { id: ViewMode; label: string; icon: LucideIcon }[] = [
-  { id: 'flashcards', label: 'Cards', icon: Layers },
   { id: 'chuleta', label: 'Repaso', icon: BookOpen },
+  { id: 'flashcards', label: 'Cards', icon: Layers },
 ];
 
 const rightTabs: { id: ViewMode; label: string; icon: LucideIcon }[] = [

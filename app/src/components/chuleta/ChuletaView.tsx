@@ -1,11 +1,19 @@
 import { useState, useEffect, useCallback } from 'react';
+import { Lightbulb, Printer } from 'lucide-react';
 import { useApp } from '../../context/AppContext';
 import { ChapterFilter } from '../layout/ChapterFilter';
 import { ChapterSection } from './ChapterSection';
 
 export function ChuletaView() {
   const { content, selectedChapter, setSelectedChapter } = useApp();
-  const [showMnemonics, setShowMnemonics] = useState(true);
+  const [showMnemonics, setShowMnemonics] = useState(() => {
+    const saved = localStorage.getItem('showMnemonics');
+    return saved !== null ? JSON.parse(saved) : true;
+  });
+
+  useEffect(() => {
+    localStorage.setItem('showMnemonics', JSON.stringify(showMnemonics));
+  }, [showMnemonics]);
 
   // Flechas para cambiar de capitulo
   const goNext = useCallback(() => {
@@ -66,20 +74,22 @@ export function ChuletaView() {
           <div className="flex items-center gap-1.5 shrink-0">
             <button
               onClick={() => setShowMnemonics(!showMnemonics)}
-              className={`px-3 py-1.5 text-xs font-medium rounded-lg transition-colors ${
+              className={`p-2 rounded-lg transition-colors ${
                 showMnemonics
                   ? 'bg-amber-100 dark:bg-amber-950/40 text-amber-700 dark:text-amber-300'
                   : 'bg-stone-100 dark:bg-zinc-800 text-stone-500 dark:text-zinc-500 hover:bg-stone-200 dark:hover:bg-zinc-700'
               }`}
               aria-pressed={showMnemonics}
+              title="Mnemotécnicos"
             >
-              Mnemo
+              <Lightbulb size={16} strokeWidth={1.75} />
             </button>
             <button
               onClick={handlePrint}
-              className="px-3 py-1.5 text-xs font-medium rounded-lg bg-stone-100 dark:bg-zinc-800 text-stone-500 dark:text-zinc-500 hover:bg-stone-200 dark:hover:bg-zinc-700 hover:text-stone-700 dark:hover:text-zinc-300 transition-colors"
+              className="p-2 rounded-lg bg-stone-100 dark:bg-zinc-800 text-stone-500 dark:text-zinc-500 hover:bg-stone-200 dark:hover:bg-zinc-700 hover:text-stone-700 dark:hover:text-zinc-300 transition-colors"
+              title="Imprimir"
             >
-              Imprimir
+              <Printer size={16} strokeWidth={1.75} />
             </button>
           </div>
         </div>

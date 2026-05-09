@@ -1,5 +1,6 @@
 import { useCallback, useMemo } from 'react';
 import { useApp } from '../context/AppContext';
+import { recordActivity } from '../utils/activity';
 import type { Flashcard } from '../types';
 
 export function useLeitner(cards: Flashcard[]) {
@@ -50,26 +51,31 @@ export function useLeitner(cards: Flashcard[]) {
     setProgress((prev) => {
       const boxes = { ...prev.leitner.boxes };
       const lastSeen = { ...prev.leitner.lastSeen };
+      const prevBox = boxes[cardId] ?? 1;
 
       if (rating === 1) {
-        // No la se: vuelve a caja 1
         boxes[cardId] = 1;
       } else if (rating === 2) {
-        // Mas o menos: sube a caja 2 (o se queda si ya esta en 2 o 3)
         const current = boxes[cardId] ?? 1;
         boxes[cardId] = current === 1 ? 2 : current as 1 | 2 | 3;
       } else {
-        // La se: sube un nivel (max 3)
         const current = boxes[cardId] ?? 1;
         boxes[cardId] = Math.min(current + 1, 3) as 1 | 2 | 3;
       }
 
       lastSeen[cardId] = Date.now();
 
-      return {
+      let result = {
         ...prev,
         leitner: { ...prev.leitner, boxes, lastSeen },
       };
+
+      // Record activity when card reaches box 3
+      if (boxes[cardId] === 3 && prevBox !== 3) {
+        result = recordActivity(result);
+      }
+
+      return result;
     });
   }, [setProgress]);
 
