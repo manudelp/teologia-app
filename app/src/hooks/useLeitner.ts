@@ -36,7 +36,8 @@ export function useLeitner(cards: Flashcard[]) {
     const box3: Flashcard[] = [];
 
     cards.forEach((card) => {
-      const box = getBox(card.id);
+      // Usamos el listado de cajas en el momento de generar la cola
+      const box = leitner.boxes[card.id] ?? 1;
       if (box === 1) box1.push(card);
       else if (box === 2) box2.push(card);
       else if (box === 3 && showBox3) box3.push(card);
@@ -45,7 +46,8 @@ export function useLeitner(cards: Flashcard[]) {
     // Caja 1 aparece varias veces: duplicamos al final
     queue.push(...box1, ...box2, ...box3, ...box1);
     return queue;
-  }, [cards, getBox, leitner.sessionCount]);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [cards, leitner.sessionCount]); // Removido getBox / leitner.boxes para congelar la cola durante la sesion
 
   const markCard = useCallback((cardId: string, rating: 1 | 2 | 3) => {
     setProgress((prev) => {
@@ -86,5 +88,5 @@ export function useLeitner(cards: Flashcard[]) {
     }));
   }, [setProgress]);
 
-  return { counts, studyQueue, markCard, getBox, startNewSession };
+  return { counts, studyQueue, markCard, getBox, startNewSession, sessionCount: leitner.sessionCount };
 }

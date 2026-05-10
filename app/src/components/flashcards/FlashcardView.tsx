@@ -1,4 +1,4 @@
-import { useState, useCallback, useMemo } from 'react';
+import { useState, useCallback, useMemo, useEffect } from 'react';
 import { RotateCcw } from 'lucide-react';
 import { useApp } from '../../context/AppContext';
 import { useLeitner } from '../../hooks/useLeitner';
@@ -8,7 +8,7 @@ import { Card } from './Card';
 import { ProgressBar } from './ProgressBar';
 
 export function FlashcardView() {
-  const { content, selectedChapter } = useApp();
+  const { content, selectedChapter, setSelectedChapter } = useApp();
   const [index, setIndex] = useState(0);
   const [flipped, setFlipped] = useState(false);
 
@@ -19,14 +19,20 @@ export function FlashcardView() {
       : content.flashcards.filter((fc) => fc.chapterId === selectedChapter);
   }, [content, selectedChapter]);
 
-  const { counts, studyQueue, markCard, getBox, startNewSession } = useLeitner(filteredCards);
+  const { counts, studyQueue, markCard, getBox, startNewSession, sessionCount } = useLeitner(filteredCards);
+
+  // Resetear el índice cuando cambian las cards filtradas (ej. cambio de capítulo) o cuando se inicia una nueva sesión
+  useEffect(() => {
+    setIndex(0);
+    setFlipped(false);
+  }, [filteredCards, sessionCount]);
 
   const currentCard = studyQueue[index] ?? null;
 
   const flip = useCallback(() => setFlipped((f) => !f), []);
 
   const goNext = useCallback(() => {
-    if (index < studyQueue.length - 1) {
+    if (index < studyQueue.length) {
       setIndex((i) => i + 1);
       setFlipped(false);
     }
@@ -42,7 +48,7 @@ export function FlashcardView() {
   const rate = useCallback((rating: 1 | 2 | 3) => {
     if (!currentCard) return;
     markCard(currentCard.id, rating);
-    if (index < studyQueue.length - 1) {
+    if (index < studyQueue.length) {
       setIndex((i) => i + 1);
       setFlipped(false);
     }
@@ -79,6 +85,70 @@ export function FlashcardView() {
             >
               Iniciar nueva sesion
             </button>
+          )}
+        </div>
+      </div>
+    );
+  }
+
+  const isSessionFinished = index >= studyQueue.length;
+
+  if (isSessionFinished) {
+    const currentChapterIndex = content.chapters.findIndex((c) => c.id === selectedChapter);
+    const nextChapter = currentChapterIndex >= 0 && currentChapterIndex < content.chapters.length - 1 
+      ? content.chapters[currentChapterIndex + 1] 
+      : null;
+
+    return (
+      <div>
+        <div className="flex items-end gap-3 mb-8">
+          <ChapterFilter />
+          <button
+            onClick={startNewSession}
+            className="shrink-0 px-3 py-1.5 text-xs font-medium text-stone-500 dark:text-zinc-500 hover:text-stone-700 dark:hover:text-zinc-300 bg-stone-100 dark:bg-zinc-800 hover:bg-stone-200 dark:hover:bg-zinc-700 rounded-lg transition-colors"
+          >
+            Nueva sesion
+          </button>
+        </div>
+        <div className="text-center py-16 max-w-sm mx-auto animate-fadeUp">
+          <h2 className="text-xl font-medium text-stone-700 dark:text-zinc-300 mb-3">Sesión completada</h2>
+          <p className="text-stone-500 dark:text-zinc-400 text-sm leading-relaxed">
+            Has repasado todas las flashcards para esta sesión.
+          </p>
+          <button
+            onClick={startNewSession}
+            className="mt-8 px-5 py-2.5 w-full text-sm font-medium bg-stone-800 dark:bg-zinc-200 text-stone-100 dark:text-zinc-800 rounded-lg hover:bg-stone-900 dark:hover:bg-white active:scale-[0.98] transition-all"
+          >
+            Nueva sesión
+          </button>
+          
+          {nextChapter && (
+            <div className="mt-8 pt-8 border-t border-stone-200 dark:border-zinc-800/80">
+              <p className="text-xs uppercase tracking-wider text-stone-400 dark:text-zinc-500 mb-3">
+                Siguiente capítulo
+              </p>
+              <button
+                onClick={() => {
+                  setSelectedChapter(nextChapter.id);
+                  startNewSession();
+                }}
+                className="w-full relative px-4 py-3 text-left bg-stone-50 dark:bg-zinc-800/50 hover:bg-stone-100 dark:hover:bg-zinc-800 border border-stone-200 dark:border-zinc-700/50 rounded-xl transition-colors group"
+              >
+                <div className="flex items-center justify-between">
+                  <div>
+                    <span className="text-xs font-mono text-stone-400 dark:text-zinc-500 block mb-1">
+                      {nextChapter.number}
+                    </span>
+                    <span className="text-sm font-medium text-stone-700 dark:text-zinc-300">
+                      {nextChapter.title}
+                    </span>
+                  </div>
+                  <span className="text-stone-300 dark:text-zinc-600 group-hover:text-stone-500 dark:group-hover:text-zinc-400 transition-colors">
+                    &rarr;
+                  </span>
+                </div>
+              </button>
+            </div>
           )}
         </div>
       </div>
