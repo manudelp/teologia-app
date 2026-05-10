@@ -257,33 +257,33 @@ export function FlashcardView() {
       </div>
 
       {/* Rating + Navigation */}
-      <div className="mt-5 flex items-center gap-2">
+      <div className="mt-5 flex items-stretch gap-1 sm:gap-2">
         <button
           onClick={goPrev}
           disabled={index === 0}
           aria-label="Card anterior"
-          className="p-2.5 rounded-xl text-stone-400 dark:text-zinc-600 hover:bg-stone-100 dark:hover:bg-zinc-800/60 disabled:opacity-20 transition-colors"
+          className="flex items-center justify-center px-1.5 sm:px-2.5 rounded-xl text-stone-400 dark:text-zinc-600 hover:bg-stone-100 dark:hover:bg-zinc-800/60 disabled:opacity-20 transition-colors"
         >
           &larr;
         </button>
         <button
           onClick={() => rate(1)}
           aria-label="No la se"
-          className="flex-1 py-2.5 text-sm font-medium bg-rose-50 border border-rose-200/60 dark:bg-rose-950/30 dark:border-rose-900/40 text-rose-700 dark:text-rose-300 rounded-xl hover:bg-rose-100 dark:hover:bg-rose-950/50 active:scale-[0.98] transition-all"
+          className="flex-1 flex items-center justify-center text-center p-2 min-h-[52px] text-xs sm:text-sm font-medium bg-rose-50 border border-rose-200/60 dark:bg-rose-950/30 dark:border-rose-900/40 text-rose-700 dark:text-rose-300 rounded-xl hover:bg-rose-100 dark:hover:bg-rose-950/50 active:scale-[0.98] transition-all leading-tight sm:leading-normal"
         >
           No la sé
         </button>
         <button
           onClick={() => rate(2)}
           aria-label="Mas o menos"
-          className="flex-1 py-2.5 text-sm font-medium bg-amber-50 border border-amber-200/60 dark:bg-amber-950/30 dark:border-amber-900/40 text-amber-700 dark:text-amber-300 rounded-xl hover:bg-amber-100 dark:hover:bg-amber-950/50 active:scale-[0.98] transition-all"
+          className="flex-1 flex items-center justify-center text-center p-2 min-h-[52px] text-xs sm:text-sm font-medium bg-amber-50 border border-amber-200/60 dark:bg-amber-950/30 dark:border-amber-900/40 text-amber-700 dark:text-amber-300 rounded-xl hover:bg-amber-100 dark:hover:bg-amber-950/50 active:scale-[0.98] transition-all leading-tight sm:leading-normal"
         >
           Más o menos
         </button>
         <button
           onClick={() => rate(3)}
           aria-label="La se"
-          className="flex-1 py-2.5 text-sm font-medium bg-emerald-50 border border-emerald-200/60 dark:bg-emerald-950/30 dark:border-emerald-900/40 text-emerald-700 dark:text-emerald-300 rounded-xl hover:bg-emerald-100 dark:hover:bg-emerald-950/50 active:scale-[0.98] transition-all"
+          className="flex-1 flex items-center justify-center text-center p-2 min-h-[52px] text-xs sm:text-sm font-medium bg-emerald-50 border border-emerald-200/60 dark:bg-emerald-950/30 dark:border-emerald-900/40 text-emerald-700 dark:text-emerald-300 rounded-xl hover:bg-emerald-100 dark:hover:bg-emerald-950/50 active:scale-[0.98] transition-all leading-tight sm:leading-normal"
         >
           La sé
         </button>
@@ -291,7 +291,7 @@ export function FlashcardView() {
           onClick={goNext}
           disabled={index >= studyQueue.length - 1}
           aria-label="Card siguiente"
-          className="p-2.5 rounded-xl text-stone-400 dark:text-zinc-600 hover:bg-stone-100 dark:hover:bg-zinc-800/60 disabled:opacity-20 transition-colors"
+          className="flex items-center justify-center px-1.5 sm:px-2.5 rounded-xl text-stone-400 dark:text-zinc-600 hover:bg-stone-100 dark:hover:bg-zinc-800/60 disabled:opacity-20 transition-colors"
         >
           &rarr;
         </button>
