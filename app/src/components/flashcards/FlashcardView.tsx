@@ -12,6 +12,17 @@ export function FlashcardView() {
   const [index, setIndex] = useState(0);
   const [flipped, setFlipped] = useState(false);
 
+  useEffect(() => {
+    // Bloquear scroll vertical del body mientras estemos en la vista de flashcards
+    document.body.style.overflow = 'hidden';
+    document.body.style.overscrollBehavior = 'none';
+    
+    return () => {
+      document.body.style.overflow = '';
+      document.body.style.overscrollBehavior = '';
+    };
+  }, []);
+
   const filteredCards = useMemo(() => {
     if (!content) return [];
     return selectedChapter === 'todos'
@@ -21,38 +32,39 @@ export function FlashcardView() {
 
   const { counts, studyQueue, markCard, getBox, startNewSession, sessionCount } = useLeitner(filteredCards);
 
-  const [pointerStartX, setPointerStartX] = useState<number | null>(null);
-  const [pointerEndX, setPointerEndX] = useState<number | null>(null);
+  const [pointerStart, setPointerStart] = useState<{ x: number, y: number } | null>(null);
+  const [pointerEnd, setPointerEnd] = useState<{ x: number, y: number } | null>(null);
   const minSwipeDistance = 50;
 
   const onPointerDown = (e: React.PointerEvent) => {
-    setPointerEndX(null);
-    setPointerStartX(e.clientX);
-    try {
-      (e.target as HTMLElement).setPointerCapture(e.pointerId);
-    } catch (err) {
-      // Ignorar si falla la captura (puede pasar en algunos elementos)
-    }
+    if (e.pointerType === 'mouse' && e.button !== 0) return; // ignore right click
+    setPointerEnd(null);
+    setPointerStart({ x: e.clientX, y: e.clientY });
   };
 
   const onPointerMove = (e: React.PointerEvent) => {
-    if (pointerStartX !== null) {
-      setPointerEndX(e.clientX);
+    if (pointerStart) {
+      setPointerEnd({ x: e.clientX, y: e.clientY });
     }
   };
 
-  const onPointerUp = (e: React.PointerEvent) => {
-    try {
-      (e.target as HTMLElement).releasePointerCapture(e.pointerId);
-    } catch (err) {}
-    
-    if (!pointerStartX || !pointerEndX) {
-      setPointerStartX(null);
+  const onPointerUp = () => {
+    if (!pointerStart || !pointerEnd) {
+      setPointerStart(null);
       return;
     }
-    const distance = pointerStartX - pointerEndX;
-    const isLeftSwipe = distance > minSwipeDistance;
-    const isRightSwipe = distance < -minSwipeDistance;
+    const distanceX = pointerStart.x - pointerEnd.x;
+    const distanceY = pointerStart.y - pointerEnd.y;
+    
+    // Si la persona deslizo mas en vertical (scroll) que en horizontal, se ignora
+    if (Math.abs(distanceY) > Math.abs(distanceX)) {
+      setPointerStart(null);
+      setPointerEnd(null);
+      return;
+    }
+
+    const isLeftSwipe = distanceX > minSwipeDistance;
+    const isRightSwipe = distanceX < -minSwipeDistance;
     
     if (isLeftSwipe) {
       goNext();
@@ -60,8 +72,13 @@ export function FlashcardView() {
       goPrev();
     }
     
-    setPointerStartX(null);
-    setPointerEndX(null);
+    setPointerStart(null);
+    setPointerEnd(null);
+  };
+
+  const onPointerCancel = () => {
+    setPointerStart(null);
+    setPointerEnd(null);
   };
 
   // Resetear el índice cuando cambian las cards filtradas (ej. cambio de capítulo) o cuando se inicia una nueva sesión
@@ -199,7 +216,7 @@ export function FlashcardView() {
   }
 
   return (
-    <div>
+    <div className="overscroll-none touch-none">
       {/* Controles superiores - ancho completo */}
       <div className="flex items-end gap-3 mb-6">
         <ChapterFilter />
@@ -220,12 +237,12 @@ export function FlashcardView() {
 
       {/* Card */}
       <div 
-        className="mt-4 animate-fadeUp touch-none" 
+        className="mt-4 animate-fadeUp" 
         key={currentCard?.id}
         onPointerDown={onPointerDown}
         onPointerMove={onPointerMove}
         onPointerUp={onPointerUp}
-        onPointerCancel={onPointerUp}
+        onPointerCancel={onPointerCancel}
       >
         {currentCard && (
           <Card

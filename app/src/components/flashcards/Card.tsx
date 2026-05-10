@@ -31,8 +31,9 @@ function useAutoFit(text: string, hasMnemonic: boolean) {
       const el = textRef.current;
       if (!container || !content || !el) return;
 
-      // Espacio disponible: alto del contenedor menos padding superior (metadata) e inferior
-      const availableHeight = container.clientHeight - 80;
+      // Espacio disponible: alto del contenedor menos padding superior e inferior
+      // (ajustado para el py-8 en mobile que suma 64px)
+      const availableHeight = container.clientHeight - 64;
 
       let min = 12;
       let max = 28;
@@ -63,21 +64,21 @@ export function Card({ front, back, flipped, onFlip, mnemonic, box }: Props) {
     <div
       onClick={onFlip}
       onKeyDown={(e) => { if (e.code === 'Space' || e.code === 'Enter') { e.preventDefault(); onFlip(); } }}
-      className="card-flip-container w-full min-h-[320px] sm:min-h-[400px] cursor-pointer select-none"
+      className="card-flip-container w-full min-h-[260px] sm:min-h-[400px] cursor-pointer select-none"
       role="button"
       aria-label={flipped ? 'Dorso de la card. Click o espacio para voltear' : 'Frente de la card. Click o espacio para voltear'}
       tabIndex={0}
     >
-      <div className={`card-flip-inner min-h-[320px] sm:min-h-[400px] ${flipped ? 'flipped' : ''}`}>
+      <div className={`card-flip-inner min-h-[260px] sm:min-h-[400px] ${flipped ? 'flipped' : ''}`}>
         {/* Frente */}
-        <div className={`card-flip-face rounded-2xl ${boxBg[box]} px-8 py-12`}>
+        <div className={`card-flip-face rounded-2xl ${boxBg[box]} px-6 py-8 sm:px-8 sm:py-12`}>
           <p className="font-serif text-2xl sm:text-3xl leading-snug text-stone-800 dark:text-zinc-100">{front}</p>
         </div>
 
         {/* Dorso */}
         <div
           ref={containerRef}
-          className={`card-flip-face card-flip-back rounded-2xl ${boxBg[box]} px-8 py-12`}
+          className={`card-flip-face card-flip-back rounded-2xl ${boxBg[box]} px-6 py-8 sm:px-8 sm:py-12`}
         >
           <div ref={contentRef} className="w-full">
             <p
