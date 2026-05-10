@@ -21,6 +21,49 @@ export function FlashcardView() {
 
   const { counts, studyQueue, markCard, getBox, startNewSession, sessionCount } = useLeitner(filteredCards);
 
+  const [pointerStartX, setPointerStartX] = useState<number | null>(null);
+  const [pointerEndX, setPointerEndX] = useState<number | null>(null);
+  const minSwipeDistance = 50;
+
+  const onPointerDown = (e: React.PointerEvent) => {
+    setPointerEndX(null);
+    setPointerStartX(e.clientX);
+    try {
+      (e.target as HTMLElement).setPointerCapture(e.pointerId);
+    } catch (err) {
+      // Ignorar si falla la captura (puede pasar en algunos elementos)
+    }
+  };
+
+  const onPointerMove = (e: React.PointerEvent) => {
+    if (pointerStartX !== null) {
+      setPointerEndX(e.clientX);
+    }
+  };
+
+  const onPointerUp = (e: React.PointerEvent) => {
+    try {
+      (e.target as HTMLElement).releasePointerCapture(e.pointerId);
+    } catch (err) {}
+    
+    if (!pointerStartX || !pointerEndX) {
+      setPointerStartX(null);
+      return;
+    }
+    const distance = pointerStartX - pointerEndX;
+    const isLeftSwipe = distance > minSwipeDistance;
+    const isRightSwipe = distance < -minSwipeDistance;
+    
+    if (isLeftSwipe) {
+      goNext();
+    } else if (isRightSwipe) {
+      goPrev();
+    }
+    
+    setPointerStartX(null);
+    setPointerEndX(null);
+  };
+
   // Resetear el índice cuando cambian las cards filtradas (ej. cambio de capítulo) o cuando se inicia una nueva sesión
   useEffect(() => {
     setIndex(0);
@@ -176,7 +219,14 @@ export function FlashcardView() {
       <ProgressBar counts={counts} current={index + 1} total={studyQueue.length} />
 
       {/* Card */}
-      <div className="mt-4 animate-fadeUp" key={currentCard?.id}>
+      <div 
+        className="mt-4 animate-fadeUp touch-none" 
+        key={currentCard?.id}
+        onPointerDown={onPointerDown}
+        onPointerMove={onPointerMove}
+        onPointerUp={onPointerUp}
+        onPointerCancel={onPointerUp}
+      >
         {currentCard && (
           <Card
             front={currentCard.front}
@@ -202,21 +252,21 @@ export function FlashcardView() {
         <button
           onClick={() => rate(1)}
           aria-label="No la se"
-          className="flex-1 py-2.5 text-sm font-medium bg-rose-50 dark:bg-rose-950/30 text-rose-700 dark:text-rose-300 rounded-xl hover:bg-rose-100 dark:hover:bg-rose-950/50 active:scale-[0.98] transition-all"
+          className="flex-1 py-2.5 text-sm font-medium bg-rose-50 border border-rose-200/60 dark:bg-rose-950/30 dark:border-rose-900/40 text-rose-700 dark:text-rose-300 rounded-xl hover:bg-rose-100 dark:hover:bg-rose-950/50 active:scale-[0.98] transition-all"
         >
           No la sé
         </button>
         <button
           onClick={() => rate(2)}
           aria-label="Mas o menos"
-          className="flex-1 py-2.5 text-sm font-medium bg-amber-50 dark:bg-amber-950/30 text-amber-700 dark:text-amber-300 rounded-xl hover:bg-amber-100 dark:hover:bg-amber-950/50 active:scale-[0.98] transition-all"
+          className="flex-1 py-2.5 text-sm font-medium bg-amber-50 border border-amber-200/60 dark:bg-amber-950/30 dark:border-amber-900/40 text-amber-700 dark:text-amber-300 rounded-xl hover:bg-amber-100 dark:hover:bg-amber-950/50 active:scale-[0.98] transition-all"
         >
           Más o menos
         </button>
         <button
           onClick={() => rate(3)}
           aria-label="La se"
-          className="flex-1 py-2.5 text-sm font-medium bg-emerald-50 dark:bg-emerald-950/30 text-emerald-700 dark:text-emerald-300 rounded-xl hover:bg-emerald-100 dark:hover:bg-emerald-950/50 active:scale-[0.98] transition-all"
+          className="flex-1 py-2.5 text-sm font-medium bg-emerald-50 border border-emerald-200/60 dark:bg-emerald-950/30 dark:border-emerald-900/40 text-emerald-700 dark:text-emerald-300 rounded-xl hover:bg-emerald-100 dark:hover:bg-emerald-950/50 active:scale-[0.98] transition-all"
         >
           La sé
         </button>

@@ -28,7 +28,7 @@ export function KeyboardHelp({ open, onClose }: Props) {
         { keys: '1', action: 'No la se' },
         { keys: '2', action: 'Mas o menos' },
         { keys: '3', action: 'La se' },
-        { keys: '\u2190 \u2192', action: 'Navegar sin marcar' },
+        { keys: '\u2190 \u2192 / Swipe', action: 'Navegar sin marcar' },
       ],
     },
   ], [mod]);
@@ -51,9 +51,9 @@ export function KeyboardHelp({ open, onClose }: Props) {
         className="animate-fadeUp relative w-full max-w-md mx-4 bg-white dark:bg-zinc-900 rounded-2xl shadow-2xl p-6"
         onClick={(e) => e.stopPropagation()}
         role="dialog"
-        aria-label="Atajos de teclado"
+        aria-label="Atajos"
       >
-        <h2 className="font-serif text-xl text-stone-800 dark:text-zinc-200 mb-5">Atajos de teclado</h2>
+        <h2 className="font-serif text-xl text-stone-800 dark:text-zinc-200 mb-5">Atajos</h2>
 
         {groups.map((group) => (
           <div key={group.title} className="mb-5 last:mb-0">

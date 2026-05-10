@@ -10,9 +10,9 @@ interface Props {
 }
 
 const boxBg = {
-  1: 'bg-rose-50/60 dark:bg-rose-950/20',
-  2: 'bg-amber-50/60 dark:bg-amber-950/20',
-  3: 'bg-emerald-50/60 dark:bg-emerald-950/20',
+  1: 'bg-rose-50/60 border border-rose-200/60 dark:bg-rose-950/20 dark:border-rose-900/30',
+  2: 'bg-amber-50/60 border border-amber-200/60 dark:bg-amber-950/20 dark:border-amber-900/30',
+  3: 'bg-emerald-50/60 border border-emerald-200/60 dark:bg-emerald-950/20 dark:border-emerald-900/30',
 };
 
 // Calcula el font-size maximo que permite que todo el contenido entre en el contenedor
