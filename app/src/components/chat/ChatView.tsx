@@ -182,7 +182,7 @@ function RenderContent({ text }: { text: string }) {
     else if (line.startsWith('> ')) {
       elements.push(
         <blockquote key={i} className="border-l-2 border-stone-300 dark:border-zinc-700 pl-3 my-2 text-stone-500 dark:text-zinc-400 italic text-[14px]">
-          {line.slice(2)}
+          <InlineFormat text={line.slice(2)} />
         </blockquote>
       );
     }
