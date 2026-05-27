@@ -1,4 +1,4 @@
-import { useRef, useEffect, useState } from 'react';
+import { useRef, useEffect, useState, type ReactNode } from 'react';
 
 interface Props {
   front: string;
@@ -19,7 +19,7 @@ const boxBg = {
 function useAutoFit(text: string, hasMnemonic: boolean) {
   const containerRef = useRef<HTMLDivElement>(null);
   const contentRef = useRef<HTMLDivElement>(null);
-  const textRef = useRef<HTMLParagraphElement>(null);
+  const textRef = useRef<HTMLDivElement>(null);
   const [fontSize, setFontSize] = useState(18);
 
   useEffect(() => {
@@ -57,6 +57,52 @@ function useAutoFit(text: string, hasMnemonic: boolean) {
   return { containerRef, contentRef, textRef, fontSize };
 }
 
+// Renderiza el texto del dorso respetando marcadores:
+// \n = salto de linea, lineas que empiezan con • = bullet, **texto** = negrita
+function formatBack(text: string): ReactNode {
+  const lines = text.split('\n');
+  const elements: ReactNode[] = [];
+  let bulletBuffer: string[] = [];
+
+  const flushBullets = () => {
+    if (bulletBuffer.length === 0) return;
+    elements.push(
+      <ul key={`ul-${elements.length}`} className="list-disc list-outside pl-4 space-y-0.5">
+        {bulletBuffer.map((b, i) => <li key={i}>{renderInline(b)}</li>)}
+      </ul>
+    );
+    bulletBuffer = [];
+  };
+
+  for (const line of lines) {
+    const trimmed = line.trim();
+    if (trimmed.startsWith('• ') || trimmed.startsWith('- ')) {
+      bulletBuffer.push(trimmed.slice(2));
+    } else {
+      flushBullets();
+      if (trimmed === '') {
+        elements.push(<div key={`sp-${elements.length}`} className="h-2" />);
+      } else {
+        elements.push(<p key={`p-${elements.length}`}>{renderInline(trimmed)}</p>);
+      }
+    }
+  }
+  flushBullets();
+
+  return <div className="space-y-1.5">{elements}</div>;
+}
+
+function renderInline(text: string): ReactNode {
+  // **bold** rendering
+  const parts = text.split(/(\*\*[^*]+\*\*)/g);
+  if (parts.length === 1) return text;
+  return <>{parts.map((p, i) =>
+    p.startsWith('**') && p.endsWith('**')
+      ? <span key={i} className="font-semibold text-stone-800 dark:text-zinc-100">{p.slice(2, -2)}</span>
+      : <span key={i}>{p}</span>
+  )}</>;
+}
+
 export function Card({ front, back, flipped, onFlip, mnemonic, box }: Props) {
   const { containerRef, contentRef, textRef, fontSize } = useAutoFit(back, !!mnemonic);
 
@@ -81,13 +127,13 @@ export function Card({ front, back, flipped, onFlip, mnemonic, box }: Props) {
           className={`card-flip-face card-flip-back rounded-2xl ${boxBg[box]} px-6 py-8 sm:px-8 sm:py-12`}
         >
           <div ref={contentRef} className="w-full">
-            <p
+            <div
               ref={textRef}
               style={{ fontSize: `${fontSize}px` }}
-              className="leading-relaxed text-stone-700 dark:text-zinc-300 whitespace-pre-line text-left w-full"
+              className="leading-relaxed text-stone-700 dark:text-zinc-300 text-left w-full"
             >
-              {back}
-            </p>
+              {formatBack(back)}
+            </div>
             {mnemonic && (
               <div className="mt-4 w-full px-4 py-3 bg-amber-50/50 dark:bg-amber-950/20 border-l-2 border-amber-400 dark:border-amber-600 rounded-r-lg">
                 <p className="font-serif italic text-sm text-amber-800 dark:text-amber-300">{mnemonic}</p>
