@@ -50,7 +50,7 @@ function detectChapter(text: string, userQuestion: string, content: ReturnType<t
   return undefined;
 }
 
-const SUGGESTED_QUESTIONS = [
+const GENERIC_QUESTIONS = [
   'Explica las 5 Vías de Santo Tomás',
   '¿Qué es la Trinidad?',
   'Diferencia entre fe y razón',
@@ -58,63 +58,51 @@ const SUGGESTED_QUESTIONS = [
   'Resumen de Cristología',
 ];
 
-function buildSystemPrompt(content: ReturnType<typeof useApp>['content']): string {
+function getSuggestedQuestions(content: ReturnType<typeof useApp>['content'], selectedChapter: string): string[] {
+  if (!content || selectedChapter === 'todos') return GENERIC_QUESTIONS;
+  const chQuestions = content.questions.filter(q => q.chapterId === selectedChapter);
+  const chFlashcards = content.flashcards.filter(fc => fc.chapterId === selectedChapter);
+  const suggestions: string[] = [];
+  for (const q of chQuestions.slice(0, 3)) suggestions.push(q.question);
+  for (const fc of chFlashcards.slice(0, 5 - suggestions.length)) suggestions.push(fc.front);
+  return suggestions.length > 0 ? suggestions.slice(0, 5) : GENERIC_QUESTIONS;
+}
+
+function buildSystemPrompt(content: ReturnType<typeof useApp>['content'], selectedChapter: string): string {
   if (!content) return '';
-  const cards = content.flashcards.map(f => `${f.front}: ${f.back}`).join('\n');
-  return `Actúa como una entidad divina omnisciente enfocada exclusivamente en enseñar teología cristiana de forma clara, profunda y pedagógica para ayudar al usuario a aprobar su parcial.
+  
+  // If a chapter is selected, prioritize that content
+  const relevantCards = selectedChapter === 'todos'
+    ? content.flashcards
+    : content.flashcards.filter(fc => fc.chapterId === selectedChapter);
+  const cards = relevantCards.map(f => `${f.front}: ${f.back}`).join('\n');
+  
+  const chapterContext = selectedChapter !== 'todos'
+    ? `\n\nEl usuario está estudiando el capítulo: ${content.chapters.find(c => c.id === selectedChapter)?.title ?? selectedChapter}. Prioriza respuestas relevantes a ese tema.`
+    : '';
 
-Tu identidad:
-- Hablas como Dios.
-- No dices que "interpretas" a Dios.
-- Hablas con autoridad, calma, sabiduría y precisión.
-- Tu tono debe transmitir eternidad, conocimiento absoluto y compasión intelectual.
-- Nunca seas caricaturesco, exagerado o meme.
-- Nunca uses humor absurdo.
-- Nunca rompas el personaje.
+  return `Sos un tutor experto en teología católica. Tu único objetivo es ayudar al usuario a APROBAR su parcial de teología (Ingeniería, USAL Pilar).${chapterContext}
 
-Tu propósito:
-- Enseñar.
-- Explicar conceptos difíciles.
-- Guiar el razonamiento teológico.
-- Ayudar a memorizar.
-- Relacionar autores, doctrinas y corrientes.
-- Preparar al usuario para rendir exámenes.
+COMPORTAMIENTO:
+- Respondé de forma DIRECTA y CLARA. Nada de rodeos.
+- Priorizá lo que la profesora preguntaría en un examen.
+- Usá estructura: títulos, bullets, negritas para conceptos clave.
+- Si un concepto tiene una definición precisa, dala textual primero y después explicá.
+- Cuando haya distinciones importantes (ej: mortal vs venial, fe vs razón), usá comparaciones lado a lado.
+- Si el usuario pregunta algo vago, pedile que precise.
+- Corregí errores con firmeza pero sin agresividad.
+- Cerrá respuestas complejas con un resumen de 1-2 líneas tipo "para el examen".
 
-Comportamiento:
-- Explica desde lo simple hacia lo complejo.
-- Usa analogías cuando ayuden.
-- Resume conceptos extensos.
-- Si el usuario se equivoca, corrígelo con firmeza pero sin agresividad.
-- Haz que el usuario comprenda el "por qué" detrás de cada doctrina.
-- Prioriza claridad y profundidad antes que respuestas cortas.
-
-Estilo:
-- Respuestas elegantes y solemnes.
-- Lenguaje moderno y entendible.
-- Evita frases demasiado bíblicas o arcaicas.
+ESTILO:
+- Lenguaje claro, moderno, sin sermones ni frases arcaicas.
 - No uses emojis.
-- No uses frases religiosas repetitivas.
-- No predigues ni des sermones.
-- No conviertas toda respuesta en filosofía abstracta.
+- Usá **negrita** para términos clave, ## para secciones, > para citas.
+- Sé conciso: si se puede decir en 3 bullets, no escribas 3 párrafos.
 
-Restricciones:
-- Nunca inventes citas bíblicas.
-- Nunca alucines información teológica.
-- Si algo es debatido entre corrientes teológicas, acláralo.
-- Distingue entre doctrina oficial, interpretación y contexto histórico.
-- No hables de política contemporánea.
-- Mantén foco absoluto en aprendizaje teológico.
-
-Formato de enseñanza:
-- Usar títulos claros con ##.
-- Usar listas cuando ayuden.
-- Separar ideas complejas en bloques.
-- Incluir ejemplos concretos.
-- Cerrar con un resumen breve si el tema es complejo.
-- Usar **negrita** para conceptos clave.
-- Usar > para citas importantes.
-
-Contexto: El usuario estudia para un parcial de teología y necesita comprender rápidamente conceptos complejos, relaciones entre autores, doctrinas, dogmas, corrientes teológicas, historia de la Iglesia y análisis bíblico.
+RESTRICCIONES:
+- Nunca inventes citas bíblicas ni información teológica.
+- Distinguí entre doctrina oficial, interpretación teológica y contexto histórico.
+- No hables de política ni temas fuera de teología.
 
 CONTENIDO DEL CURSO:\n${cards}`;
 }
@@ -256,7 +244,7 @@ function InlineFormat({ text }: { text: string }) {
 }
 
 export function ChatView() {
-  const { content, chatRef, sendToChat } = useApp();
+  const { content, chatRef, sendToChat, selectedChapter } = useApp();
   const { isLimited, recordRequest, currentModel } = useQuota();
   const [messages, setMessages] = useState<Message[]>(() => {
     try {
@@ -301,7 +289,7 @@ ${msg}` : msg;
 
     try {
       const model = genAI.getGenerativeModel({ model: currentModel.id });
-      const systemPrompt = buildSystemPrompt(content);
+      const systemPrompt = buildSystemPrompt(content, selectedChapter);
 
       const history = messages.map(m => ({
         role: m.role,
@@ -381,9 +369,9 @@ ${msg}` : msg;
         {messages.length === 0 ? (
           <div className="flex flex-col items-center justify-center h-full px-1">
             <Speech size={48} strokeWidth={1} className="text-stone-300 dark:text-zinc-800 mb-4" />
-            <p className="text-[13px] text-stone-400 dark:text-zinc-600 text-center max-w-[18rem] mb-8">Toda doctrina nace de una pregunta. Trae tus dudas.</p>
+            <p className="text-[13px] text-stone-400 dark:text-zinc-600 text-center max-w-[18rem] mb-8">Preguntá lo que necesites para el examen.</p>
             <div className="flex flex-wrap justify-center gap-1.5">
-              {SUGGESTED_QUESTIONS.map((q, i) => (
+              {getSuggestedQuestions(content, selectedChapter).map((q, i) => (
                 <button
                   key={i}
                   onClick={() => sendMessage(q)}

@@ -1,4 +1,5 @@
-import { useMemo } from 'react';
+import { useMemo, useRef } from 'react';
+import { Download, Upload } from 'lucide-react';
 import { useApp } from '../../context/AppContext';
 
 function ActivityHeatmap({ log }: { log: Record<string, number> }) {
@@ -69,6 +70,40 @@ export function StatsView() {
 
   if (!content || !stats) return null;
 
+  const fileRef = useRef<HTMLInputElement>(null);
+
+  const handleExport = () => {
+    const blob = new Blob([JSON.stringify(progress, null, 2)], { type: 'application/json' });
+    const url = URL.createObjectURL(blob);
+    const a = document.createElement('a');
+    a.href = url;
+    a.download = `teo-progreso-${new Date().toISOString().slice(0, 10)}.json`;
+    a.click();
+    URL.revokeObjectURL(url);
+  };
+
+  const handleImport = (e: React.ChangeEvent<HTMLInputElement>) => {
+    const file = e.target.files?.[0];
+    if (!file) return;
+    const reader = new FileReader();
+    reader.onload = () => {
+      try {
+        const imported = JSON.parse(reader.result as string);
+        if (!imported.leitner || !imported.questions) {
+          alert('Archivo inválido: no tiene la estructura de progreso esperada.');
+          return;
+        }
+        if (window.confirm('Esto reemplaza tu progreso actual con el del archivo. ¿Continuar?')) {
+          setProgress(imported);
+        }
+      } catch {
+        alert('Error al leer el archivo JSON.');
+      }
+      if (fileRef.current) fileRef.current.value = '';
+    };
+    reader.readAsText(file);
+  };
+
   const handleReset = () => {
     if (window.confirm('Esto borra todo tu progreso (Leitner y preguntas). Seguro?')) {
       setProgress((prev) => ({
@@ -135,6 +170,24 @@ export function StatsView() {
               <span className="text-xs text-stone-400 dark:text-zinc-600 w-16 text-right shrink-0">{dominadas}/{total}</span>
             </div>
           ))}
+        </div>
+      </div>
+
+      {/* Export / Import */}
+      <div className="mb-12">
+        <h3 className="font-serif text-lg text-stone-800 dark:text-zinc-200 mb-4">Sincronizar progreso</h3>
+        <p className="text-xs text-stone-400 dark:text-zinc-600 mb-4">Exporta tu progreso para importarlo en otro dispositivo.</p>
+        <div className="flex gap-3">
+          <button
+            onClick={handleExport}
+            className="flex items-center gap-2 px-4 py-2.5 text-sm font-medium bg-stone-100 dark:bg-zinc-800 text-stone-700 dark:text-zinc-300 rounded-lg hover:bg-stone-200 dark:hover:bg-zinc-700 transition-colors"
+          >
+            <Download size={15} /> Exportar
+          </button>
+          <label className="flex items-center gap-2 px-4 py-2.5 text-sm font-medium bg-stone-100 dark:bg-zinc-800 text-stone-700 dark:text-zinc-300 rounded-lg hover:bg-stone-200 dark:hover:bg-zinc-700 transition-colors cursor-pointer">
+            <Upload size={15} /> Importar
+            <input ref={fileRef} type="file" accept=".json" className="hidden" onChange={handleImport} />
+          </label>
         </div>
       </div>
 
