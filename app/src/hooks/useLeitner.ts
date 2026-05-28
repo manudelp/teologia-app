@@ -3,51 +3,52 @@ import { useApp } from '../context/AppContext';
 import { recordActivity } from '../utils/activity';
 import type { Flashcard } from '../types';
 
-export function useLeitner(cards: Flashcard[]) {
+export function useLeitner(cards: Flashcard[], examMode = false) {
   const { progress, setProgress } = useApp();
   const { leitner } = progress;
 
-  // Asignar caja 1 a cards nuevas (merge no destructivo)
   const getBox = useCallback((id: string): 1 | 2 | 3 => {
     return leitner.boxes[id] ?? 1;
   }, [leitner.boxes]);
 
-  // Conteo por caja
   const counts = useMemo(() => {
     const c = { 1: 0, 2: 0, 3: 0 };
     cards.forEach((card) => { c[getBox(card.id)]++; });
     return c;
   }, [cards, getBox]);
 
-  // Armar cola de estudio segun intervalos:
-  // Caja 1: todas (varias veces por sesion)
-  // Caja 2: una vez por sesion
-  // Caja 3: cada 3 sesiones
   const studyQueue = useMemo(() => {
+    if (examMode) {
+      // Exam mode: ALL cards, sorted by difficulty (box 1 first, then 2, then 3)
+      // Within same box, cards seen less recently go first
+      return [...cards].sort((a, b) => {
+        const boxA = leitner.boxes[a.id] ?? 1;
+        const boxB = leitner.boxes[b.id] ?? 1;
+        if (boxA !== boxB) return boxA - boxB;
+        const seenA = leitner.lastSeen[a.id] ?? 0;
+        const seenB = leitner.lastSeen[b.id] ?? 0;
+        return seenA - seenB;
+      });
+    }
+
     const session = leitner.sessionCount;
     const queue: Flashcard[] = [];
-
-    // Caja 3: solo si sesion es multiplo de 3
     const showBox3 = session % 3 === 0;
-
-    // Primero caja 1 (prioridad), luego caja 2, luego caja 3
     const box1: Flashcard[] = [];
     const box2: Flashcard[] = [];
     const box3: Flashcard[] = [];
 
     cards.forEach((card) => {
-      // Usamos el listado de cajas en el momento de generar la cola
       const box = leitner.boxes[card.id] ?? 1;
       if (box === 1) box1.push(card);
       else if (box === 2) box2.push(card);
       else if (box === 3 && showBox3) box3.push(card);
     });
 
-    // Caja 1 aparece varias veces: duplicamos al final
     queue.push(...box1, ...box2, ...box3, ...box1);
     return queue;
     // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [cards, leitner.sessionCount]); // Removido getBox / leitner.boxes para congelar la cola durante la sesion
+  }, [cards, leitner.sessionCount, examMode]);
 
   const markCard = useCallback((cardId: string, rating: 1 | 2 | 3) => {
     setProgress((prev) => {
@@ -72,7 +73,6 @@ export function useLeitner(cards: Flashcard[]) {
         leitner: { ...prev.leitner, boxes, lastSeen },
       };
 
-      // Record activity when card reaches box 3
       if (boxes[cardId] === 3 && prevBox !== 3) {
         result = recordActivity(result);
       }

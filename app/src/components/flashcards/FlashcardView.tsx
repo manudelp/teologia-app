@@ -1,5 +1,5 @@
 import { useState, useCallback, useMemo, useEffect } from 'react';
-import { RotateCcw } from 'lucide-react';
+import { RotateCcw, Zap } from 'lucide-react';
 import { useApp } from '../../context/AppContext';
 import { useLeitner } from '../../hooks/useLeitner';
 import { useKeyboard } from '../../hooks/useKeyboard';
@@ -11,6 +11,7 @@ export function FlashcardView() {
   const { content, selectedChapter, setSelectedChapter } = useApp();
   const [index, setIndex] = useState(0);
   const [flipped, setFlipped] = useState(false);
+  const [examMode, setExamMode] = useState(false);
 
   useEffect(() => {
     // Bloquear scroll vertical del body mientras estemos en la vista de flashcards
@@ -30,7 +31,7 @@ export function FlashcardView() {
       : content.flashcards.filter((fc) => fc.chapterId === selectedChapter);
   }, [content, selectedChapter]);
 
-  const { counts, studyQueue, markCard, getBox, startNewSession, sessionCount } = useLeitner(filteredCards);
+  const { counts, studyQueue, markCard, getBox, startNewSession, sessionCount } = useLeitner(filteredCards, examMode);
 
   const [pointerStart, setPointerStart] = useState<{ x: number, y: number } | null>(null);
   const [pointerEnd, setPointerEnd] = useState<{ x: number, y: number } | null>(null);
@@ -220,6 +221,17 @@ export function FlashcardView() {
       {/* Controles superiores - ancho completo */}
       <div className="flex items-end gap-3 mb-6">
         <ChapterFilter />
+        <button
+          onClick={() => { setExamMode(!examMode); setIndex(0); setFlipped(false); }}
+          className={`shrink-0 flex items-center gap-1.5 px-3 py-2 text-xs font-medium rounded-lg transition-colors ${
+            examMode
+              ? 'bg-amber-100 dark:bg-amber-900/40 text-amber-700 dark:text-amber-300 border border-amber-300 dark:border-amber-700'
+              : 'text-stone-500 dark:text-zinc-500 hover:text-stone-700 dark:hover:text-zinc-300 bg-stone-100 dark:bg-zinc-800 hover:bg-stone-200 dark:hover:bg-zinc-700'
+          }`}
+          title={examMode ? 'Modo repaso final activo' : 'Activar repaso final'}
+        >
+          <Zap size={13} /> {examMode ? 'Final' : 'Repaso final'}
+        </button>
         <button
           onClick={startNewSession}
           className="shrink-0 p-2 text-stone-500 dark:text-zinc-500 hover:text-stone-700 dark:hover:text-zinc-300 bg-stone-100 dark:bg-zinc-800 hover:bg-stone-200 dark:hover:bg-zinc-700 rounded-lg transition-colors"
