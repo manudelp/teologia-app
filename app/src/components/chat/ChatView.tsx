@@ -19,36 +19,6 @@ function formatTime(ts: number): string {
   return new Date(ts).toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' });
 }
 
-function detectChapter(text: string, userQuestion: string, content: ReturnType<typeof useApp>['content']): string | undefined {
-  if (!content) return undefined;
-  const combined = (userQuestion + ' ' + text).toLowerCase();
-  
-  // Direct keyword matching against chapters
-  const scores: { ch: typeof content.chapters[0]; score: number }[] = [];
-  for (const ch of content.chapters) {
-    const words = ch.title.toLowerCase().split(' ').filter(w => w.length > 3);
-    const matched = words.filter(w => combined.includes(w)).length;
-    if (matched > 0) scores.push({ ch, score: matched / words.length });
-  }
-  
-  // Also check flashcard content
-  for (const fc of content.flashcards) {
-    const keywords = fc.front.toLowerCase().split(' ').filter(w => w.length > 4);
-    if (keywords.length > 0 && keywords.some(w => combined.includes(w))) {
-      const ch = content.chapters.find(c => c.id === fc.chapterId);
-      if (ch) {
-        const existing = scores.find(s => s.ch.id === ch.id);
-        if (existing) existing.score += 0.3;
-        else scores.push({ ch, score: 0.5 });
-      }
-    }
-  }
-
-  if (scores.length === 0) return undefined;
-  const best = scores.sort((a, b) => b.score - a.score)[0];
-  if (best.score >= 0.5) return `Cap. ${best.ch.number} — ${best.ch.title}`;
-  return undefined;
-}
 
 const GENERIC_QUESTIONS = [
   'Explica las 5 Vías de Santo Tomás',
@@ -324,17 +294,6 @@ ${msg}` : msg;
       const response = await result.response;
       const totalTokens = response.usageMetadata?.totalTokenCount ?? 0;
       recordRequest(totalTokens);
-
-      // Detect chapter reference
-      const userQ = messages.length > 0 ? messages[messages.length - 1]?.text || msg : msg;
-      const chapterRef = detectChapter(fullText, userQ, content);
-      if (chapterRef) {
-        setMessages(prev => {
-          const updated = [...prev];
-          updated[updated.length - 1] = { ...updated[updated.length - 1], chapterRef };
-          return updated;
-        });
-      }
     } catch (e) {
       const raw = e instanceof Error ? e.message : '';
       let errMsg: string;
