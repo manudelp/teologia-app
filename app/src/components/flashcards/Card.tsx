@@ -7,6 +7,7 @@ interface Props {
   onFlip: () => void;
   mnemonic?: string;
   box: 1 | 2 | 3;
+  examMode?: boolean;
 }
 
 const boxBg = {
@@ -106,9 +107,13 @@ function renderInline(text: string): ReactNode {
   )}</>;
 }
 
-export function Card({ front, back, flipped, onFlip, mnemonic, box }: Props) {
+export function Card({ front, back, flipped, onFlip, mnemonic, box, examMode }: Props) {
   const { containerRef, contentRef, textRef, fontSize, overflows } = useAutoFit(back, !!mnemonic);
   const scrolledRef = useRef(false);
+
+  const cardBg = examMode
+    ? 'bg-amber-50/40 border-2 border-amber-400/70 dark:bg-amber-950/10 dark:border-amber-500/40'
+    : boxBg[box];
 
   const handleClick = () => {
     if (scrolledRef.current) {
@@ -133,7 +138,7 @@ export function Card({ front, back, flipped, onFlip, mnemonic, box }: Props) {
     >
       <div className={`card-flip-inner min-h-[280px] sm:min-h-[400px] ${flipped ? 'flipped' : ''}`}>
         {/* Frente */}
-        <div className={`card-flip-face rounded-2xl ${boxBg[box]} px-5 py-6 sm:px-8 sm:py-12`}>
+        <div className={`card-flip-face rounded-2xl ${cardBg} px-5 py-6 sm:px-8 sm:py-12`}>
           <p className="font-serif text-xl sm:text-3xl leading-snug text-stone-800 dark:text-zinc-100">{front}</p>
         </div>
 
@@ -141,7 +146,7 @@ export function Card({ front, back, flipped, onFlip, mnemonic, box }: Props) {
         <div
           ref={containerRef}
           onScroll={handleScroll}
-          className={`card-flip-face card-flip-back rounded-2xl ${boxBg[box]} px-5 py-6 sm:px-8 sm:py-12 ${overflows ? 'overflow-y-auto' : ''}`}
+          className={`card-flip-face card-flip-back rounded-2xl ${cardBg} px-5 py-6 sm:px-8 sm:py-12 ${overflows ? 'overflow-y-auto' : ''}`}
         >
           <div ref={contentRef} className="w-full">
             <div

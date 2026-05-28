@@ -223,14 +223,14 @@ export function FlashcardView() {
         <ChapterFilter />
         <button
           onClick={() => { setExamMode(!examMode); setIndex(0); setFlipped(false); }}
-          className={`shrink-0 flex items-center gap-1.5 px-3 py-2 text-xs font-medium rounded-lg transition-colors ${
+          className={`shrink-0 p-2 rounded-lg transition-colors ${
             examMode
-              ? 'bg-amber-100 dark:bg-amber-900/40 text-amber-700 dark:text-amber-300 border border-amber-300 dark:border-amber-700'
+              ? 'bg-amber-100 dark:bg-amber-900/40 text-amber-600 dark:text-amber-300 border border-amber-300 dark:border-amber-700'
               : 'text-stone-500 dark:text-zinc-500 hover:text-stone-700 dark:hover:text-zinc-300 bg-stone-100 dark:bg-zinc-800 hover:bg-stone-200 dark:hover:bg-zinc-700'
           }`}
-          title={examMode ? 'Modo repaso final activo' : 'Activar repaso final'}
+          title={examMode ? 'Desactivar repaso final' : 'Activar repaso final'}
         >
-          <Zap size={13} /> {examMode ? 'Final' : 'Repaso final'}
+          <Zap size={16} />
         </button>
         <button
           onClick={startNewSession}
@@ -245,6 +245,9 @@ export function FlashcardView() {
       <div className="max-w-2xl mx-auto">
 
       {/* Indicador de cajas */}
+      {examMode && (
+        <p className="text-xs font-medium text-amber-600 dark:text-amber-400 mb-2">Repaso final</p>
+      )}
       <ProgressBar counts={counts} current={index + 1} total={studyQueue.length} />
 
       {/* Card */}
@@ -264,6 +267,7 @@ export function FlashcardView() {
             onFlip={flip}
             mnemonic={currentCard.mnemonic}
             box={getBox(currentCard.id)}
+            examMode={examMode}
           />
         )}
       </div>
