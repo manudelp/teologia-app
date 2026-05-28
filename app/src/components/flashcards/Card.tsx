@@ -20,7 +20,8 @@ function useAutoFit(text: string, hasMnemonic: boolean) {
   const containerRef = useRef<HTMLDivElement>(null);
   const contentRef = useRef<HTMLDivElement>(null);
   const textRef = useRef<HTMLDivElement>(null);
-  const [fontSize, setFontSize] = useState(18);
+  const [fontSize, setFontSize] = useState(16);
+  const [overflows, setOverflows] = useState(false);
 
   useEffect(() => {
     if (!containerRef.current || !contentRef.current || !textRef.current) return;
@@ -31,17 +32,14 @@ function useAutoFit(text: string, hasMnemonic: boolean) {
       const el = textRef.current;
       if (!container || !content || !el) return;
 
-      // Espacio disponible: alto del contenedor menos padding superior e inferior
-      // (ajustado para el py-8 en mobile que suma 64px)
-      const availableHeight = container.clientHeight - 64;
-
-      let min = 12;
-      let max = 28;
+      const availableHeight = container.clientHeight - 48;
+      const MIN_FONT = 11;
+      let min = MIN_FONT;
+      let max = 24;
 
       while (max - min > 1) {
         const mid = Math.floor((min + max) / 2);
         el.style.fontSize = `${mid}px`;
-        // Medir el contenido completo (texto + mnemotecnica)
         if (content.scrollHeight <= availableHeight) {
           min = mid;
         } else {
@@ -51,10 +49,15 @@ function useAutoFit(text: string, hasMnemonic: boolean) {
 
       el.style.fontSize = '';
       setFontSize(min);
+
+      // Check if even at min font it overflows — enable scroll
+      el.style.fontSize = `${min}px`;
+      setOverflows(content.scrollHeight > availableHeight);
+      el.style.fontSize = '';
     });
   }, [text, hasMnemonic]);
 
-  return { containerRef, contentRef, textRef, fontSize };
+  return { containerRef, contentRef, textRef, fontSize, overflows };
 }
 
 // Renderiza el texto del dorso respetando marcadores:
@@ -104,27 +107,41 @@ function renderInline(text: string): ReactNode {
 }
 
 export function Card({ front, back, flipped, onFlip, mnemonic, box }: Props) {
-  const { containerRef, contentRef, textRef, fontSize } = useAutoFit(back, !!mnemonic);
+  const { containerRef, contentRef, textRef, fontSize, overflows } = useAutoFit(back, !!mnemonic);
+  const scrolledRef = useRef(false);
+
+  const handleClick = () => {
+    if (scrolledRef.current) {
+      scrolledRef.current = false;
+      return;
+    }
+    onFlip();
+  };
+
+  const handleScroll = () => {
+    scrolledRef.current = true;
+  };
 
   return (
     <div
-      onClick={onFlip}
+      onClick={handleClick}
       onKeyDown={(e) => { if (e.code === 'Space' || e.code === 'Enter') { e.preventDefault(); onFlip(); } }}
-      className="card-flip-container w-full min-h-[260px] sm:min-h-[400px] cursor-pointer select-none"
+      className="card-flip-container w-full min-h-[280px] sm:min-h-[400px] cursor-pointer select-none"
       role="button"
       aria-label={flipped ? 'Dorso de la card. Click o espacio para voltear' : 'Frente de la card. Click o espacio para voltear'}
       tabIndex={0}
     >
-      <div className={`card-flip-inner min-h-[260px] sm:min-h-[400px] ${flipped ? 'flipped' : ''}`}>
+      <div className={`card-flip-inner min-h-[280px] sm:min-h-[400px] ${flipped ? 'flipped' : ''}`}>
         {/* Frente */}
-        <div className={`card-flip-face rounded-2xl ${boxBg[box]} px-6 py-8 sm:px-8 sm:py-12`}>
-          <p className="font-serif text-2xl sm:text-3xl leading-snug text-stone-800 dark:text-zinc-100">{front}</p>
+        <div className={`card-flip-face rounded-2xl ${boxBg[box]} px-5 py-6 sm:px-8 sm:py-12`}>
+          <p className="font-serif text-xl sm:text-3xl leading-snug text-stone-800 dark:text-zinc-100">{front}</p>
         </div>
 
         {/* Dorso */}
         <div
           ref={containerRef}
-          className={`card-flip-face card-flip-back rounded-2xl ${boxBg[box]} px-6 py-8 sm:px-8 sm:py-12`}
+          onScroll={handleScroll}
+          className={`card-flip-face card-flip-back rounded-2xl ${boxBg[box]} px-5 py-6 sm:px-8 sm:py-12 ${overflows ? 'overflow-y-auto' : ''}`}
         >
           <div ref={contentRef} className="w-full">
             <div
@@ -135,8 +152,8 @@ export function Card({ front, back, flipped, onFlip, mnemonic, box }: Props) {
               {formatBack(back)}
             </div>
             {mnemonic && (
-              <div className="mt-4 w-full px-4 py-3 bg-amber-50/50 dark:bg-amber-950/20 border-l-2 border-amber-400 dark:border-amber-600 rounded-r-lg">
-                <p className="font-serif italic text-sm text-amber-800 dark:text-amber-300">{mnemonic}</p>
+              <div className="mt-3 w-full px-3 py-2 bg-amber-50/50 dark:bg-amber-950/20 border-l-2 border-amber-400 dark:border-amber-600 rounded-r-lg">
+                <p className="font-serif italic text-xs sm:text-sm text-amber-800 dark:text-amber-300">{mnemonic}</p>
               </div>
             )}
           </div>
