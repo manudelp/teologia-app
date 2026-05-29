@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState, type ReactNode } from 'react';
 import type { ExamQuestion } from '../../types';
 
 interface Props {
@@ -82,34 +82,46 @@ export function QuestionCard({ question, status, onMark }: Props) {
   );
 }
 
-// Parsea enumeraciones (1), (2), etc. en listas visuales
+// Renderiza respuesta con formato: \n, • bullets, **bold**
 function AnswerText({ text }: { text: string }) {
-  const enumPattern = /\(\d+\)/g;
-  const matches = text.match(enumPattern);
+  const lines = text.split('\n');
+  const elements: ReactNode[] = [];
+  let bulletBuffer: string[] = [];
 
-  // Si hay 3+ enumeraciones, renderizar como lista
-  if (matches && matches.length >= 3) {
-    const parts = text.split(/\(\d+\)\s*/);
-    const items = parts.filter((p) => p.trim());
-
-    // Si el primer fragmento no empieza con (1), es un intro
-    const startsWithEnum = text.trimStart().startsWith('(1)');
-    const intro = startsWithEnum ? null : items.shift();
-
-    return (
-      <div className="text-sm sm:text-base leading-relaxed text-stone-700 dark:text-zinc-300">
-        {intro && <p className="mb-3">{intro}</p>}
-        <ol className="space-y-2 list-none">
-          {items.map((item, i) => (
-            <li key={i} className="flex gap-2">
-              <span className="text-stone-400 dark:text-zinc-600 shrink-0 font-medium text-xs mt-0.5">({i + 1})</span>
-              <span>{item.trim()}</span>
-            </li>
-          ))}
-        </ol>
-      </div>
+  const flushBullets = () => {
+    if (bulletBuffer.length === 0) return;
+    elements.push(
+      <ul key={`ul-${elements.length}`} className="list-disc list-outside pl-4 space-y-1">
+        {bulletBuffer.map((b, i) => <li key={i}>{renderInline(b)}</li>)}
+      </ul>
     );
-  }
+    bulletBuffer = [];
+  };
 
-  return <p className="text-sm sm:text-base leading-relaxed text-stone-700 dark:text-zinc-300 whitespace-pre-line">{text}</p>;
+  for (const line of lines) {
+    const trimmed = line.trim();
+    if (trimmed.startsWith('• ') || trimmed.startsWith('- ')) {
+      bulletBuffer.push(trimmed.slice(2));
+    } else {
+      flushBullets();
+      if (trimmed === '') {
+        elements.push(<div key={`sp-${elements.length}`} className="h-2" />);
+      } else {
+        elements.push(<p key={`p-${elements.length}`}>{renderInline(trimmed)}</p>);
+      }
+    }
+  }
+  flushBullets();
+
+  return <div className="text-sm sm:text-base leading-relaxed text-stone-700 dark:text-zinc-300 space-y-1.5">{elements}</div>;
+}
+
+function renderInline(text: string): ReactNode {
+  const parts = text.split(/(\*\*[^*]+\*\*)/g);
+  if (parts.length === 1) return text;
+  return <>{parts.map((p, i) =>
+    p.startsWith('**') && p.endsWith('**')
+      ? <span key={i} className="font-semibold text-stone-800 dark:text-zinc-100">{p.slice(2, -2)}</span>
+      : <span key={i}>{p}</span>
+  )}</>;
 }

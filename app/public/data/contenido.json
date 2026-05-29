@@ -1763,7 +1763,7 @@
       "chapterId": "cap1",
       "type": "corta",
       "question": "Defina qué es la Teología y mencione su finalidad.",
-      "answer": "La Teología es el conocimiento científico de la Revelación divina a los hombres, y de su credibilidad. Etimológicamente proviene del griego theós (Dios) y logos (tratado). Su finalidad es conocer y amar cada vez más a Dios; su fin último es la salvación del hombre.",
+      "answer": "La Teología es el conocimiento científico de la Revelación divina a los hombres, y de su credibilidad.\n\n**Etimología:** theós (Dios) + logos (tratado)\n\n**Finalidad:**\n• Fin especulativo: conocer y amar cada vez más a Dios\n• Fin último: la salvación del hombre",
       "priority": "alta"
     },
     {
@@ -1771,7 +1771,7 @@
       "chapterId": "cap1",
       "type": "corta",
       "question": "¿Cuáles son las cuatro fuentes de la Teología?",
-      "answer": "Las cuatro fuentes son: (1) la Sagrada Escritura, (2) la Tradición, (3) el Magisterio de la Iglesia (solemne y ordinario) y (4) la Razón iluminada por la Fe.",
+      "answer": "• Sagrada Escritura\n• Tradición\n• Magisterio de la Iglesia (solemne y ordinario)\n• Razón iluminada por la Fe",
       "priority": "media"
     },
     {
@@ -1779,7 +1779,7 @@
       "chapterId": "cap2",
       "type": "corta",
       "question": "Defina la Fe sobrenatural e indique cuál es su objeto formal.",
-      "answer": "La Fe es una virtud sobrenatural por la que el hombre cree firmemente lo que Dios ha revelado y la Iglesia enseña como tal. Su objeto formal es la autoridad de Dios mismo que revela, no la evidencia intelectual.",
+      "answer": "La Fe es una virtud sobrenatural por la que el hombre cree firmemente lo que Dios ha revelado y la Iglesia enseña como tal.\n\n**Objeto formal:** la autoridad de Dios mismo que revela (no la evidencia intelectual).",
       "priority": "alta"
     },
     {
@@ -1787,7 +1787,7 @@
       "chapterId": "cap2",
       "type": "desarrollo",
       "question": "Explique la relación entre Fe y razón según la doctrina católica, contrastándola con el fideísmo y el racionalismo.",
-      "answer": "La doctrina católica sostiene que la Fe es superior a la razón pero no contraria a ella. San Agustín lo expresó: 'creo para comprender y comprendo para creer mejor'. Juan Pablo II en la encíclica Fides et Ratio (1998) afirmó que la Fe y la razón son como las dos alas con las cuales el espíritu humano se eleva hacia la contemplación de la verdad. La Fe supone la razón, y la razón es sanada y elevada por la Fe. El fideísmo, asociado a Lutero, da primacía absoluta a la Fe sobre la razón. El racionalismo, en cambio, da primacía absoluta a la razón sobre la Fe. La solución católica es la armonía entre ambas, con subordinación de la razón a la Fe.",
+      "answer": "La doctrina católica sostiene que la Fe es superior a la razón pero no contraria a ella.\n\n**San Agustín:** \"Creo para comprender y comprendo para creer mejor\"\n**Juan Pablo II (Fides et Ratio, 1998):** \"La Fe y la razón son como las dos alas con las cuales el espíritu humano se eleva hacia la contemplación de la verdad\"\n\n• La Fe supone la razón\n• La razón es sanada y elevada por la Fe\n\n**Errores:**\n• **Fideísmo** (Lutero): primacía absoluta de la Fe sobre la razón\n• **Racionalismo:** primacía absoluta de la razón sobre la Fe\n\n**Solución católica:** armonía entre ambas, con subordinación de la razón a la Fe.",
       "priority": "media"
     },
     {
@@ -1795,7 +1795,7 @@
       "chapterId": "cap3",
       "type": "desarrollo",
       "question": "Enumere las cinco vías de Santo Tomás de Aquino, indicando el punto de partida y la conclusión de cada una.",
-      "answer": "Las cinco vías parten todas del esquema: hecho evidente, principio de causalidad, imposibilidad de regresión infinita, Primera Causa = Dios. (1ª) Movimiento en el mundo, concluye en un Primer Motor no movido por nada. (2ª) Causas eficientes subordinadas, concluye en una Causa eficiente primera incausada. (3ª) Seres contingentes, concluye en un Ser necesario. (4ª) Perfecciones limitadas, concluye en un Ser máximamente perfecto. (5ª) Orden y finalidad de las cosas, concluye en un Ser inteligente que dirige todo a un fin.",
+      "answer": "Todas parten del mismo esquema: hecho evidente → principio de causalidad → imposibilidad de regresión infinita → Primera Causa = Dios.\n\n• **1a Vía (Movimiento):** movimiento en el mundo → Primer Motor no movido por nada\n• **2a Vía (Causalidad):** causas eficientes subordinadas → Causa eficiente primera incausada\n• **3a Vía (Contingencia):** seres contingentes → Ser necesario\n• **4a Vía (Perfección):** perfecciones limitadas → Ser máximamente perfecto\n• **5a Vía (Finalidad):** orden y finalidad de las cosas → Ser inteligente que dirige todo a un fin",
       "priority": "media"
     },
     {
@@ -1803,7 +1803,7 @@
       "chapterId": "cap3",
       "type": "corta",
       "question": "Explique la respuesta filosófica al problema del mal.",
-      "answer": "El mal no es un ser positivo sino una privación del bien (privatio boni). Por eso su existencia presupone la del bien y, en última instancia, la de Dios como bien supremo. Existe también una respuesta sobrenatural: el misterio del Dolor Redentor solo se comprende contemplando al Dios crucificado.",
+      "answer": "El mal no es un ser positivo sino una **privación del bien** (privatio boni).\n\nPor eso su existencia presupone la del bien y, en última instancia, la de Dios como bien supremo.\n\n**Respuesta sobrenatural:** el misterio del Dolor Redentor solo se comprende contemplando al Dios crucificado.",
       "priority": "alta"
     },
     {
@@ -1811,7 +1811,7 @@
       "chapterId": "cap4",
       "type": "desarrollo",
       "question": "Defina la Sagrada Escritura y explique los conceptos de inspiración, canonicidad e inerrancia.",
-      "answer": "La Sagrada Escritura es un conjunto de libros que tiene a Dios como Autor principal y al hombre que escribe como autor secundario o causa instrumental, y que contiene lo esencial de la Revelación divina a los hombres para su eterna salvación. La INSPIRACIÓN es la gracia del Espíritu Santo por la cual el escritor sagrado, llamado hagiógrafo, es movido a poner por escrito lo que Dios quiere comunicar; Dios respeta las capacidades del autor y no le dicta. La CANONICIDAD se refiere al catálogo oficial de los libros inspirados (del griego kanon, regla); la Biblia católica tiene 73 libros (46 del AT y 27 del NT), canon fijado por el Concilio de Trento el 8 de abril de 1546. La INERRANCIA es la ausencia de error en lo referente a la salvación del hombre, conforme a Jn 10,35: 'la Escritura no puede fallar'.",
+      "answer": "**Definición:** conjunto de libros que tiene a Dios como Autor principal y al hombre (hagiógrafo) como autor secundario, y que contiene lo esencial de la Revelación divina para la eterna salvación.\n\n**INSPIRACIÓN:** gracia del Espíritu Santo por la cual el hagiógrafo es movido a poner por escrito lo que Dios quiere comunicar. Dios respeta las capacidades del autor y no le dicta.\n\n**CANONICIDAD:** catálogo oficial de los libros inspirados (del griego kanon = regla).\n• Biblia católica: 73 libros (46 AT + 27 NT)\n• Canon fijado por el Concilio de Trento (8 de abril de 1546)\n\n**INERRANCIA:** ausencia de error en lo referente a la salvación del hombre (Jn 10,35: \"la Escritura no puede fallar\").",
       "priority": "media"
     },
     {
@@ -1819,7 +1819,7 @@
       "chapterId": "cap4",
       "type": "corta",
       "question": "¿Qué es la Tradición y qué relación tiene con la Sagrada Escritura?",
-      "answer": "La Sagrada Tradición es la transmisión oral de la verdad revelada que, a partir de lo dicho y obrado por Jesús, iniciaron los Apóstoles y que perdura ininterrumpidamente en la Iglesia bajo la asistencia del Espíritu Santo. La Sagrada Escritura no puede ser entendida cabalmente al margen de la Tradición. Contra el sola scriptura protestante, la propia Escritura afirma la Tradición (II Tes 2,15; I Cor 11,2).",
+      "answer": "La Sagrada Tradición es la transmisión oral de la verdad revelada que, a partir de lo dicho y obrado por Jesús, iniciaron los Apóstoles y que perdura ininterrumpidamente en la Iglesia bajo la asistencia del Espíritu Santo.\n\n• La Sagrada Escritura no puede ser entendida cabalmente al margen de la Tradición\n• Contra el \"sola scriptura\" protestante, la propia Escritura afirma la Tradición (II Tes 2,15; I Cor 11,2)",
       "priority": "media"
     },
     {
@@ -1827,7 +1827,7 @@
       "chapterId": "cap5",
       "type": "corta",
       "question": "¿Qué son los atributos divinos y cómo se clasifican?",
-      "answer": "Los atributos son perfecciones que, según nuestro modo analógico de pensar, brotan de la esencia metafísica de Dios. Se dividen en: (1) Entitativos, que aluden al ser de Dios (Perfección, Infinitud, Simplicidad, Unicidad, Verdad, Bondad, Inmutabilidad, Eternidad, Inmensidad, Omnipresencia); y (2) Operativos, que aluden al obrar de Dios (Inteligencia divina y Voluntad divina).",
+      "answer": "**Definición:** perfecciones que, según nuestro modo analógico de pensar, brotan de la esencia metafísica de Dios.\n\n**ENTITATIVOS (del ser):**\n• Perfección, Infinitud, Simplicidad, Unicidad\n• Verdad, Bondad, Inmutabilidad\n• Eternidad, Inmensidad, Omnipresencia\n\n**OPERATIVOS (del obrar):**\n• Inteligencia divina\n• Voluntad divina",
       "priority": "alta"
     },
     {
@@ -1835,7 +1835,7 @@
       "chapterId": "cap5",
       "type": "corta",
       "question": "Defina la eternidad de Dios según Boecio.",
-      "answer": "La definición clásica de Boecio establece que la eternidad es la posesión total, simultánea y perfecta de una vida interminable. Es duración sin principio ni fin, sin antes ni después.",
+      "answer": "La definición clásica de Boecio:\n\n\"La posesión total, simultánea y perfecta de una vida interminable.\"\n\nEs duración sin principio ni fin, sin antes ni después.",
       "priority": "media"
     },
     {
@@ -1843,7 +1843,7 @@
       "chapterId": "cap6",
       "type": "desarrollo",
       "question": "Exponga la doctrina católica sobre la Santísima Trinidad.",
-      "answer": "La definición dogmática establece que en Dios hay tres personas (Padre, Hijo y Espíritu Santo), y cada una posee la esencia divina que es numéricamente la misma. Dios es uno y único en naturaleza, y trino en personas. Las tres Personas divinas tienen unidad e identidad en la única sustancia divina, hay real distinción entre ellas pero no son tres dioses sino un solo Dios. En Dios se dan solo dos procesiones inmanentes ad intra: la generación del Hijo (procede del Padre por generación intelectual) y la procesión del Espíritu Santo (procede del Padre y del Hijo, filioque, como de un solo principio de espiración activa). El dogma fue proclamado en el Concilio I de Nicea (325) y en el Símbolo niceno-constantinopolitano (325 y 381). Es un misterio en sentido estricto pero no antirracional.",
+      "answer": "**Definición dogmática:** en Dios hay tres personas (Padre, Hijo y Espíritu Santo), y cada una posee la esencia divina que es numéricamente la misma.\n\n• Dios es uno y único en naturaleza, y trino en personas\n• Las tres Personas tienen unidad e identidad en la única sustancia divina\n• Hay real distinción entre ellas pero no son tres dioses sino un solo Dios\n\n**Dos procesiones inmanentes (ad intra):**\n• Generación del Hijo: procede del Padre por generación intelectual\n• Procesión del Espíritu Santo: procede del Padre y del Hijo (filioque) como de un solo principio\n\n**Definido en:** Concilio I de Nicea (325) y Símbolo niceno-constantinopolitano (325 y 381).\n\nEs un misterio en sentido estricto pero no antirracional.",
       "priority": "alta"
     },
     {
@@ -1851,7 +1851,7 @@
       "chapterId": "cap7",
       "type": "corta",
       "question": "Defina la creación y explique qué significa que es 'de la nada'.",
-      "answer": "La creación es la primera producción de todo el ser, hecha de la nada por la causa universal, que es Dios (Royo Marín). 'De la nada' (ex nihilo) significa sin ninguna materia preexistente. Es un acto tan propio y exclusivo de Dios que ni por milagro podría transferirlo a ninguna criatura.",
+      "answer": "**Definición (Royo Marín):** la primera producción de todo el ser, hecha de la nada por la causa universal, que es Dios.\n\n**\"De la nada\" (ex nihilo):** sin ninguna materia preexistente.\n\nEs un acto tan propio y exclusivo de Dios que ni por milagro podría transferirlo a ninguna criatura.",
       "priority": "alta"
     },
     {
@@ -1859,7 +1859,7 @@
       "chapterId": "cap7",
       "type": "corta",
       "question": "Mencione los principales errores contrarios a la doctrina de la creación.",
-      "answer": "Los principales errores son: (1) Gnosticismo (el mundo fue creado por una divinidad secundaria), (2) Dualismo (dos principios eternos, bueno y malo), (3) Materialismo o Monismo materialista, y (4) Panteísmo (identificación de Dios con el universo).",
+      "answer": "• **Gnosticismo:** el mundo fue creado por una divinidad secundaria\n• **Dualismo:** dos principios eternos (bueno y malo)\n• **Materialismo/Monismo materialista:** materia eterna\n• **Panteísmo:** identificación de Dios con el universo",
       "priority": "media"
     },
     {
@@ -1867,7 +1867,7 @@
       "chapterId": "cap8",
       "type": "desarrollo",
       "question": "Explique los cuatro estados de la naturaleza humana.",
-      "answer": "(1) ESTADO DE JUSTICIA ORIGINAL o de santidad original: el de los primeros padres antes del pecado, con todos los dones (naturales, preternaturales y sobrenaturales). (2) ESTADO DE NATURALEZA CAÍDA o de pecado original: tras el pecado de Adán; el hombre queda sin gracia santificante ni dones preternaturales, y los dones naturales quedan heridos por la ignorancia, la malicia, la fragilidad y la concupiscencia desordenada. (3) ESTADO DE NATURALEZA REDIMIDA o reparada: restaurado por la gracia redentora de Cristo; el hombre posee la gracia santificante pero no los dones preternaturales. (4) ESTADO DE NATURALEZA GLORIFICADA: el de quienes ya alcanzaron la visión beatífica; comprende la gracia santificante en toda su perfección.",
+      "answer": "**1. JUSTICIA ORIGINAL** (antes del pecado): los primeros padres con todos los dones (naturales, preternaturales y sobrenaturales).\n\n**2. NATURALEZA CAÍDA** (tras pecado de Adán): sin gracia santificante ni dones preternaturales; dones naturales heridos por ignorancia, malicia, fragilidad y concupiscencia desordenada.\n\n**3. NATURALEZA REDIMIDA** (por Cristo): restaurado por la gracia redentora; posee gracia santificante pero no dones preternaturales.\n\n**4. NATURALEZA GLORIFICADA** (cielo): gracia santificante en toda su perfección, visión beatífica.",
       "priority": "alta"
     },
     {
@@ -1875,7 +1875,7 @@
       "chapterId": "cap8",
       "type": "corta",
       "question": "¿En qué consistió el pecado original y cuáles fueron sus consecuencias en los dones naturales?",
-      "answer": "El pecado original consistió en querer el hombre una total autonomía respecto a la determinación del bien y del mal (autonomía moral), sustrayendo a Dios la autoridad para determinarlos. Sus consecuencias en los dones naturales fueron cuatro heridas: ignorancia y error (en la inteligencia), malicia (en la voluntad), fragilidad o debilidad (en el apetito irascible) y concupiscencia desordenada (en el apetito concupiscible).",
+      "answer": "**En qué consistió:** querer el hombre una total autonomía respecto a la determinación del bien y del mal (autonomía moral), sustrayendo a Dios la autoridad para determinarlos.\n\n**Consecuencias — cuatro heridas en los dones naturales:**\n• **Ignorancia/error** (en la inteligencia)\n• **Malicia** (en la voluntad)\n• **Fragilidad/debilidad** (en el apetito irascible)\n• **Concupiscencia desordenada** (en el apetito concupiscible)",
       "priority": "alta"
     },
     {
@@ -1883,7 +1883,7 @@
       "chapterId": "cap9",
       "type": "desarrollo",
       "question": "Explique el misterio de la Encarnación y la Unión Hipostática.",
-      "answer": "La Encarnación es el hecho de que el Hijo de Dios haya asumido una naturaleza humana (Jn 1,14: 'la Palabra se hizo carne'). Hay modificación en la naturaleza humana asumida, pero no en Dios. Su finalidad primordial es la salvación de los hombres y, como fin ulterior, la glorificación de Dios. La UNIÓN HIPOSTÁTICA (del griego hipóstasis = persona) significa que en Cristo hay una sola persona, la segunda persona divina, y dos naturalezas que subsisten (divina y humana), que no se confunden ni se mezclan. Fue proclamada en el Concilio de Éfeso (431), que afirmó la unidad de persona contra Nestorio, y en el Concilio de Calcedonia (451), que definió la dualidad de naturaleza y la unicidad de persona. La unión comenzó en el instante de la concepción en el seno virginal de María y nunca se interrumpió: la muerte de Cristo rompió la unión de su cuerpo y su alma, pero no rompió la unión entre su divinidad y su humanidad.",
+      "answer": "**ENCARNACIÓN:** el Hijo de Dios asumió una naturaleza humana (Jn 1,14: \"la Palabra se hizo carne\"). Hay modificación en la naturaleza humana asumida, pero no en Dios.\n\n**Finalidad:** primordial = salvación de los hombres; ulterior = glorificación de Dios.\n\n**UNIÓN HIPOSTÁTICA** (del griego hipóstasis = persona):\n• En Cristo hay UNA sola persona (la segunda persona divina)\n• DOS naturalezas (divina y humana) que no se confunden ni mezclan\n\n**Concilios:**\n• Éfeso (431): afirmó la unidad de persona contra Nestorio\n• Calcedonia (451): definió la dualidad de naturaleza y unicidad de persona\n\nLa unión comenzó en el instante de la concepción y NUNCA se interrumpió: la muerte rompió cuerpo-alma, pero NO divinidad-humanidad.",
       "priority": "alta"
     },
     {
@@ -1891,7 +1891,7 @@
       "chapterId": "cap10",
       "type": "desarrollo",
       "question": "Defina la Redención y explique sus dos facetas.",
-      "answer": "La Redención es la ofrenda al Padre que Jesucristo hace de su propia vida humana, por amor al hombre, para satisfacer la deuda debida a la justicia divina, restaurarnos la gracia y el derecho al cielo, liberándonos de la esclavitud del pecado y del demonio. Tiene dos facetas: (1) la NEGATIVA o Redención en sentido estricto, que es la liberación del señorío del pecado, del demonio, de la muerte y de la esclavitud de la ley mosaica (rescate); (2) la POSITIVA o Reconciliación, que es la restauración del estado de unión sobrenatural con Dios causado por la gracia santificante. También se distingue entre redención objetiva (la obra de Cristo, de alcance universal) y subjetiva (la justificación, su aplicación a cada hombre por el Bautismo). Según San Anselmo, el pecado es ultraje al honor de Dios y solo Cristo, Dios y Hombre, podía dar una satisfacción adecuada de valor infinito.",
+      "answer": "**Definición:** la ofrenda al Padre que Jesucristo hace de su propia vida humana, por amor al hombre, para satisfacer la deuda debida a la justicia divina, restaurar la gracia y liberar al hombre del pecado y del demonio.\n\n**Dos facetas:**\n• **NEGATIVA (rescate):** liberación del señorío del pecado, del demonio, de la muerte y de la esclavitud de la ley mosaica\n• **POSITIVA (reconciliación):** restauración del estado de unión sobrenatural con Dios por la gracia santificante\n\n**También se distingue:**\n• Redención objetiva: la obra de Cristo (alcance universal)\n• Redención subjetiva: su aplicación a cada hombre por el Bautismo\n\n**San Anselmo:** el pecado es ultraje al honor de Dios; solo Cristo (Dios y Hombre) podía dar satisfacción adecuada de valor infinito.",
       "priority": "alta"
     },
     {
@@ -1899,7 +1899,7 @@
       "chapterId": "cap11",
       "type": "corta",
       "question": "Mencione las tres 'huellas' o pruebas de la Resurrección.",
-      "answer": "(1) Cristo murió verdaderamente, hecho constatado por San Juan testigo ocular y por Pilato; (2) el sepulcro vacío, hecho histórico irrefutable que ni los enemigos pudieron impugnar, y que solo intentaron explicar por el robo del cuerpo; (3) las apariciones del Resucitado, encuentros objetivos con el Señor que explican el cambio de actitud de los apóstoles, inexplicable de otro modo.",
+      "answer": "• **Cristo murió verdaderamente:** constatado por San Juan (testigo ocular) y por Pilato\n• **Sepulcro vacío:** hecho histórico irrefutable que ni los enemigos pudieron impugnar; solo intentaron explicar por el robo del cuerpo\n• **Apariciones del Resucitado:** encuentros objetivos con el Señor que explican el cambio de actitud de los apóstoles, inexplicable de otro modo",
       "priority": "media"
     },
     {
@@ -1907,7 +1907,7 @@
       "chapterId": "cap12",
       "type": "desarrollo",
       "question": "Enumere y explique los dogmas marianos.",
-      "answer": "(1) MATERNIDAD DIVINA: María es verdadera Madre de Dios Hijo en cuanto a su Humanidad. Concibió y dio a luz a la segunda persona de la Santísima Trinidad, no en cuanto a su naturaleza divina sino a la humana asumida. Definida en el Concilio de Éfeso (431). (2) VIRGINIDAD PERPETUA: María concibió sin principio masculino por virtud del Espíritu Santo, dio a luz sin pérdida de su integridad corporal y permaneció virgen toda su vida. Los 'hermanos de Jesús' son hijos de otra María llamada 'la otra María' (Mt 27,56). (3) INMACULADA CONCEPCIÓN: definida el 8 de diciembre de 1854 por Pío IX. María fue preservada de la mancha del pecado original por una gracia especial de Dios omnipotente en atención a los méritos de Jesucristo, salvador del género humano (redención preservativa). (4) ASUNCIÓN: definida el 1 de noviembre de 1950 por Pío XII (Munificentissimus Deus, Dz 2333). La Santísima Virgen, poco después de su muerte y resurrección gloriosas, fue recibida en cuerpo y alma gloriosos en el cielo. Se dice 'asunción' (no 'ascensión') porque María fue arrebatada por el poder divino, mientras que Cristo subió por su propio poder.",
+      "answer": "**1. MATERNIDAD DIVINA:**\nMaría es verdadera Madre de Dios Hijo en cuanto a su Humanidad. Concibió y dio a luz a la segunda persona de la Trinidad (no en cuanto a su naturaleza divina sino a la humana asumida). Definida en el Concilio de Éfeso (431).\n\n**2. VIRGINIDAD PERPETUA:**\n• ANTES del parto: concepción por obra del E.S., sin varón\n• DURANTE el parto: sin pérdida de integridad corporal\n• DESPUÉS del parto: no tuvo otros hijos\nLos \"hermanos de Jesús\" son hijos de otra María (Mt 27,56).\n\n**3. INMACULADA CONCEPCIÓN:**\nDefinida el 8/12/1854 por Pío IX. María fue preservada de la mancha del pecado original por gracia especial en atención a los méritos de Cristo (redención preservativa).\n\n**4. ASUNCIÓN:**\nDefinida el 1/11/1950 por Pío XII (Munificentissimus Deus). Fue recibida en cuerpo y alma gloriosos en el cielo. \"Asunción\" (no \"ascensión\") porque fue llevada por el poder divino; Cristo subió por su propio poder.",
       "priority": "media"
     },
     {
@@ -1915,7 +1915,7 @@
       "chapterId": "cap12",
       "type": "corta",
       "question": "Explique los tres tipos de culto y a quién corresponde cada uno.",
-      "answer": "(1) LATRÍA: culto de adoración, debido únicamente a Dios. (2) HIPERDULÍA: culto especial debido a la Virgen María por su dignidad de Madre de Dios y su plenitud de gracia, esencialmente inferior a la latría pero superior en grado a la dulía. (3) DULÍA: culto de veneración debido a los ángeles y a todos los demás santos.",
+      "answer": "• **LATRÍA:** culto de adoración, debido únicamente a Dios\n• **HIPERDULÍA:** culto especial debido a la Virgen María por su dignidad de Madre de Dios y su plenitud de gracia (inferior a la latría pero superior a la dulía)\n• **DULÍA:** culto de veneración debido a los ángeles y a todos los demás santos",
       "priority": "media"
     },
     {
@@ -1923,7 +1923,7 @@
       "chapterId": "cap13",
       "type": "desarrollo",
       "question": "Defina la gracia y explique los tipos principales con sus efectos.",
-      "answer": "La gracia es un don sobrenatural que Dios concede a la criatura racional por los méritos de Jesucristo, totalmente inmerecido por parte de la criatura, que hace al hombre hijo de Dios y heredero del Cielo. Es una participación en la vida de Dios. Hay dos tipos: (1) GRACIA HABITUAL O SANTIFICANTE: cualidad permanente y sobrenatural del alma que la santifica intrínsecamente. Sus efectos son hacer al alma justa y santa, borrar el pecado mortal, hacer al hombre amigo de Dios, hijo adoptivo, hermano de Jesucristo, partícipe de la vida divina, templo de la Santísima Trinidad, heredero del cielo; y dar valor y mérito sobrenatural a los actos. (2) GRACIA ACTUAL: influjo sobrenatural y transitorio de Dios sobre las potencias del alma para realizar alguna acción saludable; tiende a la consecución, acrecentamiento o conservación de la gracia santificante. Junto a la gracia santificante van las tres virtudes teologales (fe, esperanza, caridad), las cuatro virtudes morales (prudencia, templanza, fortaleza, justicia) y los siete dones del Espíritu Santo (sabiduría, ciencia, entendimiento, consejo, fortaleza, piedad, temor de Dios).",
+      "answer": "**Definición:** don sobrenatural que Dios concede a la criatura racional por los méritos de Jesucristo, totalmente inmerecido, que hace al hombre hijo de Dios y heredero del Cielo. Es participación en la vida de Dios.\n\n**1. GRACIA HABITUAL (santificante):** cualidad permanente y sobrenatural del alma.\n• Hace al alma justa y santa\n• Borra el pecado mortal\n• Hace al hombre amigo de Dios, hijo adoptivo, templo de la Trinidad, heredero del cielo\n• Da valor y mérito sobrenatural a los actos\n\n**2. GRACIA ACTUAL:** influjo sobrenatural y transitorio de Dios sobre las potencias del alma.\n• Tiende a la consecución, acrecentamiento o conservación de la gracia santificante\n\n**Acompañan a la gracia santificante:**\n• Tres virtudes teologales: fe, esperanza, caridad\n• Cuatro virtudes morales: prudencia, templanza, fortaleza, justicia\n• Siete dones del E.S.: sabiduría, ciencia, entendimiento, consejo, fortaleza, piedad, temor de Dios",
       "priority": "alta"
     },
     {
@@ -1931,7 +1931,7 @@
       "chapterId": "cap13",
       "type": "desarrollo",
       "question": "Contraste el error naturalista y el sobrenaturalista sobre la gracia con la postura católica.",
-      "answer": "El ERROR NATURALISTA se caracteriza por un optimismo ético ilimitado y desmedida confianza en la naturaleza humana. Sostiene que el estado de Adán antes y después del pecado no se diferencian esencialmente, que no existe el pecado original, que Cristo solo aprovechó por su buen ejemplo, y que el hombre puede convertirse a Dios y merecer la vida eterna con sus solas fuerzas. El ERROR SOBRENATURALISTA, propio del protestantismo, sostiene que la naturaleza humana está totalmente corrupta (no solo herida) por el pecado original, que el hombre es incapaz de cualquier bien, que la voluntad ante la gracia es pura pasividad, y que la justificación es por sola fides (sola fe fiduciaria), permaneciendo el hombre simultáneamente justo y pecador, sin renovación de la naturaleza. La POSTURA CATÓLICA es el equilibrio: frente al naturalismo defiende la absoluta necesidad de la gracia; frente al sobrenaturalismo defiende cierta capacidad de la naturaleza humana, que aun herida puede conocer algunas verdades religiosas y morales y realizar algunos actos buenos.",
+      "answer": "**ERROR NATURALISTA:**\n• Optimismo ético ilimitado, desmedida confianza en la naturaleza\n• El estado de Adán antes y después del pecado no se diferencian esencialmente\n• No existe el pecado original\n• Cristo solo aprovechó por su buen ejemplo\n• El hombre puede salvarse con sus solas fuerzas\n\n**ERROR SOBRENATURALISTA (protestantismo):**\n• La naturaleza está totalmente CORRUPTA (no solo herida)\n• El hombre es incapaz de cualquier bien\n• La voluntad ante la gracia es pura pasividad\n• Justificación por sola fides (fe fiduciaria)\n• El hombre es simultáneamente justo y pecador, sin renovación\n\n**POSTURA CATÓLICA (equilibrio):**\n• Frente al naturalismo: defiende la absoluta necesidad de la gracia\n• Frente al sobrenaturalismo: defiende cierta capacidad de la naturaleza humana, que aun herida puede conocer verdades y realizar actos buenos",
       "priority": "media"
     },
     {
@@ -1939,7 +1939,7 @@
       "chapterId": "cap13",
       "type": "corta",
       "question": "Defina pecado y mencione las tres condiciones para que algo sea pecado.",
-      "answer": "Pecado es una transgresión voluntaria de la ley de Dios; o, según el CATIC 1849, una falta contra la razón, la verdad y la conciencia recta, faltar al amor a Dios y al prójimo a causa de un apego perverso a ciertos bienes. Las tres condiciones son: (1) materia prohibida (grave o leve), (2) advertencia (la inteligencia advierte que el acto es malo), y (3) consentimiento (la voluntad acepta libremente cometerlo).",
+      "answer": "**Definición:** transgresión voluntaria de la ley de Dios. Según CATIC 1849: falta contra la razón, la verdad y la conciencia recta; faltar al amor a Dios y al prójimo a causa de un apego perverso a ciertos bienes.\n\n**Tres condiciones:**\n• **Materia prohibida** (grave o leve)\n• **Advertencia** (la inteligencia advierte que el acto es malo)\n• **Consentimiento** (la voluntad acepta libremente cometerlo)",
       "priority": "alta"
     },
     {
@@ -1947,7 +1947,7 @@
       "chapterId": "cap13",
       "type": "corta",
       "question": "Distinga pecado mortal y pecado venial.",
-      "answer": "El pecado MORTAL es la transgresión voluntaria de la ley de Dios en materia GRAVE, con plena advertencia y perfecto consentimiento. Separa al hombre de Dios y hace perder la gracia santificante; supone aversión a Dios y conversión a la criatura (San Agustín). El pecado VENIAL es la transgresión en materia LEVE; 'venial' viene de venia (perdón). No supone aversión a Dios, sino solo desviación del recto camino. Disminuye la caridad, conduce a la tibieza espiritual y predispone al pecado mortal.",
+      "answer": "**PECADO MORTAL:**\n• Transgresión voluntaria en materia GRAVE, con plena advertencia y perfecto consentimiento\n• Separa al hombre de Dios\n• Hace perder la gracia santificante\n• Supone aversión a Dios y conversión a la criatura (San Agustín)\n\n**PECADO VENIAL:**\n• Transgresión en materia LEVE (\"venial\" viene de venia = perdón)\n• No supone aversión a Dios, solo desviación del recto camino\n• Disminuye la caridad\n• Conduce a la tibieza espiritual\n• Predispone al pecado mortal",
       "priority": "alta"
     },
     {
@@ -1955,7 +1955,7 @@
       "chapterId": "cap14",
       "type": "desarrollo",
       "question": "Enumere y explique las cuatro notas distintivas de la Iglesia.",
-      "answer": "Las cuatro notas, profesadas en el Credo, son: (1) UNA: la Iglesia es una y nunca varias simultáneas. La unidad se da en tres planos: de fe (mismas verdades reveladas), de comunión (sujeción al Papa y obispos) y de participación (mismos sacramentos y culto). El fundamento de la unidad es la fe, no la caridad. (2) SANTA: santa y santificante. Santa en su origen (su fundador es Cristo y su alma el Espíritu Santo) y en su fin (la glorificación de Dios y la salvación de los hombres). Santificante porque posee los medios de santificación. (3) CATÓLICA (del griego katholikos = universal): destinada a todos los hombres de todos los tiempos y lugares. (4) APOSTÓLICA: continuidad ininterrumpida con los Apóstoles elegidos por Cristo. La sucesión apostólica garantiza la transmisión fiel de la doctrina y la validez de los sacramentos.",
+      "answer": "**1. UNA:**\nLa Iglesia es una y nunca varias simultáneas. Unidad en tres planos: de fe (mismas verdades reveladas), de comunión (sujeción al Papa y obispos) y de participación (mismos sacramentos y culto). El fundamento de la unidad es la FE, no la caridad.\n\n**2. SANTA:**\nSanta y santificante. Santa en su origen (Cristo y el E.S.) y en su fin (glorificación de Dios y salvación). Santificante porque posee los medios de santificación.\n\n**3. CATÓLICA** (del griego katholikos = universal):\nDestinada a todos los hombres de todos los tiempos y lugares.\n\n**4. APOSTÓLICA:**\nContinuidad ininterrumpida con los Apóstoles elegidos por Cristo. La sucesión apostólica garantiza la transmisión fiel de la doctrina y la validez de los sacramentos.",
       "priority": "alta"
     },
     {
@@ -1963,7 +1963,7 @@
       "chapterId": "cap14",
       "type": "corta",
       "question": "Explique en qué consiste la infalibilidad papal y sus condiciones.",
-      "answer": "La infalibilidad papal es una asistencia especial del Espíritu Santo (no una virtud personal del Papa) para que la Revelación divina se mantenga íntegra. El Papa es infalible solo cuando habla EX CATHEDRA, lo que requiere cuatro condiciones: (1) hablar como pastor y doctor de todos los fieles, (2) sobre materia de fe y costumbres, (3) con intención de definirla como doctrina de fe, y (4) con intención de obligar a toda la Iglesia. NO es infalible en sus opiniones personales, en asuntos de ciencia, política, economía o historia, en disciplina ordinaria, ni en homilías ordinarias.",
+      "answer": "**Definición:** asistencia especial del Espíritu Santo (no una virtud personal del Papa) para que la Revelación divina se mantenga íntegra.\n\nEl Papa es infalible solo cuando habla **EX CATHEDRA**, lo que requiere:\n• Hablar como pastor y doctor de todos los fieles\n• Sobre materia de fe y costumbres\n• Con intención de definirla como doctrina de fe\n• Con intención de obligar a toda la Iglesia\n\n**NO es infalible en:**\n• Opiniones personales\n• Asuntos de ciencia, política, economía o historia\n• Disciplina ordinaria\n• Homilías ordinarias",
       "priority": "alta"
     },
     {
@@ -1971,7 +1971,7 @@
       "chapterId": "cap14",
       "type": "corta",
       "question": "Distinga herejía y cisma.",
-      "answer": "Ambos son pecados contra la unidad de la Iglesia. La HEREJÍA rompe la unidad de fe: es la doctrina errónea de un bautizado que niega o duda en forma pertinaz de una verdad de fe definida (por ejemplo, negar la Inmaculada Concepción). El CISMA rompe la unidad de comunión: es la división de quienes, confesando la misma fe, rechazan la sujeción al Papa (por ejemplo, la Iglesia Ortodoxa).",
+      "answer": "Ambos son pecados contra la unidad de la Iglesia.\n\n**HEREJÍA** — rompe la unidad de FE:\nDoctrina errónea de un bautizado que niega o duda pertinazmente de una verdad de fe definida. Ej: negar la Inmaculada Concepción.\n\n**CISMA** — rompe la unidad de COMUNIÓN:\nDivisión de quienes, confesando la misma fe, rechazan la sujeción al Papa. Ej: Iglesia Ortodoxa.",
       "priority": "media"
     },
     {
@@ -1979,7 +1979,7 @@
       "chapterId": "cap14",
       "type": "corta",
       "question": "¿Cuáles son los tres requisitos para ser miembro pleno de la Iglesia?",
-      "answer": "(1) Haber recibido válidamente el bautismo (ministerio sacerdotal). (2) Profesar la verdadera fe (ministerio doctrinal). (3) Estar en comunión con la Iglesia, es decir, no estar separado por herejía ni por cisma.",
+      "answer": "• Haber recibido válidamente el bautismo (ministerio sacerdotal)\n• Profesar la verdadera fe (ministerio doctrinal)\n• Estar en comunión con la Iglesia (no estar separado por herejía ni por cisma)",
       "priority": "media"
     },
     {
@@ -1987,7 +1987,7 @@
       "chapterId": "cap2",
       "type": "corta",
       "question": "Explique el rol de la voluntad en el acto de Fe.",
-      "answer": "La voluntad interviene de dos modos: (a) aplicando el entendimiento a los motivos de credibilidad; y (b) eliminando obstáculos como el orgullo, la pasión y los prejuicios. La fe es siempre un acto libre. El Concilio Vaticano II afirma además que todos los hombres tienen obligación moral de buscar la verdad y adherirse a ella.",
+      "answer": "La voluntad interviene de dos modos:\n• Aplicando el entendimiento a los motivos de credibilidad\n• Eliminando obstáculos (orgullo, pasión, prejuicios)\n\nLa fe es siempre un acto libre. El Concilio Vaticano II afirma que todos los hombres tienen obligación moral de buscar la verdad y adherirse a ella.",
       "priority": "media"
     },
     {
@@ -1995,7 +1995,7 @@
       "chapterId": "cap2",
       "type": "corta",
       "question": "¿Qué hace el hereje según la doctrina católica?",
-      "answer": "El hereje introduce su propia razón como criterio: deja de creerle a Dios y se cree a sí mismo. Esto contradice el objeto formal de la fe, que es la autoridad de Dios mismo que revela.",
+      "answer": "El hereje introduce su propia razón como criterio: deja de creerle a Dios y se cree a sí mismo.\n\nEsto contradice el objeto formal de la fe, que es la autoridad de Dios mismo que revela.",
       "priority": "media"
     },
     {
@@ -2003,7 +2003,7 @@
       "chapterId": "cap7",
       "type": "corta",
       "question": "Explique el motivo y la finalidad de la Creación.",
-      "answer": "Dios creó el mundo no por necesidad sino movido por su bondad, según su Sabiduría (CATIC 295). Su fin primario es la manifestación de las perfecciones divinas con la subsiguiente glorificación de Dios. Su fin secundario es colmar de beneficios a las criaturas y hacer felices a las racionales.",
+      "answer": "Dios creó el mundo no por necesidad sino movido por su bondad, según su Sabiduría (CATIC 295).\n\n**Fines:**\n• **Primario:** manifestación de las perfecciones divinas con la subsiguiente glorificación de Dios\n• **Secundario:** colmar de beneficios a las criaturas y hacer felices a las racionales",
       "priority": "media"
     },
     {
@@ -2011,7 +2011,7 @@
       "chapterId": "cap9",
       "type": "corta",
       "question": "¿En qué consiste la originalidad del cristianismo respecto de otras religiones?",
-      "answer": "El centro del mensaje cristiano es Cristo mismo en persona. En ninguna otra religión el fundador se sitúa en el centro de la religión predicada. Buda, Moisés y Mahoma se presentaron como mensajeros de Dios, jamás como centro de su mensaje. Solo Jesús dice 'Yo soy el camino, la verdad y la vida' (Jn 14,6) y exige fe en su propia persona.",
+      "answer": "El centro del mensaje cristiano es **Cristo mismo en persona**.\n\nEn ninguna otra religión el fundador se sitúa en el centro de la religión predicada. Buda, Moisés y Mahoma se presentaron como mensajeros de Dios, jamás como centro de su mensaje.\n\nSolo Jesús dice \"Yo soy el camino, la verdad y la vida\" (Jn 14,6) y exige fe en su propia persona.",
       "priority": "media"
     },
     {
@@ -2019,7 +2019,7 @@
       "chapterId": "cap9",
       "type": "desarrollo",
       "question": "Enumere las consecuencias de negar la divinidad de Jesucristo.",
-      "answer": "Si Jesucristo no fuese Dios: (i) se niega la Santísima Trinidad, ya que la segunda Persona deja de ser divina; (ii) si murió en la Cruz como persona solo humana, no estamos redimidos, porque solo una víctima de valor infinito (Dios y Hombre) podía dar satisfacción adecuada; (iii) la Iglesia no sería el sacramento universal de salvación, sino una asociación humana más; (iv) se confundiría lo temporal con lo espiritual y lo sobrenatural con lo político, perdiendo su carácter trascendente.",
+      "answer": "Si Jesucristo no fuese Dios:\n\n• Se niega la Santísima Trinidad (la segunda Persona deja de ser divina)\n• No estamos redimidos (solo una víctima de valor infinito podía dar satisfacción adecuada)\n• La Iglesia no sería sacramento universal de salvación, sino una asociación humana más\n• Se confundiría lo temporal con lo espiritual y lo sobrenatural con lo político, perdiendo su carácter trascendente",
       "priority": "media"
     },
     {
@@ -2027,7 +2027,7 @@
       "chapterId": "cap10",
       "type": "corta",
       "question": "¿Por qué se dice que Cristo en el Calvario fue al mismo tiempo Sumo Sacerdote y Víctima?",
-      "answer": "Porque Jesús se ofreció a Sí mismo en la Cruz como verdadero y propio sacrificio para la salvación del género humano. La inmolación no podía llegar más allá, y esta Víctima tiene un valor infinito. El sacerdote y la ofrenda coinciden en una sola persona divino-humana, lo que hace al sacrificio único y perfecto.",
+      "answer": "Porque Jesús se ofreció a Sí mismo en la Cruz como verdadero y propio sacrificio para la salvación del género humano.\n\n• La inmolación no podía llegar más allá\n• La Víctima tiene un valor infinito\n• El sacerdote y la ofrenda coinciden en una sola persona divino-humana\n\nEsto hace al sacrificio único y perfecto.",
       "priority": "media"
     },
     {
@@ -2035,7 +2035,7 @@
       "chapterId": "cap11",
       "type": "corta",
       "question": "¿Qué significa el descenso a los infiernos en el Símbolo de los Apóstoles?",
-      "answer": "'Infierno' aquí no significa solo el infierno de los condenados, sino que puede entenderse en tres sentidos: el infierno de los condenados, el purgatorio y el llamado seno de Abraham o Limbo de los Padres. Cristo se reveló a aquellos difuntos que murieron en estado de unión con Dios pero a quienes estaba prohibido el acceso a la visión de Dios antes de su muerte, ya que antes de la muerte de Cristo nadie podía entrar al Cielo. Su fin fue librar a las almas justas del limbo, aplicándoles los frutos de la redención.",
+      "answer": "\"Infierno\" aquí no significa solo el infierno de los condenados. Puede entenderse en tres sentidos:\n• El infierno de los condenados\n• El purgatorio\n• El seno de Abraham o Limbo de los Padres\n\nCristo se reveló a aquellos difuntos que murieron en estado de unión con Dios pero a quienes estaba prohibido el acceso a la visión de Dios antes de su muerte.\n\n**Fin:** librar a las almas justas del limbo, aplicándoles los frutos de la redención. Antes de la muerte de Cristo NADIE podía entrar al Cielo.",
       "priority": "media"
     },
     {
@@ -2043,7 +2043,7 @@
       "chapterId": "cap16",
       "type": "corta",
       "question": "Defina sacramento y enumere sus tres elementos esenciales.",
-      "answer": "Los sacramentos son signos sensibles y eficaces de la gracia instituidos por Nuestro Señor Jesucristo y administrados por la Iglesia para nuestra salvación. Sus tres elementos esenciales son: (1) deben ser signos sensibles, perceptibles por los sentidos; (2) deben ser eficaces, es decir, que produzcan la gracia; (3) deben ser de institución divina, es decir, instituidos por Jesucristo.",
+      "answer": "**Definición:** signos sensibles y eficaces de la gracia instituidos por Nuestro Señor Jesucristo y administrados por la Iglesia para nuestra salvación.\n\n**Tres elementos esenciales:**\n• Deben ser signos **sensibles** (perceptibles por los sentidos)\n• Deben ser **eficaces** (que produzcan la gracia)\n• Deben ser de **institución divina** (instituidos por Jesucristo)",
       "priority": "alta"
     },
     {
@@ -2051,7 +2051,7 @@
       "chapterId": "cap16",
       "type": "corta",
       "question": "Mencione los efectos de los sacramentos.",
-      "answer": "Los efectos son tres: (1) la GRACIA SANTIFICANTE, que en algunos casos es primera justificación (ej. Bautismo), en otros aumento de gracia (ej. Eucaristía) o devolución de la gracia perdida por pecado mortal (ej. Penitencia). (2) La GRACIA SACRAMENTAL: cada sacramento otorga una gracia propia y actual, llamada gracia sacramental, que da los auxilios especiales para obtener el fin específico de cada sacramento. (3) El CARÁCTER SACRAMENTAL: un sello o impresión invisible, una marca imborrable o indeleble que algunos sacramentos imprimen en el alma. Solo lo imprimen el Bautismo, la Confirmación y el Orden Sagrado, y por eso solo pueden recibirse una vez en la vida.",
+      "answer": "**1. GRACIA SANTIFICANTE:**\n• Primera justificación (ej. Bautismo)\n• Aumento de gracia (ej. Eucaristía)\n• Devolución de la gracia perdida por pecado mortal (ej. Penitencia)\n\n**2. GRACIA SACRAMENTAL:**\nCada sacramento otorga una gracia propia y actual que da auxilios especiales para obtener el fin específico de cada sacramento.\n\n**3. CARÁCTER SACRAMENTAL:**\nSello indeleble que algunos sacramentos imprimen en el alma. Solo lo imprimen Bautismo, Confirmación y Orden Sagrado → solo pueden recibirse una vez en la vida.",
       "priority": "media"
     },
     {
@@ -2059,7 +2059,7 @@
       "chapterId": "cap16",
       "type": "corta",
       "question": "Enumere los siete sacramentos y las tres divisiones principales.",
-      "answer": "Los siete sacramentos instituidos por Cristo son: (1) Bautismo, (2) Confirmación, (3) Eucaristía, (4) Penitencia o Reconciliación, (5) Unción de los enfermos, (6) Orden Sagrado y (7) Matrimonio. Una primera división los clasifica en: sacramentos de INICIACIÓN cristiana (Bautismo, Confirmación y Eucaristía), sacramentos de CURACIÓN (Penitencia y Unción de los enfermos), y sacramentos AL SERVICIO DE LA COMUNIDAD (Orden Sagrado y Matrimonio). Otra clasificación distingue los sacramentos DE MUERTOS, que son el Bautismo y la Penitencia porque quitan la muerte del alma producida por el pecado, y los sacramentos DE VIVOS, que son los demás y para recibirlos requieren estar ya en gracia, sin pecado mortal.",
+      "answer": "**Los siete sacramentos:**\n• Bautismo\n• Confirmación\n• Eucaristía\n• Penitencia o Reconciliación\n• Unción de los enfermos\n• Orden Sagrado\n• Matrimonio\n\n**División por función:**\n• **Iniciación cristiana:** Bautismo, Confirmación, Eucaristía\n• **Curación:** Penitencia, Unción de los enfermos\n• **Servicio a la comunidad:** Orden Sagrado, Matrimonio\n\n**División por estado del alma:**\n• **De muertos:** Bautismo y Penitencia (quitan la muerte del alma)\n• **De vivos:** los demás (requieren estar ya en gracia)",
       "priority": "media"
     },
     {
@@ -2067,7 +2067,7 @@
       "chapterId": "cap17",
       "type": "desarrollo",
       "question": "Explique el sacramento del Bautismo: definición, materia, forma, ministro, efectos y necesidad.",
-      "answer": "El BAUTISMO es el primero y más necesario de los sacramentos, en el que se nos da la gracia y el carácter de cristianos; es el sacramento que nos hace cristianos. Su MATERIA es el agua verdadera y natural, derramando agua sobre el que se bautiza. Su FORMA son las palabras del bautizante: 'Yo te bautizo, NN, en el nombre del Padre y del Hijo y del Espíritu Santo', que se deben pronunciar al mismo tiempo que se emplea la materia. El MINISTRO ordinario es el sacerdote (particularmente el párroco). El extraordinario, en peligro de muerte ante la imposibilidad de obtener un sacerdote, puede ser cualquier persona, incluso un ateo, con tal de que tenga intención de hacerlo como lo hace la Iglesia. Sus EFECTOS son: quita el pecado original y todos los actuales que hubiera; perdona las penas temporal y eterna debidas por los pecados; da la gracia santificante, las virtudes teologales (fe, esperanza y caridad), las morales y los dones del Espíritu Santo; imprime CARÁCTER indeleble; nos da derecho a los demás sacramentos. Es necesario con NECESIDAD DE MEDIO: sin este sacramento el alma no posee la vida divina y por tanto no se salva.",
+      "answer": "**Definición:** el primero y más necesario de los sacramentos, en el que se nos da la gracia y el carácter de cristianos.\n\n**MATERIA:** agua verdadera y natural, derramada sobre el que se bautiza.\n\n**FORMA:** \"Yo te bautizo, NN, en el nombre del Padre y del Hijo y del Espíritu Santo\" (simultáneo con la materia).\n\n**MINISTRO:**\n• Ordinario: el sacerdote (particularmente el párroco)\n• Extraordinario: en peligro de muerte, cualquier persona (incluso un ateo) con intención de hacerlo como lo hace la Iglesia\n\n**EFECTOS:**\n• Quita el pecado original y todos los actuales\n• Perdona penas temporal y eterna\n• Da gracia santificante, virtudes teologales, morales y dones del E.S.\n• Imprime CARÁCTER indeleble\n• Da derecho a los demás sacramentos\n\n**NECESIDAD:** de MEDIO — sin este sacramento el alma no posee la vida divina y no se salva.",
       "priority": "alta"
     },
     {
@@ -2075,7 +2075,7 @@
       "chapterId": "cap17",
       "type": "corta",
       "question": "Defina la Eucaristía como sacramento y mencione sus efectos.",
-      "answer": "La EUCARISTÍA como sacramento es aquel en el cual, por la admirable conversión de toda la sustancia del pan en el Cuerpo de Jesucristo y la del vino en su preciosa Sangre, se contiene real y sustancialmente el Cuerpo, la Sangre, el Alma y la Divinidad de Nuestro Señor Jesucristo, bajo las apariencias del pan y del vino, para nuestro fortalecimiento espiritual. Sus EFECTOS son: es fuente de la gracia (porque contiene a Jesucristo, autor y dador de la gracia); da la gracia sacramental, principalmente el aumento de la caridad; alimenta el alma; PERDONA los pecados VENIALES; preserva de los pecados mortales y aleja la debilidad espiritual; es prenda de RESURRECCIÓN y de la gloria eterna, según definió el Concilio de Trento.",
+      "answer": "**Definición:** sacramento en el cual, por la conversión de toda la sustancia del pan en el Cuerpo de Cristo y la del vino en su Sangre, se contiene real y sustancialmente el Cuerpo, la Sangre, el Alma y la Divinidad de Nuestro Señor Jesucristo, bajo las apariencias del pan y del vino.\n\n**EFECTOS:**\n• Es fuente de la gracia (contiene a Jesucristo, autor y dador de la gracia)\n• Da gracia sacramental: principalmente aumento de la caridad\n• Alimenta el alma\n• PERDONA pecados VENIALES\n• Preserva de pecados mortales y aleja la debilidad espiritual\n• Es prenda de RESURRECCIÓN y de la gloria eterna (Concilio de Trento)",
       "priority": "media"
     },
     {
@@ -2083,7 +2083,7 @@
       "chapterId": "cap17",
       "type": "desarrollo",
       "question": "Explique la diferencia entre la Eucaristía como sacramento y como sacrificio, y la relación entre el Sacrificio de la Misa y el de la Cruz.",
-      "answer": "La Eucaristía como SACRAMENTO es un signo sensible que tiene por objeto comunicar la gracia de Dios en provecho de los hombres; el fin del sacramento es alimentar espiritualmente. Como SACRIFICIO es el ofrecimiento de Jesucristo para reconocer a Dios como dueño, alabarlo, darle gracias, aplacarlo y rogarle; el fin del sacrificio es honrar a la Divinidad. La SANTA MISA es el verdadero Sacrificio del Cuerpo y de la Sangre de Jesucristo, ofrecido bajo las especies de pan y de vino, en MEMORIA y como RENOVACIÓN del Sacrificio de la Cruz. La identidad entre la Misa y la Cruz se da en que la víctima es la misma (Cristo), el sacerdote primario es el mismo (Cristo) y el fin es el mismo. Hay tres diferencias accidentales: PRIMERA, la forma de verificarse la inmolación, que en la Cruz fue cruenta y en la Misa es INCRUENTA; SEGUNDA, en el ministro: en la Cruz fue el mismo Jesucristo en persona, mientras que en la Misa es Jesucristo en la persona del sacerdote; TERCERA, en la Cruz Cristo nos MERECIÓ la redención, mientras que en la Misa nos APLICA esa redención. Por la transubstanciación, en virtud de las palabras de la Consagración, toda la sustancia del pan se convierte en el Cuerpo de Cristo y toda la sustancia del vino en su Sangre.",
+      "answer": "**Como SACRAMENTO:** signo sensible que comunica la gracia de Dios en provecho de los hombres.\n• Fin: alimentar espiritualmente\n\n**Como SACRIFICIO:** ofrecimiento de Jesucristo para reconocer a Dios como dueño, alabarlo, darle gracias, aplacarlo y rogarle.\n• Fin: honrar a la Divinidad\n\n**LA SANTA MISA** es el verdadero Sacrificio del Cuerpo y Sangre de Cristo, ofrecido bajo las especies de pan y vino, en memoria y como renovación del Sacrificio de la Cruz.\n\n**Identidad Misa-Cruz:** misma víctima (Cristo), mismo sacerdote primario (Cristo), mismo fin.\n\n**Tres diferencias accidentales:**\n• Forma: cruenta en la Cruz, INCRUENTA en la Misa\n• Ministro: en la Cruz Cristo en persona; en la Misa Cristo en la persona del sacerdote\n• En la Cruz nos MERECIÓ la redención; en la Misa nos la APLICA\n\n**Transubstanciación:** en virtud de las palabras de la Consagración, toda la sustancia del pan se convierte en el Cuerpo de Cristo y toda la sustancia del vino en su Sangre.",
       "priority": "alta"
     },
     {
@@ -2091,7 +2091,7 @@
       "chapterId": "cap17",
       "type": "corta",
       "question": "Mencione los cuatro fines del Sacrificio de la Misa.",
-      "answer": "El sacrificio de la Misa se ofrece a Dios por cuatro fines: (1) el fin LATRÉUTICO o de ADORACIÓN: la Misa es un acto de adoración perfecto y verdaderamente digno de Dios; (2) el fin EUCARÍSTICO o de ACCIÓN DE GRACIAS: con la Misa se da a Dios el agradecimiento condigno por los beneficios recibidos; (3) el fin EXPIATORIO o PROPICIATORIO: por los méritos de Jesucristo, adquiridos en la Cruz y aplicados en la Misa, se aplaca y cesa la justa indignación divina contra el pecador; (4) el fin IMPETRATORIO o de SÚPLICA: el cristiano pide alcanzar nuevos favores de Dios.",
+      "answer": "• **LATRÉUTICO (adoración):** la Misa es un acto de adoración perfecto y verdaderamente digno de Dios\n• **EUCARÍSTICO (acción de gracias):** se da a Dios el agradecimiento condigno por los beneficios recibidos\n• **EXPIATORIO (propiciatorio):** por los méritos de Cristo se aplaca la justa indignación divina contra el pecador\n• **IMPETRATORIO (súplica):** el cristiano pide alcanzar nuevos favores de Dios",
       "priority": "media"
     },
     {
@@ -2099,7 +2099,7 @@
       "chapterId": "cap17",
       "type": "desarrollo",
       "question": "Explique el sacramento de la Penitencia: definición, materia, forma, condiciones para una buena confesión y necesidad.",
-      "answer": "La PENITENCIA, Confesión o Reconciliación es el sacramento en el cual se perdonan, por medio de la absolución sacerdotal, todos los pecados cometidos después del Bautismo al pecador que, arrepentido de ellos, los confiesa sinceramente y tiene propósito de enmienda. Su MATERIA son los actos del penitente: contrición, confesión vocal y satisfacción. Su FORMA son las palabras de la absolución: 'Dios, Padre misericordioso, que reconcilió consigo al mundo... y yo te absuelvo de tus pecados en el nombre del Padre y del Hijo y del Espíritu Santo'. El MINISTRO es el sacerdote, que debe guardar el SIGILO SACRAMENTAL absoluto, no pudiendo revelar nunca, en ninguna circunstancia ni después de la muerte del penitente, lo tratado en la confesión. Las CINCO CONDICIONES para una buena confesión son: (1) examinar la conciencia, (2) dolerse de los pecados (contrición), (3) hacer firme propósito de no pecar en adelante, (4) confesar todos los pecados al sacerdote en forma humilde, breve, discreta y sincera, (5) querer cumplir la penitencia que el confesor imponga. Su NECESIDAD es de MEDIO o absoluta para todos los que han pecado mortalmente después del Bautismo; cuando no se puede recibir, debe suplírselo con un acto de contrición perfecta, con propósito de confesarse en cuanto se pueda. Es además necesaria con necesidad de PRECEPTO: hay obligación de confesarse al menos una vez al año y cuando hubiere peligro de muerte.",
+      "answer": "**Definición:** sacramento en el cual se perdonan, por medio de la absolución sacerdotal, todos los pecados cometidos después del Bautismo al pecador que, arrepentido, los confiesa sinceramente y tiene propósito de enmienda.\n\n**MATERIA:** actos del penitente (contrición, confesión vocal, satisfacción).\n\n**FORMA:** palabras de la absolución: \"Dios, Padre misericordioso... yo te absuelvo de tus pecados en el nombre del Padre y del Hijo y del Espíritu Santo.\"\n\n**MINISTRO:** el sacerdote, que debe guardar el SIGILO SACRAMENTAL absoluto (no puede revelar nunca lo tratado en confesión).\n\n**Cinco condiciones para una buena confesión:**\n• Examinar la conciencia\n• Dolerse de los pecados (contrición)\n• Hacer firme propósito de no pecar en adelante\n• Confesar todos los pecados al sacerdote (humilde, breve, discreta y sinceramente)\n• Querer cumplir la penitencia impuesta\n\n**NECESIDAD:**\n• De MEDIO: absoluta para todos los que pecaron mortalmente después del Bautismo\n• Si no se puede recibir: suplir con acto de contrición perfecta + propósito de confesarse\n• De PRECEPTO: al menos una vez al año y en peligro de muerte",
       "priority": "alta"
     }
   ]
