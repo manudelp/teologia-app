@@ -54,10 +54,10 @@ function AppContent() {
   }
 
   return (
-    <div className="min-h-screen pb-20 sm:pb-4">
+    <div className={`min-h-screen ${view === 'chat' ? '' : 'pb-20 sm:pb-4'}`}>
       <Header onSearchOpen={() => setSearchOpen(true)} onHelpOpen={() => setHelpOpen(true)} />
       {view === 'chat' ? (
-        <main className="h-[calc(100vh-8rem)] sm:h-[calc(100vh-5rem)]">
+        <main className="h-[calc(100dvh-theme(spacing.16)-theme(spacing.14))] sm:h-[calc(100dvh-theme(spacing.16))]">
           <ChatView />
         </main>
       ) : (

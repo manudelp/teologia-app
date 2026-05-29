@@ -324,7 +324,7 @@ ${msg}` : msg;
   return (
     <div className="flex flex-col h-full">
       {/* Content area */}
-      <div className="flex-1 overflow-y-auto pb-2 scroll-smooth">
+      <div className="flex-1 overflow-y-auto pb-1 scroll-smooth">
         {messages.length === 0 ? (
           <div className="flex flex-col items-center justify-center h-full px-1">
             <Speech size={48} strokeWidth={1} className="text-stone-300 dark:text-zinc-800 mb-4" />
@@ -393,16 +393,16 @@ ${msg}` : msg;
       </div>
 
       {/* Input */}
-      <div className="shrink-0 pt-3 max-w-3xl mx-auto w-full px-6">
+      <div className="shrink-0 pt-2 pb-1 max-w-3xl mx-auto w-full px-4 sm:px-6">
         {activeRef && (
-          <div className="flex items-center gap-2 mx-6 px-3 py-2.5 -mb-1.5 rounded-t-lg bg-stone-200/60 dark:bg-zinc-800 border border-b-0 border-stone-300/60 dark:border-zinc-700/50">
+          <div className="flex items-center gap-2 px-3 py-2 mb-1.5 rounded-lg bg-stone-200/60 dark:bg-zinc-800 border border-stone-300/60 dark:border-zinc-700/50">
             <span className="text-[11px] text-stone-600 dark:text-zinc-300 truncate flex-1">“{activeRef}”</span>
             <button onClick={() => setActiveRef(null)} className="shrink-0 text-stone-400 dark:text-zinc-600 hover:text-stone-600 dark:hover:text-zinc-400">
               <X size={11} />
             </button>
           </div>
         )}
-        <div className={`flex items-center gap-2 px-4 bg-stone-100 dark:bg-zinc-900 border border-stone-200 dark:border-zinc-800/50 rounded-full ${messages.length === 0 && !activeRef ? 'h-14' : 'h-12'}`}>
+        <div className="flex items-center gap-2 px-4 h-11 bg-stone-100 dark:bg-zinc-900 border border-stone-200 dark:border-zinc-800/50 rounded-full">
           <input
             type="text"
             value={input}
@@ -420,7 +420,7 @@ ${msg}` : msg;
             <Send size={14} strokeWidth={2} className="text-white dark:text-zinc-900" />
           </button>
         </div>
-        <div className="flex items-center justify-between mt-2 px-1">
+        <div className="flex items-center justify-between mt-1.5 px-1">
           <div>
             {messages.length > 0 && (
               <button onClick={clearHistory} className="flex items-center gap-1 text-[10px] text-stone-400 dark:text-zinc-700 hover:text-stone-600 dark:hover:text-zinc-500 transition-colors">
