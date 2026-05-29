@@ -38,17 +38,48 @@ function getSuggestedQuestions(content: ReturnType<typeof useApp>['content'], se
   return suggestions.length > 0 ? suggestions.slice(0, 5) : GENERIC_QUESTIONS;
 }
 
-function buildSystemPrompt(content: ReturnType<typeof useApp>['content'], selectedChapter: string): string {
+function buildSystemPrompt(content: ReturnType<typeof useApp>['content'], selectedChapter: string, userQuery: string): string {
   if (!content) return '';
+
+  // Search for relevant content based on user query
+  const queryWords = userQuery.toLowerCase().split(/\s+/).filter(w => w.length > 3);
   
-  // If a chapter is selected, prioritize that content
-  const relevantCards = selectedChapter === 'todos'
+  const scoreCard = (text: string): number => {
+    const lower = text.toLowerCase();
+    return queryWords.filter(w => lower.includes(w)).length;
+  };
+
+  // Get cards from selected chapter OR search globally
+  const candidateCards = selectedChapter === 'todos'
     ? content.flashcards
     : content.flashcards.filter(fc => fc.chapterId === selectedChapter);
-  const cards = relevantCards.map(f => `${f.front}: ${f.back}`).join('\n');
   
+  const candidateQuestions = selectedChapter === 'todos'
+    ? content.questions
+    : content.questions.filter(q => q.chapterId === selectedChapter);
+
+  // Score and pick top relevant cards
+  const scoredCards = candidateCards
+    .map(fc => ({ text: `${fc.front}: ${fc.back}`, score: scoreCard(fc.front + ' ' + fc.back) }))
+    .sort((a, b) => b.score - a.score)
+    .slice(0, 8);
+
+  const scoredQuestions = candidateQuestions
+    .map(q => ({ text: `${q.question}: ${q.answer}`, score: scoreCard(q.question + ' ' + q.answer) }))
+    .sort((a, b) => b.score - a.score)
+    .slice(0, 4);
+
+  // If no good matches, fall back to chapter cards (first 10)
+  const relevantContent = [...scoredCards, ...scoredQuestions]
+    .filter(item => item.score > 0)
+    .map(item => item.text);
+
+  const contextCards = relevantContent.length > 0
+    ? relevantContent.join('\n')
+    : candidateCards.slice(0, 10).map(f => `${f.front}: ${f.back}`).join('\n');
+
   const chapterContext = selectedChapter !== 'todos'
-    ? `\n\nEl usuario está estudiando el capítulo: ${content.chapters.find(c => c.id === selectedChapter)?.title ?? selectedChapter}. Prioriza respuestas relevantes a ese tema.`
+    ? `\n\nEl usuario está estudiando el capítulo: ${content.chapters.find(c => c.id === selectedChapter)?.title ?? selectedChapter}.`
     : '';
 
   return `Sos un tutor experto en teología católica. Tu único objetivo es ayudar al usuario a APROBAR su parcial de teología (Ingeniería, USAL Pilar).${chapterContext}
@@ -58,23 +89,20 @@ COMPORTAMIENTO:
 - Priorizá lo que la profesora preguntaría en un examen.
 - Usá estructura: títulos, bullets, negritas para conceptos clave.
 - Si un concepto tiene una definición precisa, dala textual primero y después explicá.
-- Cuando haya distinciones importantes (ej: mortal vs venial, fe vs razón), usá comparaciones lado a lado.
-- Si el usuario pregunta algo vago, pedile que precise.
-- Corregí errores con firmeza pero sin agresividad.
+- Cuando haya distinciones importantes, usá comparaciones lado a lado.
 - Cerrá respuestas complejas con un resumen de 1-2 líneas tipo "para el examen".
+- Sé conciso: si se puede decir en 3 bullets, no escribas 3 párrafos.
 
 ESTILO:
-- Lenguaje claro, moderno, sin sermones ni frases arcaicas.
+- Lenguaje claro, moderno, sin sermones.
 - No uses emojis.
 - Usá **negrita** para términos clave, ## para secciones, > para citas.
-- Sé conciso: si se puede decir en 3 bullets, no escribas 3 párrafos.
 
 RESTRICCIONES:
 - Nunca inventes citas bíblicas ni información teológica.
-- Distinguí entre doctrina oficial, interpretación teológica y contexto histórico.
 - No hables de política ni temas fuera de teología.
 
-CONTENIDO DEL CURSO:\n${cards}`;
+CONTENIDO RELEVANTE DEL CURSO:\n${contextCards}`;
 }
 
 // Minimal markdown renderer — no large headings, subtle formatting
@@ -261,7 +289,7 @@ ${msg}` : msg;
 
     try {
       const model = genAI.getGenerativeModel({ model: currentModel.id });
-      const systemPrompt = buildSystemPrompt(content, selectedChapter);
+      const systemPrompt = buildSystemPrompt(content, selectedChapter, msg);
 
       const history = messages.map(m => ({
         role: m.role,
