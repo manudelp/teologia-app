@@ -15,8 +15,8 @@ export function QuestionCard({ question, status, onMark }: Props) {
     <div className={`py-8 border-b border-stone-100 dark:border-zinc-800/50 last:border-b-0 transition-opacity ${isDominada ? 'opacity-50' : ''}`}>
       {/* Badges */}
       <div className="flex items-center gap-2 mb-3">
-        <span className={`text-xs font-medium px-2 py-0.5 rounded-md ${question.priority === 'alta' ? 'bg-red-50 dark:bg-red-950/30 text-red-700 dark:text-red-300' : 'bg-stone-100 dark:bg-zinc-800 text-stone-500 dark:text-zinc-500'}`}>
-          {question.priority === 'alta' ? 'Alta' : 'Media'}
+        <span className={`text-xs font-medium px-2 py-0.5 rounded-md ${question.priority === 'alta' ? 'bg-red-50 dark:bg-red-950/30 text-red-700 dark:text-red-300' : question.priority === 'media' ? 'bg-amber-50 dark:bg-amber-950/30 text-amber-700 dark:text-amber-300' : 'bg-stone-100 dark:bg-zinc-800 text-stone-500 dark:text-zinc-500'}`}>
+          {question.priority === 'alta' ? 'Alta' : question.priority === 'media' ? 'Media' : 'Baja'}
         </span>
         <span className={`text-xs font-medium px-2 py-0.5 rounded-md ${question.type === 'desarrollo' ? 'bg-purple-50 dark:bg-purple-950/30 text-purple-600 dark:text-purple-400' : 'bg-sky-50 dark:bg-sky-950/30 text-sky-600 dark:text-sky-400'}`}>
           {question.type === 'desarrollo' ? 'Desarrollo' : 'Corta'}
