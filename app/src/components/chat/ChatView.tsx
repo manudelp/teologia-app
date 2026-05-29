@@ -226,6 +226,7 @@ export function ChatView() {
   const [loading, setLoading] = useState(false);
   const [activeRef, setActiveRef] = useState<string | null>(null);
   const bottomRef = useRef<HTMLDivElement>(null);
+  const inputRef = useRef<HTMLTextAreaElement>(null);
 
   // Persist messages
   useEffect(() => {
@@ -254,6 +255,7 @@ ${msg}` : msg;
     const userMsg: Message = { role: 'user', text: fullMsg, timestamp: Date.now() };
     setMessages(prev => [...prev, userMsg]);
     setInput('');
+    if (inputRef.current) { inputRef.current.style.height = 'auto'; }
     setActiveRef(null);
     setLoading(true);
 
@@ -329,12 +331,12 @@ ${msg}` : msg;
           <div className="flex flex-col items-center justify-center h-full px-1">
             <Speech size={48} strokeWidth={1} className="text-stone-300 dark:text-zinc-800 mb-4" />
             <p className="text-[13px] text-stone-400 dark:text-zinc-600 text-center max-w-[18rem] mb-8">Preguntá lo que necesites para el examen.</p>
-            <div className="flex flex-wrap justify-center gap-1.5">
+          <div className="flex flex-col sm:flex-row sm:flex-wrap justify-center gap-2 w-full max-w-sm sm:max-w-lg px-4">
               {getSuggestedQuestions(content, selectedChapter).map((q, i) => (
                 <button
                   key={i}
                   onClick={() => sendMessage(q)}
-                  className="px-2.5 py-1.5 rounded-lg border border-stone-200 dark:border-zinc-800/60 text-[11px] text-stone-500 dark:text-zinc-500 hover:text-stone-800 dark:hover:text-zinc-300 hover:border-stone-300 dark:hover:border-zinc-700/60 transition-colors"
+                  className="w-full sm:w-auto px-4 py-3 sm:py-2 rounded-xl border border-stone-200 dark:border-zinc-800/60 text-[13px] sm:text-[11px] text-left text-stone-600 dark:text-zinc-400 hover:text-stone-800 dark:hover:text-zinc-300 hover:border-stone-300 dark:hover:border-zinc-700/60 hover:bg-stone-50 dark:hover:bg-zinc-900/50 transition-colors"
                 >
                   {q}
                 </button>
@@ -402,15 +404,18 @@ ${msg}` : msg;
             </button>
           </div>
         )}
-        <div className="flex items-center gap-2 px-4 h-11 bg-stone-100 dark:bg-zinc-900 border border-stone-200 dark:border-zinc-800/50 rounded-full">
-          <input
-            type="text"
+        <div className="flex items-end gap-2 px-4 py-2 bg-stone-100 dark:bg-zinc-900 border border-stone-200 dark:border-zinc-800/50 rounded-2xl">
+          <textarea
+            ref={inputRef}
             value={input}
             onChange={(e) => setInput(e.target.value)}
             onKeyDown={(e) => { if (e.key === 'Enter' && !e.shiftKey) { e.preventDefault(); sendMessage(); } }}
             disabled={isLimited}
             placeholder={isLimited ? 'Límite alcanzado' : 'Pregunta algo...'}
-            className="flex-1 bg-transparent text-[14px] text-stone-800 dark:text-zinc-200 placeholder:text-stone-400 dark:placeholder:text-zinc-600 outline-none disabled:opacity-40"
+            rows={1}
+            className="flex-1 bg-transparent text-[15px] text-stone-800 dark:text-zinc-200 placeholder:text-stone-400 dark:placeholder:text-zinc-600 outline-none disabled:opacity-40 resize-none max-h-32 leading-snug py-1"
+            style={{ height: 'auto', minHeight: '24px' }}
+            onInput={(e) => { const t = e.currentTarget; t.style.height = 'auto'; t.style.height = Math.min(t.scrollHeight, 128) + 'px'; }}
           />
           <button
             onClick={() => sendMessage()}
