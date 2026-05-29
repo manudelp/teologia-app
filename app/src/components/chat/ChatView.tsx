@@ -243,7 +243,7 @@ function InlineFormat({ text }: { text: string }) {
 
 export function ChatView() {
   const { content, chatRef, sendToChat, selectedChapter } = useApp();
-  const { isLimited, recordRequest, currentModel } = useQuota();
+  const { isLimited, recordRequest, currentModel, setCurrentModel, getNextAvailableModel } = useQuota();
   const [messages, setMessages] = useState<Message[]>(() => {
     try {
       const saved = localStorage.getItem('teo-chat-history');
@@ -326,19 +326,59 @@ ${msg}` : msg;
       recordRequest(totalTokens);
     } catch (e) {
       const raw = e instanceof Error ? e.message : '';
+      const isRetryable = raw.includes('503') || raw.includes('overloaded') || raw.includes('429') || raw.includes('quota') || raw.includes('rate') || raw.includes('fetch') || raw.includes('network') || raw.includes('Failed');
+
+      // Auto-fallback to next model
+      if (isRetryable) {
+        const next = getNextAvailableModel();
+        if (next && next.id !== currentModel.id) {
+          setCurrentModel(next.id);
+          setLoading(false);
+          // Retry with new model
+          try {
+            const fallbackModel = genAI.getGenerativeModel({ model: next.id });
+            const systemPrompt = buildSystemPrompt(content, selectedChapter, msg);
+            const history = messages.map(m => ({ role: m.role, parts: [{ text: m.text }] }));
+            const chat = fallbackModel.startChat({
+              history: [
+                { role: 'user', parts: [{ text: systemPrompt + '\n\nResponde "Entendido." para confirmar.' }] },
+                { role: 'model', parts: [{ text: 'Entendido.' }] },
+                ...history,
+              ],
+            });
+            const result = await chat.sendMessageStream(msg);
+            let fullText = '';
+            setMessages(prev => [...prev, { role: 'model', text: '', timestamp: Date.now() }]);
+            for await (const chunk of result.stream) {
+              fullText += chunk.text();
+              setMessages(prev => {
+                const updated = [...prev];
+                updated[updated.length - 1] = { ...updated[updated.length - 1], text: fullText };
+                return updated;
+              });
+            }
+            const response = await result.response;
+            recordRequest(response.usageMetadata?.totalTokenCount ?? 0);
+            return;
+          } catch {
+            // Fallback also failed, show error below
+          }
+        }
+      }
+
       let errMsg: string;
       if (raw.includes('503') || raw.includes('overloaded')) {
-        errMsg = 'Servidor sobrecargado. Intenta de nuevo en unos segundos.';
+        errMsg = 'Todos los modelos sobrecargados. Intenta en unos segundos.';
       } else if (raw.includes('429') || raw.includes('quota') || raw.includes('rate')) {
-        errMsg = 'Cuota excedida. Cambia de modelo desde el selector.';
+        errMsg = 'Cuota excedida en todos los modelos disponibles.';
       } else if (raw.includes('404') || raw.includes('not found') || raw.includes('is not supported')) {
-        errMsg = 'Modelo no disponible. Selecciona otro desde el selector.';
+        errMsg = 'Modelo no disponible.';
       } else if (raw.includes('API_KEY') || raw.includes('401') || raw.includes('403')) {
         errMsg = 'Error de autenticación. Verifica la API key.';
       } else if (raw.includes('fetch') || raw.includes('network') || raw.includes('Failed')) {
-        errMsg = 'No se pudo conectar. Verifica tu conexión a internet.';
+        errMsg = 'No se pudo conectar. Verifica tu conexión.';
       } else {
-        errMsg = 'Ocurrió un error. Intenta de nuevo en unos segundos.';
+        errMsg = 'Error. Intenta de nuevo.';
       }
       setMessages(prev => [...prev, { role: 'model', text: errMsg, timestamp: Date.now() }]);
     } finally {

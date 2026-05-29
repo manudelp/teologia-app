@@ -28,6 +28,7 @@ interface QuotaContextValue {
   isLimited: boolean;
   availableModels: (ModelConfig & { available: boolean })[];
   recordRequest: (tokens: number) => void;
+  getNextAvailableModel: () => ModelConfig | null;
 }
 
 const QuotaContext = createContext<QuotaContextValue | null>(null);
@@ -151,8 +152,18 @@ export function QuotaProvider({ children }: { children: ReactNode }) {
     }));
   }, [currentModelId]);
 
+  const getNextAvailableModel = useCallback((): ModelConfig | null => {
+    const currentIdx = AVAILABLE_MODELS.findIndex(m => m.id === currentModelId);
+    for (let i = 1; i < AVAILABLE_MODELS.length; i++) {
+      const candidate = AVAILABLE_MODELS[(currentIdx + i) % AVAILABLE_MODELS.length];
+      const q = quotas[candidate.id] || { requestsMinute: 0, requestsToday: 0, tokensUsed: 0 };
+      if (!isModelLimited(candidate, q)) return candidate;
+    }
+    return null;
+  }, [currentModelId, quotas]);
+
   return (
-    <QuotaContext.Provider value={{ currentModel, setCurrentModel, quota, isLimited, availableModels, recordRequest }}>
+    <QuotaContext.Provider value={{ currentModel, setCurrentModel, quota, isLimited, availableModels, recordRequest, getNextAvailableModel }}>
       {children}
     </QuotaContext.Provider>
   );
