@@ -1,4 +1,4 @@
-import { Layers, BookOpen, MessageCircleQuestion, BarChart3, Speech, Search, Sun, Moon, Keyboard } from 'lucide-react';
+import { Layers, BookOpen, MessageCircleQuestion, BarChart3, Speech, Search, Sun, Moon, Keyboard, FileText } from 'lucide-react';
 import { ReadingProgress } from './ReadingProgress';
 import { useApp } from '../../context/AppContext';
 
@@ -10,6 +10,7 @@ const tabs: { id: ViewMode; label: string; icon: LucideIcon }[] = [
   { id: 'flashcards', label: 'Flashcards', icon: Layers },
   { id: 'chat', label: 'Dios', icon: Speech },
   { id: 'preguntas', label: 'Preguntas', icon: MessageCircleQuestion },
+  { id: 'parcial', label: 'Parcial', icon: FileText },
   { id: 'stats', label: 'Stats', icon: BarChart3 },
 ];
 

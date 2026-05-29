@@ -2102,5 +2102,169 @@
       "answer": "**Definición:** sacramento en el cual se perdonan, por medio de la absolución sacerdotal, todos los pecados cometidos después del Bautismo al pecador que, arrepentido, los confiesa sinceramente y tiene propósito de enmienda.\n\n**MATERIA:** actos del penitente (contrición, confesión vocal, satisfacción).\n\n**FORMA:** palabras de la absolución: \"Dios, Padre misericordioso... yo te absuelvo de tus pecados en el nombre del Padre y del Hijo y del Espíritu Santo.\"\n\n**MINISTRO:** el sacerdote, que debe guardar el SIGILO SACRAMENTAL absoluto (no puede revelar nunca lo tratado en confesión).\n\n**Cinco condiciones para una buena confesión:**\n• Examinar la conciencia\n• Dolerse de los pecados (contrición)\n• Hacer firme propósito de no pecar en adelante\n• Confesar todos los pecados al sacerdote (humilde, breve, discreta y sinceramente)\n• Querer cumplir la penitencia impuesta\n\n**NECESIDAD:**\n• De MEDIO: absoluta para todos los que pecaron mortalmente después del Bautismo\n• Si no se puede recibir: suplir con acto de contrición perfecta + propósito de confesarse\n• De PRECEPTO: al menos una vez al año y en peligro de muerte",
       "priority": "alta"
     }
+  ],
+  "examSimulation": [
+    {
+      "id": "exam-001",
+      "question": "¿Cuál es el designio de Dios para el hombre? ¿El hombre es capaz de Dios? ¿Basta la razón para conocerlo? ¿Qué revela Dios al hombre? ¿De qué modo se transmite la Revelación divina? ¿A quién corresponde interpretar el depósito de la fe? ¿Por qué la Sagrada Escritura enseña la verdad? ¿Qué es el canon de las Escrituras?",
+      "topics": [
+        "Teología Fundamental",
+        "Revelación",
+        "Sagrada Escritura",
+        "Magisterio"
+      ],
+      "relatedQuestions": [
+        "q-001",
+        "q-002",
+        "q-004",
+        "q-009",
+        "q-011"
+      ]
+    },
+    {
+      "id": "exam-002",
+      "question": "¿Qué significa creer en Dios? ¿Cuáles son las características de la fe? ¿Hay contradicción entre fe y ciencia?",
+      "topics": [
+        "Fe",
+        "Razón"
+      ],
+      "relatedQuestions": [
+        "q-004",
+        "q-005",
+        "q-033"
+      ]
+    },
+    {
+      "id": "exam-003",
+      "question": "¿Cómo expresa la Iglesia su fe trinitaria?",
+      "topics": [
+        "Trinidad"
+      ],
+      "relatedQuestions": [
+        "q-014"
+      ]
+    },
+    {
+      "id": "exam-004",
+      "question": "¿Quién ha creado el mundo y para qué? ¿Ha sido libre al crearlo? ¿Por qué permite el mal? ¿En qué consiste la Providencia divina?",
+      "topics": [
+        "Creación",
+        "Mal",
+        "Providencia"
+      ],
+      "relatedQuestions": [
+        "q-016",
+        "q-035",
+        "q-008"
+      ]
+    },
+    {
+      "id": "exam-005",
+      "question": "¿En qué sentido el hombre es creado a imagen y semejanza de Dios? ¿Para qué fin Dios ha creado al hombre? ¿Cuál era la condición original del hombre según el designio de Dios?",
+      "topics": [
+        "Antropología",
+        "Justicia original"
+      ],
+      "relatedQuestions": [
+        "q-018",
+        "q-019"
+      ]
+    },
+    {
+      "id": "exam-006",
+      "question": "¿Qué es el pecado? ¿En qué consistió el primer pecado? ¿Qué consecuencias provocó? ¿El hombre fue abandonado a su suerte después del pecado? ¿Hay diversidad de pecados? ¿Cómo se diferencian en cuanto a la gravedad?",
+      "topics": [
+        "Pecado",
+        "Pecado original"
+      ],
+      "relatedQuestions": [
+        "q-019",
+        "q-027",
+        "q-028"
+      ]
+    },
+    {
+      "id": "exam-007",
+      "question": "¿Qué significa Encarnación? ¿Cuál es el fin? ¿Qué expresa el misterio de la unión hipostática?",
+      "topics": [
+        "Cristología",
+        "Encarnación"
+      ],
+      "relatedQuestions": [
+        "q-020",
+        "q-037",
+        "q-038"
+      ]
+    },
+    {
+      "id": "exam-008",
+      "question": "¿Por qué María es verdadera Madre de Dios? ¿Qué significa la Inmaculada Concepción y la Virginidad perpetua de María?",
+      "topics": [
+        "Mariología"
+      ],
+      "relatedQuestions": [
+        "q-023"
+      ]
+    },
+    {
+      "id": "exam-009",
+      "question": "¿Quién es responsable de la muerte de Jesús? ¿Qué significa satisfacción vicaria? ¿Cuál es el sentido y el alcance salvífico de la Resurrección?",
+      "topics": [
+        "Redención",
+        "Resurrección"
+      ],
+      "relatedQuestions": [
+        "q-021",
+        "q-022",
+        "q-040"
+      ]
+    },
+    {
+      "id": "exam-010",
+      "question": "¿Qué es la Gracia? ¿Qué relación hay entre la gracia y la libertad del hombre? ¿Qué es el mérito? ¿Estamos todos llamados a la Santidad?",
+      "topics": [
+        "Gracia",
+        "Mérito"
+      ],
+      "relatedQuestions": [
+        "q-025",
+        "q-026"
+      ]
+    },
+    {
+      "id": "exam-011",
+      "question": "¿Qué designamos con la palabra Iglesia? ¿Cuál es su misión? ¿En qué sentido la Iglesia es una y Santa? ¿Quiénes pertenecen a la Iglesia católica? ¿Qué significa la afirmación \"fuera de la Iglesia no hay Salvación\"?",
+      "topics": [
+        "Eclesiología"
+      ],
+      "relatedQuestions": [
+        "q-029",
+        "q-030",
+        "q-031",
+        "q-032"
+      ]
+    },
+    {
+      "id": "exam-012",
+      "question": "¿Qué son los Sacramentos? ¿Cómo se distinguen? ¿Qué es el carácter Sacramental? ¿Por qué son eficaces? ¿Cómo se realiza la iniciación cristiana? ¿Quién puede recibir el Bautismo? ¿Qué se requiere? ¿Quién puede bautizar? ¿Es necesario para la Salvación?",
+      "topics": [
+        "Sacramentos",
+        "Bautismo"
+      ],
+      "relatedQuestions": [
+        "q-046",
+        "q-048",
+        "q-049",
+        "q-050"
+      ]
+    },
+    {
+      "id": "exam-013",
+      "question": "¿Qué significa Resurrección de la carne? ¿Qué sucede con la muerte a nuestro cuerpo y a nuestra alma? ¿Qué significa morir en Cristo? ¿Qué es la Vida Eterna? ¿Cuándo comienza? ¿Qué es el juicio particular? ¿Qué se entiende por cielo? ¿Y qué por purgatorio? ¿Podemos ayudar a las almas del purgatorio? ¿En qué consiste el infierno? ¿Cómo se concilia su existencia con la bondad de Dios? ¿En qué consiste el juicio final? ¿Cuándo tendrá lugar?",
+      "topics": [
+        "Escatología"
+      ],
+      "relatedQuestions": []
+    }
   ]
 }

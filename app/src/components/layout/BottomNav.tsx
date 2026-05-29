@@ -1,4 +1,4 @@
-import { Layers, BookOpen, MessageCircleQuestion, BarChart3, Speech } from 'lucide-react';
+import { Layers, BookOpen, MessageCircleQuestion, Speech, FileText } from 'lucide-react';
 import { useApp } from '../../context/AppContext';
 import type { ViewMode } from '../../types';
 import type { LucideIcon } from 'lucide-react';
@@ -10,7 +10,7 @@ const leftTabs: { id: ViewMode; label: string; icon: LucideIcon }[] = [
 
 const rightTabs: { id: ViewMode; label: string; icon: LucideIcon }[] = [
   { id: 'preguntas', label: 'Preguntas', icon: MessageCircleQuestion },
-  { id: 'stats', label: 'Stats', icon: BarChart3 },
+  { id: 'parcial', label: 'Parcial', icon: FileText },
 ];
 
 export function BottomNav() {

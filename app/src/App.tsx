@@ -8,6 +8,7 @@ import { KeyboardHelp } from './components/layout/KeyboardHelp';
 import { ChuletaView } from './components/chuleta/ChuletaView';
 import { FlashcardView } from './components/flashcards/FlashcardView';
 import { PreguntasView } from './components/preguntas/PreguntasView';
+import { ParcialView } from './components/parcial/ParcialView';
 import { StatsView } from './components/stats/StatsView';
 import { ChatView } from './components/chat/ChatView';
 import type { SearchResult } from './hooks/useSearch';
@@ -64,6 +65,7 @@ function AppContent() {
           {view === 'chuleta' && <ChuletaView />}
           {view === 'flashcards' && <FlashcardView />}
           {view === 'preguntas' && <PreguntasView />}
+          {view === 'parcial' && <ParcialView />}
           {view === 'stats' && <StatsView />}
         </main>
       )}

@@ -47,6 +47,13 @@ export interface ExamQuestion {
 
 export type Priority = 'alta' | 'media' | 'baja';
 
+export interface ExamSimQuestion {
+  id: string;
+  question: string;
+  topics: string[];
+  relatedQuestions: string[];
+}
+
 // === CONTENIDO COMPLETO ===
 
 export interface ContentData {
@@ -61,6 +68,7 @@ export interface ContentData {
   flashcards: Flashcard[];
   cheatsheet: ChuletaSection[];
   questions: ExamQuestion[];
+  examSimulation?: ExamSimQuestion[];
 }
 
 // === PROGRESO DEL USUARIO (localStorage) ===
@@ -85,4 +93,4 @@ export interface QuestionProgress {
 
 // === NAVEGACION ===
 
-export type ViewMode = 'flashcards' | 'chuleta' | 'preguntas' | 'stats' | 'chat';
+export type ViewMode = 'flashcards' | 'chuleta' | 'preguntas' | 'parcial' | 'stats' | 'chat';
