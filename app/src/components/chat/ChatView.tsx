@@ -393,7 +393,7 @@ ${msg}` : msg;
       </div>
 
       {/* Input */}
-      <div className="shrink-0 pt-2 pb-1 max-w-3xl mx-auto w-full px-4 sm:px-6">
+      <div className="shrink-0 pt-2 pb-14 sm:pb-1 max-w-3xl mx-auto w-full px-4 sm:px-6">
         {activeRef && (
           <div className="flex items-center gap-2 px-3 py-2 mb-1.5 rounded-lg bg-stone-200/60 dark:bg-zinc-800 border border-stone-300/60 dark:border-zinc-700/50">
             <span className="text-[11px] text-stone-600 dark:text-zinc-300 truncate flex-1">“{activeRef}”</span>
