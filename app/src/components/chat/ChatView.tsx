@@ -433,6 +433,11 @@ ${msg}` : msg;
           </div>
         )}
         <div className="flex items-end gap-2 px-4 py-2 bg-stone-100 dark:bg-zinc-900 border border-stone-200 dark:border-zinc-800/50 rounded-2xl">
+          {messages.length > 0 && (
+            <button onClick={clearHistory} className="shrink-0 w-8 h-8 flex items-center justify-center text-stone-400 dark:text-zinc-700 hover:text-stone-600 dark:hover:text-zinc-400 transition-colors" title="Limpiar chat">
+              <Trash2 size={15} />
+            </button>
+          )}
           <textarea
             ref={inputRef}
             value={input}
@@ -453,15 +458,7 @@ ${msg}` : msg;
             <Send size={14} strokeWidth={2} className="text-white dark:text-zinc-900" />
           </button>
         </div>
-        <div className="flex items-center justify-between mt-1.5 px-1">
-          <div>
-            {messages.length > 0 && (
-              <button onClick={clearHistory} className="flex items-center gap-1 text-[10px] text-stone-400 dark:text-zinc-700 hover:text-stone-600 dark:hover:text-zinc-500 transition-colors">
-                <Trash2 size={9} />
-                Limpiar
-              </button>
-            )}
-          </div>
+        <div className="flex items-center justify-end mt-1.5 px-1">
           <AIQuotaStatus />
         </div>
       </div>
