@@ -28,7 +28,7 @@ export function Header({ onSearchOpen, onHelpOpen }: Props) {
 
   return (
     <header className="no-print sticky top-0 z-50 bg-stone-50/95 dark:bg-zinc-950/95 backdrop-blur-sm">
-      <div className="max-w-5xl mx-auto px-6 py-4 flex items-center justify-between">
+      <div className="max-w-5xl mx-auto px-4 sm:px-6 py-3 sm:py-4 flex items-center justify-between">
         {/* Logo */}
         <h1 className="font-serif text-xl font-semibold text-stone-800 dark:text-zinc-200">
           Teología
@@ -56,7 +56,7 @@ export function Header({ onSearchOpen, onHelpOpen }: Props) {
         </nav>
 
         {/* Acciones */}
-        <div className="flex items-center gap-2">
+        <div className="flex items-center gap-1 sm:gap-2">
           <button
             onClick={onSearchOpen}
             className="p-2 rounded-lg text-stone-400 dark:text-zinc-500 hover:text-stone-700 dark:hover:text-zinc-300 hover:bg-stone-100 dark:hover:bg-zinc-800/60 transition-colors"
@@ -67,7 +67,7 @@ export function Header({ onSearchOpen, onHelpOpen }: Props) {
           </button>
           <button
             onClick={onHelpOpen}
-            className="p-2 rounded-lg text-stone-400 dark:text-zinc-500 hover:text-stone-700 dark:hover:text-zinc-300 hover:bg-stone-100 dark:hover:bg-zinc-800/60 transition-colors"
+            className="hidden sm:block p-2 rounded-lg text-stone-400 dark:text-zinc-500 hover:text-stone-700 dark:hover:text-zinc-300 hover:bg-stone-100 dark:hover:bg-zinc-800/60 transition-colors"
             aria-label="Atajos de teclado (?)"
             title="Atajos de teclado (?)"
           >

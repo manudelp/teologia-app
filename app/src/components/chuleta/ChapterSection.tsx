@@ -144,9 +144,9 @@ function ComparisonContent({ data, chapterLabel }: { data: ComparisonData; chapt
   return (
     <div className="space-y-3">
       {data.items.map((item, i) => (
-        <div key={i} className="group flex items-center text-sm leading-relaxed">
+        <div key={i} className="group flex flex-col sm:flex-row sm:items-center text-sm leading-relaxed">
           <span className="font-medium text-stone-800 dark:text-zinc-200">{item.label}</span>
-          <span className="text-stone-400 dark:text-zinc-600 mx-2">&mdash;</span>
+          <span className="hidden sm:inline text-stone-400 dark:text-zinc-600 mx-2">&mdash;</span>
           <span className="flex-1 text-stone-600 dark:text-zinc-400">{item.description}</span>
           <RefBtn text={`${item.label}: ${item.description}`} chapter={chapterLabel} />
         </div>

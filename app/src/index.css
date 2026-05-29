@@ -12,10 +12,16 @@
   body {
     @apply bg-stone-50 text-stone-900 dark:bg-zinc-950 dark:text-zinc-100 font-sans transition-colors;
     line-height: 1.4;
+    -webkit-tap-highlight-color: transparent;
   }
 
   button {
     cursor: pointer;
+    touch-action: manipulation;
+  }
+
+  input, textarea {
+    touch-action: manipulation;
   }
 
   /* Focus rings visibles para navegacion por teclado */

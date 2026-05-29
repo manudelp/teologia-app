@@ -40,7 +40,7 @@ export function SearchModal({ open, onClose, onNavigate }: Props) {
   };
 
   return (
-    <div className="fixed inset-0 z-[100] flex items-start justify-center pt-[12vh]" onClick={onClose}>
+    <div className="fixed inset-0 z-[100] flex items-start justify-center pt-[5vh] sm:pt-[12vh]" onClick={onClose}>
       <div className="absolute inset-0 bg-black/40 dark:bg-black/60" />
       <div
         className="animate-fadeUp relative w-full max-w-2xl mx-4 bg-white dark:bg-zinc-900 rounded-2xl shadow-2xl overflow-hidden"
