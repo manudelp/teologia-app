@@ -51,7 +51,7 @@ export interface ExamSimQuestion {
   id: string;
   question: string;
   topics: string[];
-  relatedQuestions: string[];
+  answer: string;
 }
 
 // === CONTENIDO COMPLETO ===

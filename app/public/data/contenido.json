@@ -2110,16 +2110,9 @@
       "topics": [
         "Teología Fundamental",
         "Revelación",
-        "Sagrada Escritura",
-        "Magisterio"
+        "Escritura"
       ],
-      "relatedQuestions": [
-        "q-001",
-        "q-002",
-        "q-004",
-        "q-009",
-        "q-011"
-      ]
+      "answer": "**Designio de Dios:** que el hombre lo conozca, lo ame y alcance la salvación eterna.\n\n**Capacidad del hombre:** puede conocer a Dios con la razón natural (existencia, atributos), pero NO comprenderlo plenamente. La razón sola llega hasta los preámbulos de la fe; para los misterios necesita la Revelación.\n\n**Revelación:** acto por el cual Dios desvela verdades de orden religioso (re-velare = quitar el velo). Se da con hechos y palabras. Plenitud en Cristo.\n\n**Transmisión — dos fuentes:**\n• Sagrada Escritura: Palabra de Dios puesta por escrito (73 libros)\n• Tradición: Palabra de Dios transmitida oralmente desde los apóstoles\n\n**Intérprete auténtico:** el Magisterio de la Iglesia (Papa + obispos). No es libre interpretación.\n\n**Escritura — enseña la verdad** porque tiene a Dios como autor principal (inspiración del E.S.). Los hagiógrafos son autores secundarios, libres en la forma.\n\n**Canon:** catálogo oficial de los 73 libros inspirados (46 AT + 27 NT), fijado por el Concilio de Trento (1546)."
     },
     {
       "id": "exam-002",
@@ -2128,11 +2121,7 @@
         "Fe",
         "Razón"
       ],
-      "relatedQuestions": [
-        "q-004",
-        "q-005",
-        "q-033"
-      ]
+      "answer": "**Creer en Dios:** virtud sobrenatural por la que el hombre cree firmemente lo que Dios ha revelado y la Iglesia enseña. Es un acto consciente y libre.\n\n**Objeto formal:** la autoridad de Dios que revela (no la evidencia intelectual).\n\n**Características:**\n• Supraracional (no irracional)\n• Supone la razón, la eleva y la sana\n• Acto libre de la voluntad movida por la gracia\n• Certeza superior a la de la razón (se funda en Dios infalible)\n\n**Fe y ciencia — NO hay contradicción:**\n\"La fe y la razón son como dos alas\" (Fides et Ratio). La relación es armónica: nunca una verdad de fe contradice una verdad de razón. La fe supone la razón, la eleva al orden sobrenatural y la sana de la herida del pecado original."
     },
     {
       "id": "exam-003",
@@ -2140,9 +2129,7 @@
       "topics": [
         "Trinidad"
       ],
-      "relatedQuestions": [
-        "q-014"
-      ]
+      "answer": "**Dogma:** en Dios hay tres personas (Padre, Hijo, E.S.) y un solo Dios verdadero. Cada persona posee la misma naturaleza divina.\n\n**Dos procesiones ad intra:**\n• Generación del Hijo (vía intelectual): Dios se piensa → procede el Verbo\n• Procesión del E.S. (vía de amor): del amor mutuo del Padre y del Hijo\n\n**La Iglesia lo expresa mediante:**\n• El Credo (Nicea-Constantinopla)\n• La señal de la cruz\n• La liturgia y los sacramentos (se invocan las tres personas)\n• La doxología (\"Gloria al Padre, al Hijo y al E.S.\")\n\n**Definido en:** Nicea (325) y Constantinopla (381). Es misterio supraracional, no antirracional."
     },
     {
       "id": "exam-004",
@@ -2152,11 +2139,7 @@
         "Mal",
         "Providencia"
       ],
-      "relatedQuestions": [
-        "q-016",
-        "q-035",
-        "q-008"
-      ]
+      "answer": "**Creación:** primera producción de todo el ser, hecha de la nada (ex nihilo), por Dios. Acto propio y exclusivo de Dios.\n\n**Libertad:** Dios crea libremente, por pura bondad, no por necesidad.\n\n**Fines:**\n• Primario: glorificación de Dios\n• Secundario: felicidad de la criatura racional\n\n**El mal:** privación de un bien debido (no es un ser positivo).\n• Mal físico: Dios lo permite para un bien mayor\n• Mal moral (pecado): Dios lo permite porque respeta la libertad humana\n• \"Si el mal existe, Dios existe\" — el mal afecta a un bien que sin Dios no existiría\n\n**Providencia:** plan eterno de Dios sobre el mundo.\n**Gobierno:** ejecución en el tiempo de ese plan.\n• Infalible e inmutable (no hay imprevistos)\n• Dios conserva todo en la existencia (si dejara de pensarnos, volveríamos a la nada)"
     },
     {
       "id": "exam-005",
@@ -2165,36 +2148,23 @@
         "Antropología",
         "Justicia original"
       ],
-      "relatedQuestions": [
-        "q-018",
-        "q-019"
-      ]
+      "answer": "**Imagen** = naturaleza racional (inteligencia y voluntad libre)\n**Semejanza** = lo sobrenatural (la gracia)\n\n**Fin:** conocer y amar a Dios, alcanzar la bienaventuranza eterna.\n\n**Condición original (justicia original):**\nNaturaleza elevada + dones sobrenaturales + dones preternaturales:\n• Integridad (sujeción perfecta del cuerpo al alma)\n• Inmortalidad corporal\n• Impasibilidad (inmunidad de dolor)\n• Ciencia infusa\n\nHabía armonía con Dios, consigo mismo y con la creación."
     },
     {
       "id": "exam-006",
-      "question": "¿Qué es el pecado? ¿En qué consistió el primer pecado? ¿Qué consecuencias provocó? ¿El hombre fue abandonado a su suerte después del pecado? ¿Hay diversidad de pecados? ¿Cómo se diferencian en cuanto a la gravedad?",
+      "question": "¿Qué es el pecado? ¿En qué consistió el primer pecado? ¿Qué consecuencias provocó? ¿El hombre fue abandonado a su suerte? ¿Hay diversidad de pecados? ¿Cómo se diferencian en gravedad?",
       "topics": [
-        "Pecado",
-        "Pecado original"
+        "Pecado"
       ],
-      "relatedQuestions": [
-        "q-019",
-        "q-027",
-        "q-028"
-      ]
+      "answer": "**Pecado:** transgresión VOLUNTARIA de la ley de Dios. Tres condiciones: materia prohibida + advertencia + consentimiento.\n\n**Primer pecado:** querer determinar por sí solo el bien y el mal, SIN Dios (autonomía moral). Acto de soberbia.\n\n**Consecuencias:**\n• Se pierden dones sobrenaturales y preternaturales\n• Naturaleza HERIDA (no corrompida): ignorancia, malicia, fragilidad, concupiscencia\n• Rupturas: con Dios, consigo mismo, con los demás, con la creación\n• Se transmite a toda la humanidad (heredado, no cometido)\n\n**NO fue abandonado:** Dios promete un Redentor (Protoevangelio, Gn 3,15).\n\n**Diversidad:**\n• **Mortal:** materia GRAVE + plena advertencia + perfecto consentimiento. Separa de Dios, pierde la gracia.\n• **Venial:** materia leve. No separa de Dios pero debilita la caridad y predispone al mortal."
     },
     {
       "id": "exam-007",
       "question": "¿Qué significa Encarnación? ¿Cuál es el fin? ¿Qué expresa el misterio de la unión hipostática?",
       "topics": [
-        "Cristología",
-        "Encarnación"
+        "Cristología"
       ],
-      "relatedQuestions": [
-        "q-020",
-        "q-037",
-        "q-038"
-      ]
+      "answer": "**Encarnación:** el Hijo de Dios asume una naturaleza humana sin dejar de ser Dios (Jn 1,14: \"la Palabra se hizo carne\").\n\n**Fin:** la salvación de los hombres. Solo un Dios hecho hombre podía dar satisfacción de valor infinito.\n\n**Unión hipostática** (hipóstasis = persona):\n• UNA persona (divina, la 2a de la Trinidad)\n• DOS naturalezas (divina y humana) sin confusión ni mezcla\n• Comienza en la concepción, NUNCA se interrumpe\n• La muerte rompió cuerpo-alma, NO divinidad-humanidad\n\n**Concilios:** Éfeso (431) = unidad de persona. Calcedonia (451) = dos naturalezas.\n\n**Originalidad del cristianismo:** Cristo es el centro (no un mensajero). \"Yo soy el camino, la verdad y la vida.\""
     },
     {
       "id": "exam-008",
@@ -2202,69 +2172,49 @@
       "topics": [
         "Mariología"
       ],
-      "relatedQuestions": [
-        "q-023"
-      ]
+      "answer": "**Madre de Dios:** porque concibió y dio a luz a la 2a persona de la Trinidad en cuanto a la naturaleza humana asumida. Fundamento: la unión hipostática. Definida en Éfeso (431).\n\n**Inmaculada Concepción** (Pío IX, 8/12/1854):\nMaría fue preservada de toda mancha de pecado original desde el primer instante de su concepción, por gracia especial en atención a los méritos de Cristo. Redención PRESERVATIVA.\n\n**Virginidad perpetua:**\n• ANTES del parto: concepción por obra del E.S., sin varón\n• DURANTE el parto: milagroso, sin dolor\n• DESPUÉS del parto: no tuvo otros hijos (Jesús es el unigénito)\n\nConfirmado por: palabras del ángel, y que Jesús deja a María al cuidado de Juan (no de \"hermanos\")."
     },
     {
       "id": "exam-009",
-      "question": "¿Quién es responsable de la muerte de Jesús? ¿Qué significa satisfacción vicaria? ¿Cuál es el sentido y el alcance salvífico de la Resurrección?",
+      "question": "¿Quién es responsable de la muerte de Jesús? ¿Qué significa satisfacción vicaria? ¿Cuál es el sentido y alcance salvífico de la Resurrección?",
       "topics": [
         "Redención",
         "Resurrección"
       ],
-      "relatedQuestions": [
-        "q-021",
-        "q-022",
-        "q-040"
-      ]
+      "answer": "**Responsable:** toda la humanidad por el pecado. Muerte voluntaria de Cristo, por obediencia al Padre.\n\n**Satisfacción vicaria** (San Anselmo, s. XI):\n• El pecado es ultraje al honor de Dios → ofensa infinita (se mide por el ofendido)\n• Solo Cristo (Dios y Hombre) podía dar satisfacción adecuada (valor infinito)\n• Vicaria = en lugar de todos los hombres\n• Sobreabundante: una sola gota bastaba\n\n**Resurrección — sentido salvífico:**\n• Confirma su divinidad\n• Victoria sobre el pecado y la muerte\n• Principio y fuente de NUESTRA resurrección futura\n• Pruebas: sepulcro vacío + apariciones (a María, apóstoles, más de 500)\n• Resucitó por su PROPIO poder (porque es Dios)\n• Cuerpo glorioso, no retorno a la vida terrena"
     },
     {
       "id": "exam-010",
       "question": "¿Qué es la Gracia? ¿Qué relación hay entre la gracia y la libertad del hombre? ¿Qué es el mérito? ¿Estamos todos llamados a la Santidad?",
       "topics": [
-        "Gracia",
-        "Mérito"
+        "Gracia"
       ],
-      "relatedQuestions": [
-        "q-025",
-        "q-026"
-      ]
+      "answer": "**Gracia:** don sobrenatural, totalmente inmerecido, que Dios concede por los méritos de Cristo. Hace al hombre hijo de Dios, heredero del cielo, templo de la Trinidad.\n\n**Tipos:**\n• **Habitual (santificante):** cualidad permanente del alma. Se pierde por pecado mortal, se recupera por confesión.\n• **Actual:** influjo transitorio sobre inteligencia y voluntad.\n\n**Gracia y libertad:** la gracia eleva y perfecciona la libertad (no la anula). \"Dios que te creó sin ti, no te salvará sin ti.\"\n\n**Mérito:** para que una obra tenga mérito sobrenatural se requiere estar en estado de gracia + estar en la vida terrenal.\n\n**Santidad:** TODOS están llamados. Es un camino de crecimiento en la gracia y el amor de Dios.\n\n**Vs. errores:**\n• Naturalismo: el hombre se salva solo → NO, necesita la gracia\n• Protestantismo: naturaleza totalmente corrupta → NO, está herida pero conserva capacidad de bien"
     },
     {
       "id": "exam-011",
-      "question": "¿Qué designamos con la palabra Iglesia? ¿Cuál es su misión? ¿En qué sentido la Iglesia es una y Santa? ¿Quiénes pertenecen a la Iglesia católica? ¿Qué significa la afirmación \"fuera de la Iglesia no hay Salvación\"?",
+      "question": "¿Qué designamos con la palabra Iglesia? ¿Cuál es su misión? ¿En qué sentido es una y Santa? ¿Quiénes pertenecen? ¿Qué significa \"fuera de la Iglesia no hay Salvación\"?",
       "topics": [
         "Eclesiología"
       ],
-      "relatedQuestions": [
-        "q-029",
-        "q-030",
-        "q-031",
-        "q-032"
-      ]
+      "answer": "**Iglesia:** comunidad de todos los bautizados, con la misma fe, gobierno unitario instituido por Cristo. Prolongación de Cristo en el mundo.\n\n**Misión:** la salvación de los hombres (sacramento universal de salvación).\n\n**Notas:**\n• **UNA:** unidad de fe + comunión + participación. Fundamento = la FE.\n• **SANTA:** en su origen (Cristo, E.S.), fin (salvación), medios (sacramentos) y frutos (santos).\n• **CATÓLICA:** universal (todos los hombres, tiempos, lugares).\n• **APOSTÓLICA:** sucesión ininterrumpida desde los apóstoles.\n\n**Pertenencia — tres requisitos:**\n• Bautismo válido\n• Profesar la verdadera fe\n• Estar en comunión (no separado por herejía ni cisma)\n\n**\"Fuera de la Iglesia no hay salvación\":** la Iglesia es el medio ORDINARIO de salvación, pero la gracia de Dios puede alcanzar a quienes viven según la verdad que conocen."
     },
     {
       "id": "exam-012",
-      "question": "¿Qué son los Sacramentos? ¿Cómo se distinguen? ¿Qué es el carácter Sacramental? ¿Por qué son eficaces? ¿Cómo se realiza la iniciación cristiana? ¿Quién puede recibir el Bautismo? ¿Qué se requiere? ¿Quién puede bautizar? ¿Es necesario para la Salvación?",
+      "question": "¿Qué son los Sacramentos? ¿Cómo se distinguen? ¿Qué es el carácter Sacramental? ¿Por qué son eficaces? ¿Cómo se realiza la iniciación cristiana? ¿Quién puede recibir el Bautismo? ¿Es necesario para la Salvación?",
       "topics": [
         "Sacramentos",
         "Bautismo"
       ],
-      "relatedQuestions": [
-        "q-046",
-        "q-048",
-        "q-049",
-        "q-050"
-      ]
+      "answer": "**Sacramentos:** signos sensibles y eficaces de la gracia, instituidos por Cristo, administrados por la Iglesia.\n\n**Tres elementos:** sensibles + eficaces + institución divina.\n\n**Clasificación:**\n• Iniciación: Bautismo, Confirmación, Eucaristía\n• Curación: Penitencia, Unción\n• Servicio: Orden, Matrimonio\n• De muertos (Bautismo, Penitencia) vs. de vivos (los demás)\n\n**Carácter sacramental:** sello indeleble en el alma. Solo Bautismo, Confirmación y Orden → se reciben una sola vez.\n\n**Eficacia:** actúan \"ex opere operato\" (por la obra obrada), no por mérito del ministro o receptor.\n\n**Bautismo:**\n• Materia: agua. Forma: \"Yo te bautizo en el nombre del Padre...\"\n• Ministro ordinario: sacerdote. Extraordinario: cualquier persona (en peligro de muerte)\n• Efectos: quita pecado original, da gracia, imprime carácter, hace miembro de la Iglesia\n• Necesidad de MEDIO: sin él no se posee la vida divina"
     },
     {
       "id": "exam-013",
-      "question": "¿Qué significa Resurrección de la carne? ¿Qué sucede con la muerte a nuestro cuerpo y a nuestra alma? ¿Qué significa morir en Cristo? ¿Qué es la Vida Eterna? ¿Cuándo comienza? ¿Qué es el juicio particular? ¿Qué se entiende por cielo? ¿Y qué por purgatorio? ¿Podemos ayudar a las almas del purgatorio? ¿En qué consiste el infierno? ¿Cómo se concilia su existencia con la bondad de Dios? ¿En qué consiste el juicio final? ¿Cuándo tendrá lugar?",
+      "question": "¿Qué significa Resurrección de la carne? ¿Qué sucede con la muerte? ¿Qué es la Vida Eterna? ¿Qué es el juicio particular? ¿Cielo, purgatorio, infierno? ¿Juicio final?",
       "topics": [
         "Escatología"
       ],
-      "relatedQuestions": []
+      "answer": "**Resurrección de la carne:** nuestros cuerpos serán resucitados al final de los tiempos, reunidos con el alma.\n\n**Muerte:** separación del cuerpo y el alma. El alma continúa existiendo.\n\n**Morir en Cristo:** confiar en su promesa de vida eterna.\n\n**Vida Eterna:** comunión plena con Dios. Comienza después de la muerte (para los que mueren en gracia).\n\n**Juicio particular:** inmediatamente después de la muerte, evalúa nuestras acciones.\n\n**Destinos:**\n• **Cielo:** unión eterna con Dios (visión beatífica)\n• **Purgatorio:** estado de purificación temporal para los que mueren en gracia pero con imperfecciones. Podemos ayudarlos con oraciones, misas y obras.\n• **Infierno:** separación eterna de Dios. Se concilia con su bondad porque Dios respeta la libertad humana de rechazar su amor.\n\n**Juicio final:** juicio de toda la humanidad al final de los tiempos. No se sabe la fecha. Cristo volverá como juez de vivos y muertos (Parusía)."
     }
   ]
 }
